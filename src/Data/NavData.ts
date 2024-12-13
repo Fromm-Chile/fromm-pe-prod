@@ -38,8 +38,8 @@ export const navBarData: NavBarData[] = [
     },
     {
         id: 3,
-        title: 'Consumibles',
-        url: '/consumibles',
+        title: 'Zunchos',
+        url: '/zunchos',
         isDropdown: true, 
         dropDownItems: [
             {id: 1, title: 'Zunchos de Poliéster ( PET )', url: '/zunchos-de-poliester'},
