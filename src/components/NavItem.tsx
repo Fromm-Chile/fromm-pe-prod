@@ -17,8 +17,8 @@ export const NavItem = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <li>
-      <div className="flex justify-between hover:bg-gray-100 border-b-[1px] border-gray-100">
+    <li className="flex justify-between flex-col border-b-[1px] border-gray-400">
+      <div className="flex justify-between w-full">
         <Link to={link}>
           <div className="py-2 pl-4">{text}</div>
         </Link>
@@ -27,11 +27,22 @@ export const NavItem = ({
             className="bg-gray-900 text-white cursor-pointer h-12 w-12 flex justify-center align-middle"
             onClick={() => setOpen(!open)}
           >
-            <ArrowDown fill="white" className={`transition-transform duration-500 ${open ? 'rotate-180' : ''}`}/>
+            <ArrowDown
+              fill="white"
+              className={`transition-transform duration-500 self-center ${
+                open ? "rotate-180" : ""
+              }`}
+            />
           </div>
         )}
       </div>
-      {open && children}
+      <div
+        className={`transition-max-height duration-1000 ease-in-out overflow-hidden ${
+          open ? "max-h-screen" : "max-h-0"
+        }`}
+      >
+        {children}
+      </div>
     </li>
   );
 };

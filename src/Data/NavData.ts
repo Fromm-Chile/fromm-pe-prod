@@ -19,7 +19,11 @@ export const navBarData: NavBarData[] = [
         url: '/maquinas-y-herramientas',
         isDropdown: true,
         dropDownItems: [
-            {id: 1, title: 'Flejadoras', url: '/flejadoras'}
+            {id: 1, title: 'Herramientas de Enzunchado FROMM', url: '/heramientas-de-enzunchado'},
+            {id: 2, title: 'Envolvedoras', url: '/envolvedoras'},
+            {id: 3, title: 'Equipos de protección de carga', url: '/equipos-de-proteccion-de-carga'},
+            {id: 4, title: 'Sistemas Automáticos de enzunchado', url: '/sisitemas-automaticos-de-enzunchado'},
+            {id: 5, title: 'Accesorios de embalajes', url: '/accessorios-de-embalajes'}
         ]
     },
     {
@@ -28,7 +32,8 @@ export const navBarData: NavBarData[] = [
         url: '/servicio-tecnico',
         isDropdown: true, 
         dropDownItems: [
-            {id: 1, title: 'Mantenimiento', url: '/mantenimiento'},
+            {id: 1, title: 'Servicio de reparación  de herramientas de Enzunchado', url: '/servicio-de-reparacion-de-herramientas-de-enzunchado'},
+            {id: 2, title: 'Respuestos', url: '/respuestos'}
         ]
     },
     {
@@ -37,7 +42,9 @@ export const navBarData: NavBarData[] = [
         url: '/consumibles',
         isDropdown: true, 
         dropDownItems: [
-            {id: 1, title: 'Zunchos', url: '/zunchos'},
+            {id: 1, title: 'Zunchos de Poliéster ( PET )', url: '/zunchos-de-poliester'},
+            {id: 2, title: 'Zunchos de Acero', url: '/zunchos-de-acero'},
+            {id: 3, title: 'Zunchos de Polipropileno', url: '/zunchos-de-polipropileno'}
         ]
     },
     {

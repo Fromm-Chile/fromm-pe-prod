@@ -26,7 +26,7 @@ export const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <nav className="border rounded-md max-w-[90%] h-[80vh] m-auto flex flex-col justify-between shadow-lg">
+        <nav className="border rounded-md min-h-[85vh] h-auto w-[95%] m-auto flex flex-col justify-between shadow-lg absolute z-10 left-[12px] bg-white">
           <div>
             <ul className="">
               {navBarData.map((item) => (
@@ -38,9 +38,12 @@ export const Navbar = () => {
                 >
                   {item.isDropdown &&
                     item.dropDownItems?.map((subItem) => (
-                      <Link key={subItem.id} to={subItem.url}>
-                        {subItem.title}
-                      </Link>
+                      <div
+                        key={subItem.id}
+                        className="flex justify-between border-b-[1px] border-gray-300 py-3 mx-6 text-sm font-medium"
+                      >
+                        <Link to={subItem.url}>{subItem.title}</Link>
+                      </div>
                     ))}
                 </NavItem>
               ))}
