@@ -5,10 +5,15 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
+
+  const handleDropdownClick = (dropdownId: number) => {
+    setOpenDropdownId((prevId) => (prevId === dropdownId ? null : dropdownId));
+  };
 
   return (
     <>
-      <div className="flex justify-between items-center py-2 px-4 border-b-2 shadow-lg h-14">
+      <div className="flex justify-between items-center py-2 px-4 border-b-2 shadow-lg h-14 fixed w-full bg-white z-20">
         <img
           className="max-w-[165px]"
           src="https://www.frommpackaging.ca/hubfs/Logo/full-logo-header.png"
@@ -26,8 +31,8 @@ export const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <nav className="border rounded-md min-h-[85vh] h-auto w-[95%] m-auto flex flex-col justify-between shadow-lg absolute z-10 left-[12px] bg-white">
-          <div>
+        <nav className="border rounded-md min-h-[85vh] h-auto w-[98%] m-auto flex flex-col justify-between shadow-2xl fixed z-10 top-[55px] left-[3px] bg-white overflow-y-scroll">
+          <div className="max-h-[80vh] overflow-y-scroll">
             <ul className="">
               {navBarData.map((item) => (
                 <NavItem
@@ -35,6 +40,8 @@ export const Navbar = () => {
                   link={item.url}
                   text={item.title}
                   hasDropdown={item.isDropdown}
+                  onClick={() => handleDropdownClick(item.id)}
+                  open={openDropdownId === item.id}
                 >
                   {item.isDropdown &&
                     item.dropDownItems?.map((subItem) => (

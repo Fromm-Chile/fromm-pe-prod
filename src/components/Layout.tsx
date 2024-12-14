@@ -42,9 +42,7 @@ export const Layout = () => {
             <ul className="flex flex-col gap-2 mb-5">
               <li className="flex gap-4 items-center">
                 <img src="/icons/Layout/phone.svg" height={20} width={20} />
-                <p className="font-medium">
-                  +56 2 2571 1100 / +56 2 5571 1102
-                </p>
+                <p className="font-medium">+56 2 2571 1100 / +56 2 5571 1102</p>
               </li>
               <li className="flex gap-4 items-center">
                 <img src="/icons/Layout/mail.svg" height={20} width={20} />

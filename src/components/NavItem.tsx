@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren } from "react";
 import { Link } from "react-router-dom";
 import { ArrowDown } from "./Icons/ArrowDown";
 
@@ -6,6 +6,8 @@ type NavItemProps = PropsWithChildren<{
   link: string;
   text: string;
   hasDropdown: boolean;
+  onClick?: () => void;
+  open: boolean;
 }>;
 
 export const NavItem = ({
@@ -13,8 +15,10 @@ export const NavItem = ({
   text,
   link,
   hasDropdown,
+  onClick,
+  open
 }: NavItemProps) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   return (
     <li className="flex justify-between flex-col border-b-[1px] border-gray-400">
@@ -25,7 +29,7 @@ export const NavItem = ({
         {hasDropdown && (
           <div
             className="bg-gray-900 text-white cursor-pointer h-12 w-12 flex justify-center align-middle"
-            onClick={() => setOpen(!open)}
+            onClick={onClick}
           >
             <ArrowDown
               fill="white"
