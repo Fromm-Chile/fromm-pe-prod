@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 export const Layout = () => {
   return (
     <>
-      <header className="relative">
+      <header className="relative pb-16">
         <Navbar />
       </header>
       <Outlet />

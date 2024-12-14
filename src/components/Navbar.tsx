@@ -13,12 +13,18 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center py-2 px-4 border-b-2 shadow-lg h-14 fixed w-full bg-white z-20">
+      <div
+        className={`flex justify-between items-center py-2 px-4 border-b-2 shadow-lg h-14 ${
+          isOpen ? "fixed" : "absolute"
+        } w-full bg-white z-20`}
+      >
+        <Link to="/">
         <img
           className="max-w-[165px]"
           src="https://www.frommpackaging.ca/hubfs/Logo/full-logo-header.png"
           alt="fromm-chile"
         />
+        </Link>
         <div
           className="cursor-pointer flex gap-2 items-center"
           onClick={() => setIsOpen((prev) => !prev)}
@@ -41,6 +47,7 @@ export const Navbar = () => {
                   text={item.title}
                   hasDropdown={item.isDropdown}
                   onClick={() => handleDropdownClick(item.id)}
+                  onLinkClick={() => setIsOpen(false)}
                   open={openDropdownId === item.id}
                 >
                   {item.isDropdown &&
@@ -49,7 +56,7 @@ export const Navbar = () => {
                         key={subItem.id}
                         className="flex justify-between border-b-[1px] border-gray-300 py-3 mx-6 text-sm font-medium"
                       >
-                        <Link to={subItem.url}>{subItem.title}</Link>
+                        <Link to={subItem.url} onClick={() => setIsOpen(false)}>{subItem.title}</Link>
                       </div>
                     ))}
                 </NavItem>

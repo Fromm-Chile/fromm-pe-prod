@@ -8,6 +8,7 @@ type NavItemProps = PropsWithChildren<{
   hasDropdown: boolean;
   onClick?: () => void;
   open: boolean;
+  onLinkClick?: () => void;
 }>;
 
 export const NavItem = ({
@@ -16,14 +17,13 @@ export const NavItem = ({
   link,
   hasDropdown,
   onClick,
-  open
+  open,
+  onLinkClick,
 }: NavItemProps) => {
-  // const [open, setOpen] = useState(false);
-
   return (
     <li className="flex justify-between flex-col border-b-[1px] border-gray-400">
       <div className="flex justify-between w-full">
-        <Link to={link}>
+        <Link to={link} onClick={onLinkClick}>
           <div className="py-2 pl-4">{text}</div>
         </Link>
         {hasDropdown && (
