@@ -54,8 +54,8 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <nav className="hidden md:flex justify-between items-center py-2 px-4 h-auto bg-red">
-        <ul className="flex items-center gap-4">
+      <nav className="hidden md:flex justify-between items-center px-12 h-auto bg-red">
+        <ul className="flex items-center gap-10 py-2">
           {navBarData.map((item) => (
             <NavItem
               key={item.id}
@@ -63,21 +63,29 @@ export const Navbar = () => {
               text={item.title}
               hasDropdown={item.isDropdown}
               onClick={() => handleDropdownClick(item.id)}
+              onMouseEnter={() => handleDropdownClick(item.id)}
+              onMouseLeave={() => setOpenDropdownId(null)}
               open={openDropdownId === item.id}
             >
               {item.isDropdown &&
-                item.dropDownItems?.map((subItem) => (
+               <div
+               className={`md:absolute md:top-16 md:bg-white md:border-2 md:py-0 md:border-gray-500 md:rounded-md md:z-50 md:text-black transition-max-height duration-500 ease-in-out overflow-hidden ${
+                 openDropdownId === item.id && item.isDropdown ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+               }`}
+             >
+                {item.dropDownItems?.map((subItem) => (
                   <div
                     key={subItem.id}
-                    className="flex justify-between border-b-[1px] border-gray-300 py-3 md:mx-0 md:w-32 mx-6 text-sm font-medium"
+                    className="flex justify-between md:items-center border-b-[2px] border-gray-300 py-3 md:w-[220px] md:mx-0 md:min-h-16 mx-6 text-sm font-medium md:hover:bg-gray-200"
                   >
-                    <Link to={subItem.url}>{subItem.title}</Link>
+                    <Link className="md:px-3" to={subItem.url}>{subItem.title}</Link>
                   </div>
                 ))}
+                </div>}
             </NavItem>
           ))}
         </ul>
-        <div>
+        <div className="bg-black text-white h-full p-2 rounded-lg font-bold">
           Cotiza en línea
         </div>
       </nav>
@@ -92,7 +100,6 @@ export const Navbar = () => {
                   text={item.title}
                   hasDropdown={item.isDropdown}
                   onClick={() => handleDropdownClick(item.id)}
-                  onMouseEnter={() => handleDropdownClick(item.id)}
                   onLinkClick={() => setIsOpen(false)}
                   open={openDropdownId === item.id}
                 >

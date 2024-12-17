@@ -10,6 +10,7 @@ type NavItemProps = PropsWithChildren<{
   open: boolean;
   onLinkClick?: () => void;
   onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }>;
 
 export const NavItem = ({
@@ -20,12 +21,13 @@ export const NavItem = ({
   onClick,
   open,
   onLinkClick,
-  onMouseEnter
+  onMouseEnter,
+  onMouseLeave
 }: NavItemProps) => {
   return (
-    <li className="flex justify-between flex-col border-b-[1px] md:border-none border-gray-400 md:text-white md:text-lg">
+    <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="md:relative flex justify-between flex-col border-b-[1px] md:border-none border-gray-400 md:text-white md:text-lg">
       <div className="flex justify-between w-full md:justify-normal md:items-center">
-        <Link to={link} onClick={onLinkClick} onMouseEnter={onMouseEnter}>
+        <Link to={link} onClick={onLinkClick}>
           <div className="py-2 pl-4 md:pl-0">{text}</div>
         </Link>
         {hasDropdown && (
@@ -42,13 +44,7 @@ export const NavItem = ({
           </div>
         )}
       </div>
-      <div
-        className={`transition-max-height duration-1000 ease-in-out overflow-hidden ${
-          open ? "max-h-screen" : "max-h-0"
-        }`}
-      >
         {children}
-      </div>
     </li>
   );
 };

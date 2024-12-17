@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 export const Layout = () => {
   return (
     <>
-      <header>
+      <header className="sticky top-[-158px] z-50">
         <div className="hidden bg-[#f7f7fd] md:flex md:justify-end md:items-center md:gap-4 md:py-1 md:px-5">
           <div>
             <div className="overflow-hidden w-[40px] h-[30px] hover:w-[170px] bg-[#323337] hover:bg-gray-500 shadow-[2px_2px_20px_rgba(0,0,0,0.08)] rounded-full flex group items-center hover:duration-300 duration-300">
@@ -40,7 +40,7 @@ export const Layout = () => {
         </div>
         <Navbar />
       </header>
-      <main className="px-4">
+      <main>
         <Outlet />
       </main>
       <footer>
