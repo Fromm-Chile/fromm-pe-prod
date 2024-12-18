@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    interpolate-size: allow-keywords; 
+}
+
+.details-upwards {
+    position: relative;
+  }
+
+  .details-upwards[open] .summary-content {
+      content: url(/icons/closeMob.svg);
+  }
+  
+  .details-upwards .details-content {
+    position: absolute;
+    bottom: 146%;
+    left: -24px;
+    background: white;
+    padding: 1rem;
+    display: none;
+    width: 100vw;
+    height: 0;
+}
+
+.details-upwards[open] .details-content {
+    display: flex;
+    opacity: 1;
+    height: 85vh;
+    visibility: visible;
+  }

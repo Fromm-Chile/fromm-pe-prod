@@ -6,7 +6,9 @@ export default {
       colors: {
         'lightGray': '#f7f7fd',
         'shadowBlack': '#2d2d2d',
-        'red': '#f10503'
+        'red': '#f10503',
+        'primaryGray': '#E4E4E4',
+        'textGray': '#404040'
       }
     },
   },
