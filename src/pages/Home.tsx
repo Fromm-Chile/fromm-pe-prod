@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { NavButton } from "../components/NavButton";
 import { Button } from "../components/commons/Button";
+import { HomeCard } from "../components/HomeCard";
+import { CustomSelect } from "../components/commons/CustomSelect";
 
 export const Home = () => {
   return (
@@ -60,8 +62,8 @@ export const Home = () => {
         </div>
       </section>
       <main>
-        <div className="relative">
-          <div className="shadow-2xl rounded-lg mx-8 my-16 p-8 bg-white z-0 absolute bottom-[600px]">
+        <section className="relative">
+          <div className="shadow-2xl rounded-lg mx-8 my-16 p-8 bg-white z-10 absolute top-[-300px]">
             <h2 className="text-center mb-8 mt-3 font-bold text-xl">
               QUÉ ESTAS BUSCANDO?
             </h2>
@@ -73,7 +75,7 @@ export const Home = () => {
               <NavButton link="/zunchos">TRABAJO</NavButton>
             </div>
           </div>
-          <div className="bg-primaryGray px-8 pt-[300px] w-full mb-8 mt-[250px] relative pb-20">
+          <div className="bg-primaryGray px-8 pt-[345px] w-full mt-[265px] pb-20">
             <p className="font-extralight text-xl text-red tracking-widest">
               BIENVENIDO!
             </p>
@@ -96,9 +98,56 @@ export const Home = () => {
                 relleno.
               </p>
             </div>
-            <Button link="/" className="absolute bottom-[-25px] left-[87px]">CONTACTANOS</Button>
           </div>
+          <Button link="/" className="mb-12 mt-[-28px] w-[170px] m-auto">
+            CONTACTANOS
+          </Button>
+        </section>
+        <HomeCard />
+        <div className="flex justify-center mb-24">
+          <Button link="/productos">VER TODOS LOS PRODUCTOS</Button>
         </div>
+        <section className="bg-primaryGray mb-24 py-10">
+          <div className="max-w-[75%] m-auto flex flex-col gap-5">
+            <h3 className="font-extralight text-xl text-red tracking-widest">
+              INDUSTRIAS
+            </h3>
+            <p className="text-textGray font-semibold text-2xl">
+              ENTREGAMOS LA SOLUCION PERFECTA PARA CADA MERCADO
+            </p>
+            <p>
+              Desde la industria del hormigón hasta los centros de distribución
+              y desde la madera hasta la industria agrícola. Ofrecemos la
+              solución perfecta para su empresa. Sea cual sea el mercado en el
+              que esté activo. Nuestros especialistas estarán encantados de
+              pensar junto con usted en las soluciones de embalaje más
+              ergonómicas. Piense en materiales de embalaje resistentes, flejes
+              reciclables y máquinas de alta calidad. Por supuesto, totalmente
+              adaptadas a sus deseos, presupuesto y situación.
+            </p>
+            <CustomSelect />
+          </div>
+        </section>
+        <section className="mb-24 py-10">
+          <div className="max-w-[75%] m-auto flex flex-col gap-5">
+            <h3 className="text-textGray font-semibold text-2xl">
+              ESPECIALISTAS EN SOLUCIONES DE EMBALAJE
+            </h3>
+            <p>
+              Somos FROMM, especialistas en soluciones de embalaje. Desde
+              nuestra sede central en Suiza, nuestros especialistas trabajan día
+              y noche para conseguir los mejores productos posibles. Para
+              asegurar, envolver, rellenar y proteger. Una cosa es cierta: nos
+              aseguramos de que sus productos se empaqueten de forma segura. Lo
+              hacemos con máquinas y consumibles de alta calidad. Con plazos de
+              entrega rápidos y atención personalizada. Y con bajos costes de
+              embalaje y acceso a un servicio de primera. FROMM no húye a los
+              desafíos. Los afrontamos con ambas manos. Trabajamos en estrecha
+              colaboración con usted para lograr una solución de embalaje óptima
+              al final de la línea. ¿Tiene tiempo libre?
+            </p>
+          </div>
+        </section>
       </main>
     </>
   );

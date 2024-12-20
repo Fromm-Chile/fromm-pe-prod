@@ -57,21 +57,21 @@ export const Layout = () => {
             © 2024 Fromm Chile. Todos los derechos reservados.
           </p>
         </div>
-        <div className="shadow-2xl fixed bottom-0 right-0 w-full bg-white flex justify-between items-center p-6">
+        <div className="shadow-2xl fixed bottom-0 right-0 w-full z-50 bg-white flex justify-between items-center p-6">
           <details className="details-upwards">
             <summary className="list-none">
               <div className="summary-content h-14 w-14 border-[1px] border-red p-2 cursor-pointer">
                 <img src="/icons/menuMob.svg" />
               </div>
             </summary>
-            <div className="details-content flex-col justify-between">
+            <div className="details-content flex flex-col justify-between">
               <div>
                 <img
-                  className="max-w-[250px] m-auto"
+                  className="max-w-[250px] m-auto mt-6"
                   src="/img/Navbar/FrommLogo.webp"
                   alt="fromm-chile"
                 />
-                <div className="m-auto w-full flex justify-center items-center">
+                <div className="m-auto w-full flex justify-center items-center mb-28">
                   <ul className="mt-12 text-2xl font-light text-textGray flex flex-col gap-6 items-start">
                     <li className="cursor-pointer hover:underline hover:text-red">
                       SOLUCIONES
