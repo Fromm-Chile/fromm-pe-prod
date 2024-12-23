@@ -57,14 +57,15 @@ export const Layout = () => {
             © 2024 Fromm Chile. Todos los derechos reservados.
           </p>
         </div>
-        <div className="shadow-2xl fixed bottom-0 right-0 w-full z-50 bg-white flex justify-between items-center p-6">
+        <div className="details-container shadow-2xl fixed bottom-0 right-0 w-full z-50 bg-white p-6">
           <details className="details-upwards">
-            <summary className="list-none">
+            <summary className="list-none flex justify-between items-center">
               <div className="summary-content h-14 w-14 border-[1px] border-red p-2 cursor-pointer">
                 <img src="/icons/menuMob.svg" />
               </div>
+              <Button link="/contacto">CONTACTO</Button>
             </summary>
-            <div className="details-content flex flex-col justify-between">
+            <div>
               <div>
                 <img
                   className="max-w-[250px] m-auto mt-6"
@@ -72,41 +73,42 @@ export const Layout = () => {
                   alt="fromm-chile"
                 />
                 <div className="m-auto w-full flex justify-center items-center mb-28">
-                  <ul className="mt-12 text-2xl font-light text-textGray flex flex-col gap-6 items-start">
-                    <li className="cursor-pointer hover:underline hover:text-red">
+                  <ul className="mt-12 text-2xl font-light text-textGray flex flex-col gap-6 items-start w-full">
+                    <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                       SOLUCIONES
                     </li>
-                    <li className="cursor-pointer hover:underline hover:text-red">
+                    <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                       PRODUCTOS
                     </li>
-                    <li className="cursor-pointer hover:underline hover:text-red">
+                    <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                       MERCADOS
                     </li>
-                    <li className="cursor-pointer hover:underline hover:text-red">
+                    <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                       NOSOTROS
                     </li>
-                    <li className="cursor-pointer hover:underline hover:text-red">
+                    <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                       NOTICIAS
                     </li>
-                    <li className="cursor-pointer hover:underline hover:text-red">
+                    <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                       VACANTES
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="border-[1px] border-red p-4 mt-8 rounded-lg pl-10 m-auto">
+              <div className="border-[1px] border-red p-6 mt-8 rounded-lg m-auto max-w-[70%]">
                 <div className="flex items-center justify-start gap-4 mb-2">
                   <img src="/icons/Layout/phone.svg" height={30} width={30} />
                   <p className="text-textGray font-light">+56 2 2571 1100</p>
                 </div>
                 <div className="flex items-center justify-start gap-4">
                   <img src="/icons/Layout/mail.svg" height={30} width={30} />
-                  <p className="text-textGray font-light">contacto@fromm-pack.cl</p>
+                  <p className="text-textGray font-light">
+                    contacto@fromm-pack.cl
+                  </p>
                 </div>
               </div>
             </div>
           </details>
-          <Button link="/contacto">CONTACTO</Button>
         </div>
       </footer>
     </>
