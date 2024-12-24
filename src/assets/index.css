@@ -1,37 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.details-upwards {
-    position: relative;
-  }
-
-  .details-upwards[open] .summary-content {
-      content: url(/icons/closeMob.svg);
-  }
-
-  .details-upwards::details-content {
-    position: absolute;
-    bottom: 130%;
-    left: -24px;
-    background: white;
-    width: 100vw;
-    visibility: hidden;
-    height: 100vh;
-    opacity: 0;
-    transition: all 0.3s;
-    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  }
-  
-  .details-upwards[open]::details-content {
-    visibility: visible;
-    height: 85vh;
-    opacity: 1;
-    visibility: visible;
-}
-
-.details-upwards[open] {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 50px;
-  }
