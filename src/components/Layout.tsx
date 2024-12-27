@@ -18,50 +18,52 @@ export const Layout = () => {
             alt="fromm-chile"
           />
         </Link>
-        <div className="self-start ml-8 mb-6">
-          <h2 className="font-bold text-2xl mb-8">FROMM CHILE</h2>
-          <p className="text-textGray font-light mb-4">
-            Dirección: Avenida Aeropuerto #560 <br />
-            Quilicura. Santiago de Chile.
-          </p>
-          <p className="text-textGray font-light mb-4">
-            E-mail: contacto@fromm-pack.cl <br />
-            Teléfono: +56 2 2571 1100
-          </p>
+        <div className="lg:flex">
+          <div className="self-start ml-8 mb-6">
+            <h2 className="font-bold text-2xl mb-8">FROMM CHILE</h2>
+            <p className="text-textGray font-light mb-4">
+              Dirección: Avenida Aeropuerto #560 <br />
+              Quilicura. Santiago de Chile.
+            </p>
+            <p className="text-textGray font-light mb-4">
+              E-mail: contacto@fromm-pack.cl <br />
+              Teléfono: +56 2 2571 1100
+            </p>
+          </div>
+          <ul className="self-start ml-8 mb-8 text-red font-medium">
+            <li className="mb-2 hover:font-bold cursor-pointer">
+              <Link className="flex items-center" to="/">
+                <p>Soluciones</p>
+                <img src="/icons/chevronRightSmall.svg" />
+              </Link>
+            </li>
+            <li className="mb-2 hover:font-bold cursor-pointer">
+              <Link className="flex items-center" to="/">
+                <p>Industrias</p>
+                <img src="/icons/chevronRightSmall.svg" />
+              </Link>
+            </li>
+            <li className="mb-2 hover:font-bold cursor-pointer">
+              <Link className="flex items-center" to="/">
+                <p>Acerca de Fromm</p>
+                <img src="/icons/chevronRightSmall.svg" />
+              </Link>
+            </li>
+            <li className="mb-2 hover:font-bold cursor-pointer">
+              <Link className="flex items-center" to="/">
+                <p>Productos</p>
+                <img src="/icons/chevronRightSmall.svg" />
+              </Link>
+            </li>
+          </ul>
         </div>
-        <ul className="self-start ml-8 mb-8 text-red font-medium">
-          <li className="mb-2 hover:font-bold cursor-pointer">
-            <Link className="flex items-center" to="/">
-              <p>Soluciones</p>
-              <img src="/icons/chevronRightSmall.svg" />
-            </Link>
-          </li>
-          <li className="mb-2 hover:font-bold cursor-pointer">
-            <Link className="flex items-center" to="/">
-              <p>Industrias</p>
-              <img src="/icons/chevronRightSmall.svg" />
-            </Link>
-          </li>
-          <li className="mb-2 hover:font-bold cursor-pointer">
-            <Link className="flex items-center" to="/">
-              <p>Acerca de Fromm</p>
-              <img src="/icons/chevronRightSmall.svg" />
-            </Link>
-          </li>
-          <li className="mb-2 hover:font-bold cursor-pointer">
-            <Link className="flex items-center" to="/">
-              <p>Productos</p>
-              <img src="/icons/chevronRightSmall.svg" />
-            </Link>
-          </li>
-        </ul>
-        <div className="border-t-[1px] border-black mb-24 mx-8">
-          <p className="text-textGray font-light mt-4">
-            © 2024 Fromm Chile. Todos los derechos reservados.
-          </p>
-        </div>
+          <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
+            <p className="text-textGray font-light mt-4">
+              © 2024 Fromm Chile. Todos los derechos reservados.
+            </p>
+          </div>
         <div
-          className={`w-full bg-white shadow-lg fixed bottom-0 z-50 flex p-5 items-end transition-all duration-1000 ease-in-out ${
+          className={`lg:hidden w-full bg-white shadow-lg fixed bottom-0 z-50 flex p-5 items-end transition-all duration-1000 ease-in-out ${
             isOpen ? "h-[100%] flex-col justify-between" : "h-[6rem]"
           }`}
         >
@@ -73,7 +75,7 @@ export const Layout = () => {
                 alt="fromm-chile"
               />
               <div className="m-auto w-full flex justify-center items-center">
-                <ul className=" text-xl font-light text-textGray flex flex-col gap-6 items-start w-full">
+                <ul className=" text-xl font-light text-textGray flex flex-col gap-4 items-start w-full">
                   <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
                     SOLUCIONES
                   </li>
@@ -108,12 +110,14 @@ export const Layout = () => {
               </div>
             </div>
           </div>
-          <div className=" absolute bottom-3 right-0 flex justify-between w-full px-5">
+          <div className="absolute bottom-3 right-0 flex justify-between w-full px-5 lg:hidden">
             <div
               className="h-14 w-14 border-[1px] border-red p-2 cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <img src={isOpen ? "/icons/closeMob.svg" : "/icons/menuMob.svg"} />
+              <img
+                src={isOpen ? "/icons/closeMob.svg" : "/icons/menuMob.svg"}
+              />
             </div>
             <Button link="/contacto">CONTACTO</Button>
           </div>
