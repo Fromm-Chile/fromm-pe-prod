@@ -18,7 +18,7 @@ export const Layout = () => {
             alt="fromm-chile"
           />
         </Link>
-        <div className="lg:flex">
+        <div className="lg:flex w-full justify-between">
           <div className="self-start ml-8 mb-6">
             <h2 className="font-bold text-2xl mb-8">FROMM CHILE</h2>
             <p className="text-textGray font-light mb-4">
@@ -30,7 +30,7 @@ export const Layout = () => {
               Teléfono: +56 2 2571 1100
             </p>
           </div>
-          <ul className="self-start ml-8 mb-8 text-red font-medium">
+          <ul className="lg:hidden self-start ml-8 mb-8 text-red font-medium">
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/">
                 <p>Soluciones</p>
@@ -56,12 +56,49 @@ export const Layout = () => {
               </Link>
             </li>
           </ul>
-        </div>
-          <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
-            <p className="text-textGray font-light mt-4">
-              © 2024 Fromm Chile. Todos los derechos reservados.
-            </p>
+        <div className="hidden lg:flex gap-32 mr-10 mb-10">
+          <div>
+            <p className="text-red font-light text-lg mb-5">SOLUCIONES</p>
+            <ul className="flex flex-col gap-3">
+              <li>Zunchos</li>
+              <li>Envolvedoras</li>
+              <li>AirPads</li>
+            </ul>
           </div>
+          <div>
+            <p className="text-red font-light text-lg mb-5">MERCADOS</p>
+            <ul className="flex flex-col gap-3">
+              <li>Minería</li>
+              <li>Construcción</li>
+              <li>Alimentación</li>
+              <li>Celulosa</li>
+              <li>Madera</li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-red font-light text-lg mb-5">ACERCA DE FROMM</p>
+            <ul className="flex flex-col gap-3">
+              <li>Historia</li>
+              <li>Noticias</li>
+              <li>Sustentabilidad</li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-red font-light text-lg mb-5">PRODUCTOS</p>
+            <ul className="flex flex-col gap-3">
+              <li>Herramientas</li>
+              <li>Consumibles</li>
+              <li>Equipos</li>
+              <li>Repuestos</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
+          <p className="text-textGray font-light mt-4">
+            © 2024 Fromm Chile. Todos los derechos reservados.
+          </p>
+        </div>
         <div
           className={`lg:hidden w-full bg-white shadow-lg fixed bottom-0 z-50 flex p-5 items-end transition-all duration-1000 ease-in-out ${
             isOpen ? "h-[100%] flex-col justify-between" : "h-[6rem]"

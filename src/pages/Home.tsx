@@ -145,7 +145,7 @@ export const Home = () => {
               <NavButton link="/zunchos">TRABAJO</NavButton>
             </div>
           </div>
-          <div className="bg-primaryGray px-8 pt-[345px] lg:pt-24 w-full mt-[265px] lg:mt-0 pb-20 lg:flex">
+          <div className="bg-primaryGray px-8 pt-[345px] lg:pt-24 w-full mt-[265px] lg:mt-0 pb-20 lg:flex xl:gap-16">
             <div>
               <p className="font-extralight text-xl text-red tracking-widest">
                 BIENVENIDO!

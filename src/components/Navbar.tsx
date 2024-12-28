@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "./commons/Button";
+import { FloatingNav } from "./ui/floating-navbar";
+import { navbarData } from "../Data/NavData";
 
 export const Navbar = () => {
   return (
@@ -16,6 +18,7 @@ export const Navbar = () => {
           <p>Cotización</p>
         </Link>
       </div>
+      <FloatingNav />
       <div className="flex h-[90px] justify-center items-center bg-white lg:px-3 xl:px-8 lg:h-[130px] lg:justify-between">
         <Link to="/">
           <img
@@ -26,26 +29,35 @@ export const Navbar = () => {
         </Link>
         <div className="hidden lg:flex justify-between items-center">
           <ul className="text-base font-medium text-textGray flex items-start lg:gap-3 xl:gap-10">
-            <li className="cursor-pointer hover:font-bold text-center p-1 transition- duration-300 ease-linear w-full">
-              SOLUCIONES
-            </li>
-            <li className="cursor-pointer hover:font-bold text-center p-1 transition- duration-300 ease-linear w-full">
-              PRODUCTOS
-            </li>
-            <li className="cursor-pointer hover:font-bold text-center p-1 transition- duration-300 ease-linear w-full">
-              MERCADOS
-            </li>
-            <li className="cursor-pointer hover:font-bold text-center p-1 transition- duration-300 ease-linear w-full">
-              NOSOTROS
-            </li>
-            <li className="cursor-pointer hover:font-bold text-center p-1 transition- duration-300 ease-linear w-full">
-              NOTICIAS
-            </li>
-            <li className="cursor-pointer hover:font-bold text-center p-1 transition- duration-300 ease-linear w-full">
-              VACANTES
-            </li>
+            <>
+              {navbarData.map((item, index) => (
+                <div className="relative group" key={index}>
+                <Link to={item.link}>
+                  <li className="cursor-pointer hover:font-bold transition- duration-300 ease-linear">
+                    {item.name}
+                  </li>
+                </Link>
+                {item.hasDropdown && item.submenu && (
+                  <div className="h-auto w-[250px] rounded-lg border border-red bg-white z-[100] shadow-lgs absolute top-10 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+                    <ul>
+                      {item.submenu.map((submenu) => (
+                        <Link to={submenu.link} key={submenu.id}>
+                          <li className="p-3 hover:font-extrabold cursor-pointer flex items-center transition-all duration-300 ease-in">
+                            <img src="/icons/chevronRightSmall.svg" />
+                            {submenu.name}
+                          </li>
+                        </Link>
+                        ))}
+                    </ul>
+                  </div>
+                )}
+                </div>
+              ))}
+            </>
           </ul>
-           <Button link="/contacto" className="ml-5">CONTACTO</Button>
+          <Button link="/contacto" className="ml-5">
+            CONTACTO
+          </Button>
         </div>
       </div>
     </>
