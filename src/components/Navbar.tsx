@@ -31,7 +31,7 @@ export const Navbar = () => {
           <ul className="text-base font-medium text-textGray flex items-start lg:gap-3 xl:gap-10">
             <>
               {navbarData.map((item, index) => (
-                <div className="relative group" key={index}>
+                <div className="relative group z-[1000]" key={index}>
                 <Link to={item.link}>
                   <li className="cursor-pointer hover:font-bold transition- duration-300 ease-linear">
                     {item.name}
