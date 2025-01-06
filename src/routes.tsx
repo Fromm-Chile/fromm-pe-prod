@@ -7,9 +7,10 @@ import { Zunchos } from "./pages/zunchos/Zunchos";
 import { Recursos } from "./pages/Recursos/Recursos";
 import Airpads from "./pages/Airpads";
 import { Contacto } from "./pages/Contacto";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const router = createBrowserRouter([
-    {path: "/", element: <Layout />, children: [
+    {path: "/", element: <><ScrollToTop/><Layout /></> , children: [
         {path: "/", element: <Home />},
         {path: "/maquinas-y-herramientas", element: <MaquinasHerramientas/>},
         {path: "/servicio-tecnico", element: <ServicioTecnico/>},
