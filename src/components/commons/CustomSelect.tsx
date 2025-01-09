@@ -27,7 +27,7 @@ export const CustomSelect = () => {
         </div>
       </div>
       {isOpen && (
-        <ul className="absolute top-full left-0 w-full bg-white border-2 border-red rounded-xl mt-1 z-10">
+        <ul className="absolute top-full left-0 w-full bg-white border-2 border-red rounded-xl mt-1 z-10 overflow-hidden">
           <li
             className="p-3 hover:bg-gray-200 cursor-pointer"
             onClick={() => handleOptionClick('Concreto')}

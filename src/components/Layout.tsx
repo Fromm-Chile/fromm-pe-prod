@@ -96,7 +96,7 @@ export const Layout = () => {
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
           <p className="text-textGray font-light mt-4">
-            © 2024 Fromm Chile. Todos los derechos reservados.
+            © 2025 Fromm Chile. Todos los derechos reservados.
           </p>
         </div>
         <div
