@@ -2,79 +2,12 @@ import { useState } from "react";
 import { Button } from "../../components/commons/Button";
 import { FocusCards } from "../../components/ui/focus-card";
 import { InfoBanner } from "../../components/InfoBanner";
-
-type ServiceData = {
-  id: number;
-  title: string;
-  description: string;
-};
-
-const servicesData: ServiceData[] = [
-  {
-    id: 1,
-    title: "ATENCION PERSONALIZADA",
-    description:
-      "Nos encantan todos los desafíos de embalaje. Por eso nos gusta trabajar en estrecha colaboración con sus especialistas. A partir de esa colaboración personal, logramos una solución de embalaje óptima para el final de la línea.",
-  },
-  {
-    id: 2,
-    title: "ALTA CALIDAD",
-    description:
-      "FROMM trabaja exclusivamente con materiales de alta calidad, lo que subraya nuestra posición de liderazgo en materia de productos y servicios sostenibles.",
-  },
-  {
-    id: 3,
-    title: "COSTOS DE EMBALAJE MÁS BAJOS",
-    description:
-      "Gracias a la innovación continua, garantizamos unos costes mínimos en el embalaje de todos los materiales. Nuestros sistemas inteligentes utilizan la menor cantidad posible de materiales de embalaje. Y eso cuenta.",
-  },
-  {
-    id: 4,
-    title: "COMUNICACIÓN DIRECTA CON EL FABRICANTE",
-    description:
-      "FROMM desarrolla y produce máquinas y consumibles en nuestras instalaciones, por lo que ofrecemos contratos de mantenimiento ventajosos y contamos con un excelente servicio técnico con repuestos propios.",
-  },
-  {
-    id: 5,
-    title: "ACCESO A UN SERVICIO DE PRIMERA",
-    description:
-      "Especialistas apasionados y atención personalizada. Con esto nos aseguramos de que su proceso de embalaje siga funcionando. En caso de cualquier avería estamos listos para empezar para que pueda seguir empaquetando sin problemas.",
-  },
-  {
-    id: 6,
-    title: "ENTREGAS RÁPIDAS",
-    description:
-      "Garantizamos entregas rápidas. Esto es posible en parte gracias al desarrollo y producción propios de nuestras máquinas y consumibles.",
-  },
-];
-
-type ProductsCard = {
-  id: number;
-  src: string;
-  title: string;
-  link: string;
-};
-
-const productsCard: ProductsCard[] = [
-  {
-    id: 1,
-    src: "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/zunchoglassclose.jpeg",
-    title: "Zunchos",
-    link: "/zunchos",
-  },
-  {
-    id: 2,
-    src: "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedorahorizontal.png",
-    title: "Envolvedoras",
-    link: "/envolvedoras",
-  },
-  {
-    id: 3,
-    src: "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/airpadhorizontal.jpeg",
-    title: "Airpads",
-    link: "/airpads",
-  },
-];
+import { InfoProductCard } from "../../components/InfoProductCard";
+import {
+  herramientasEnzunchado,
+  productsCard,
+  servicesData,
+} from "../../Data/ZunchosData";
 
 export const Zunchos = () => {
   const [openAcordeon, setOpenAcordeon] = useState<number | null>(null);
@@ -84,14 +17,14 @@ export const Zunchos = () => {
 
   return (
     <>
-    <InfoBanner 
-      srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora.jpg"
-      alt="enzunchadora"
-      title="ZUNCHOS"
-      desc="HERRAMIENTAS DE ENZUNCHADO PARA USO A GRAN ESCALA"
-      buttonTitle="VER PRODUCTOS"
-      link="/"
-    />
+      <InfoBanner
+        srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora.jpg"
+        alt="enzunchadora"
+        title="ZUNCHOS"
+        desc="HERRAMIENTAS DE ENZUNCHADO PARA USO A GRAN ESCALA"
+        buttonTitle="VER PRODUCTOS"
+        link="/"
+      />
       <section className="px-10 md:max-w-[875px] md:m-auto">
         <div className="my-10 p-8">
           <p>
@@ -138,63 +71,16 @@ export const Zunchos = () => {
           LA HERRAMIENTA DE ENZUNCHADO ADECUADA
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:py-10">
-          <div className="bg-white px-5 py-8 my-5 rounded-md hover:shadow-2xl hover:border hover:border-red transition-all ease duration-500">
-            <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraelectrica.jpg"
-              alt="enzunchadora-electrica"
+          {herramientasEnzunchado.map((herramienta) => (
+            <InfoProductCard
+              key={herramienta.id}
+              srcImg={herramienta.srcImg}
+              alt={herramienta.alt}
+              solution={herramienta.solution}
+              product={herramienta.product}
+              desc={herramienta.desc}
             />
-            <div>
-              <p className="tracking-widest text-red font-extralight text-lg">
-                ZUNCHOS
-              </p>
-              <p className="text-lg font-bold mb-8">Enzunchadoras Eléctricas</p>
-              <p className="text-textGray text-base font-light mb-3">
-                Equipamiento de última tecnología FROMM para enzunchado manual
-              </p>
-              <ul className="text-textGray text-base font-light mb-3 flex flex-col gap-2">
-                <li>Diseno inteligente para bajo mantenimiento</li>
-                <li>El mejor equipo de enzunchado a nivel mundial</li>
-              </ul>
-            </div>
-          </div>
-          <div className="bg-white px-5 py-8 my-5 rounded-md hover:shadow-xl transition-shadow ease-in-out duration-500">
-            <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoramanual.jpeg"
-              alt="enzunchadora-electrica"
-            />
-            <div>
-              <p className="tracking-widest text-red font-extralight text-lg">
-                ZUNCHOS
-              </p>
-              <p className="text-lg font-bold mb-8">Enzunchadoras Manuales</p>
-              <p className="text-textGray text-base font-light mb-3">
-                Equipamiento de última tecnología FROMM para enzunchado manual
-              </p>
-              <ul className="text-textGray text-base font-light mb-3 flex flex-col gap-2">
-                <li>Diseno inteligente para bajo mantenimiento</li>
-                <li>El mejor equipo de enzunchado a nivel mundial</li>
-              </ul>
-            </div>
-          </div>
-          <div className="bg-white px-5 py-8 my-5 rounded-md hover:shadow-xl transition-shadow ease-in-out duration-500">
-            <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraneumatica.jpeg"
-              alt="enzunchadora-electrica"
-            />
-            <div>
-              <p className="tracking-widest text-red font-extralight text-lg">
-                ZUNCHOS
-              </p>
-              <p className="text-lg font-bold mb-8">Enzunchadoras Neumáticas</p>
-              <p className="text-textGray text-base font-light mb-3">
-                Equipamiento de última tecnología FROMM para enzunchado manual
-              </p>
-              <ul className="text-textGray text-base font-light mb-3 flex flex-col gap-2">
-                <li>Diseno inteligente para bajo mantenimiento</li>
-                <li>El mejor equipo de enzunchado a nivel mundial</li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <section className="px-10 mb-10">

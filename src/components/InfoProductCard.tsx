@@ -1,9 +1,11 @@
+import React from "react";
+
 type InfoProductCardProps = {
   srcImg: string;
   alt: string;
   solution: string;
   product?: string;
-  desc: string;
+  desc: React.JSX.Element;
 };
 
 export const InfoProductCard = ({
@@ -14,7 +16,7 @@ export const InfoProductCard = ({
   desc,
 }: InfoProductCardProps) => {
   return (
-    <div className="bg-white px-5 py-8 my-5 rounded-md hover:shadow-2xl hover:border hover:border-red transition-all ease duration-500">
+    <div className="bg-white px-5 py-8 my-5 rounded-md hover:shadow-2xl hover:border-2 hover:border-red transition-all ease duration-500">
       <img src={srcImg} alt={alt} />
       <div>
         <p className="tracking-widest text-red font-extralight text-lg">
