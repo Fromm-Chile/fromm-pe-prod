@@ -5,6 +5,7 @@ type Submenu = {
   }
   
   type NavbarDataType = {
+    id: number
     name: string;
     link: string;
     hasDropdown?: boolean;
@@ -12,7 +13,7 @@ type Submenu = {
   };
   
   export const navbarData: NavbarDataType[] = [
-    { name: "SOLUCIONES", link: "/", hasDropdown: true, submenu: [
+    { id: 1, name: "SOLUCIONES", link: "/", hasDropdown: true, submenu: [
       {
         id: 1,
         link: "/zunchos",
@@ -50,8 +51,8 @@ type Submenu = {
         name: "SISTEMAS DE EMBALAJE",
       },
     ]},
-    { name: "PRODUCTOS", link: "/", hasDropdown: false },
-    { name: "MERCADOS", link: "/", hasDropdown: true, submenu: [
+    { id: 2, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
+    { id: 3, name: "MERCADOS", link: "/", hasDropdown: true, submenu: [
       {
         id: 1,
         link: "/mineria",
@@ -59,12 +60,12 @@ type Submenu = {
 
       },
     ] },
-    { name: "NOSOTROS", link: "/", hasDropdown: true, submenu: [
+    { id: 4, name: "NOSOTROS", link: "/", hasDropdown: true, submenu: [
       {
         id: 1,
         link: "/nosotros",
         name: "Acerca de Nosotros",
       },
     ] },
-    { name: "NOTICIAS", link: "/", hasDropdown: false },
+    { id: 5, name: "NOTICIAS", link: "/", hasDropdown: false },
   ];

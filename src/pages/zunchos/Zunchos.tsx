@@ -1,20 +1,11 @@
-import { useState } from "react";
 import { Button } from "../../components/commons/Button";
 import { FocusCards } from "../../components/ui/focus-card";
 import { InfoBanner } from "../../components/InfoBanner";
 import { InfoProductCard } from "../../components/InfoProductCard";
-import {
-  herramientasEnzunchado,
-  productsCard,
-  servicesData,
-} from "../../Data/ZunchosData";
+import { herramientasEnzunchado, productsCard } from "../../Data/ZunchosData";
+import { InfoAcordeon } from "../../components/InfoAcordeon";
 
 export const Zunchos = () => {
-  const [openAcordeon, setOpenAcordeon] = useState<number | null>(null);
-
-  const handleAccordion = (id: number) =>
-    setOpenAcordeon((prev) => (prev === id ? null : id));
-
   return (
     <>
       <InfoBanner
@@ -285,36 +276,7 @@ export const Zunchos = () => {
             </p>
           </div>
         </div>
-        {servicesData.map((service) => (
-          <div key={service.id}>
-            <div
-              className="px-2 py-5 cursor-pointer flex justify-between items-center hover:bg-gray-100 transition-all duration-300 ease-in-out select-none font-medium text-lg text-textGray"
-              onClick={() => handleAccordion(service.id)}
-            >
-              <p>{service.title}</p>
-              {openAcordeon === service.id ? (
-                <img src="/icons/minusIcon.svg" />
-              ) : (
-                <img src="/icons/plusIcon.svg" />
-              )}
-            </div>
-            <div
-              className={`border border-t-transparent border-l-transparent border-r-transparent border-b-black ${
-                openAcordeon === service.id
-                  ? "h-auto border border-b-black"
-                  : "h-0"
-              }`}
-            >
-              <p
-                className={`px-3 py-5 ${
-                  openAcordeon === service.id ? "visible" : "hidden"
-                }`}
-              >
-                {service.description}
-              </p>
-            </div>
-          </div>
-        ))}
+        <InfoAcordeon />
         <div className="mt-14">
           <h2 className="text-textGray text-lg font-bold mb-6">
             ALCANCE INTERNACIONAL

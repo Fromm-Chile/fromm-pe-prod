@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { Button } from "./commons/Button";
 import { useState } from "react";
+import { navbarData } from "../Data/NavData";
 
 export const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,43 +57,45 @@ export const Layout = () => {
               </Link>
             </li>
           </ul>
-        <div className="hidden lg:flex gap-32 mr-10 mb-10">
-          <div>
-            <p className="text-red font-light text-lg mb-5">SOLUCIONES</p>
-            <ul className="flex flex-col gap-3">
-              <li>Zunchos</li>
-              <li>Envolvedoras</li>
-              <li>AirPads</li>
-            </ul>
+          <div className="hidden lg:flex gap-32 mr-10 mb-10">
+            <div>
+              <p className="text-red font-light text-lg mb-5">SOLUCIONES</p>
+              <ul className="flex flex-col gap-3">
+                <li>Zunchos</li>
+                <li>Envolvedoras</li>
+                <li>AirPads</li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-red font-light text-lg mb-5">MERCADOS</p>
+              <ul className="flex flex-col gap-3">
+                <li>Minería</li>
+                <li>Construcción</li>
+                <li>Alimentación</li>
+                <li>Celulosa</li>
+                <li>Madera</li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-red font-light text-lg mb-5">
+                ACERCA DE FROMM
+              </p>
+              <ul className="flex flex-col gap-3">
+                <li>Historia</li>
+                <li>Noticias</li>
+                <li>Sustentabilidad</li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-red font-light text-lg mb-5">PRODUCTOS</p>
+              <ul className="flex flex-col gap-3">
+                <li>Herramientas</li>
+                <li>Consumibles</li>
+                <li>Equipos</li>
+                <li>Repuestos</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <p className="text-red font-light text-lg mb-5">MERCADOS</p>
-            <ul className="flex flex-col gap-3">
-              <li>Minería</li>
-              <li>Construcción</li>
-              <li>Alimentación</li>
-              <li>Celulosa</li>
-              <li>Madera</li>
-            </ul>
-          </div>
-          <div>
-            <p className="text-red font-light text-lg mb-5">ACERCA DE FROMM</p>
-            <ul className="flex flex-col gap-3">
-              <li>Historia</li>
-              <li>Noticias</li>
-              <li>Sustentabilidad</li>
-            </ul>
-          </div>
-          <div>
-            <p className="text-red font-light text-lg mb-5">PRODUCTOS</p>
-            <ul className="flex flex-col gap-3">
-              <li>Herramientas</li>
-              <li>Consumibles</li>
-              <li>Equipos</li>
-              <li>Repuestos</li>
-            </ul>
-          </div>
-        </div>
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
           <p className="text-textGray font-light mt-4">
@@ -113,24 +116,18 @@ export const Layout = () => {
               />
               <div className="m-auto w-full flex justify-center items-center">
                 <ul className=" text-xl font-light text-textGray flex flex-col gap-4 items-start w-full">
-                  <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
-                    SOLUCIONES
-                  </li>
-                  <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
-                    PRODUCTOS
-                  </li>
-                  <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
-                    MERCADOS
-                  </li>
-                  <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
-                    NOSOTROS
-                  </li>
-                  <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
-                    NOTICIAS
-                  </li>
-                  <li className="cursor-pointer hover:text-white hover:bg-red text-center p-1 transition-colors duration-500 ease-linear w-full">
-                    VACANTES
-                  </li>
+                  {navbarData.map((item) => (
+                    <Link
+                      to={item.link}
+                      key={item.id}
+                      className="m-auto"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <li className="cursor-pointer hover:text-red transition-colors duration-500 ease-linear">
+                        {item.name}
+                      </li>
+                    </Link>
+                  ))}
                 </ul>
               </div>
             </div>

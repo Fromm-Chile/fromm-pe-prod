@@ -8,11 +8,13 @@ import Airpads from "./pages/Airpads";
 import { Contacto } from "./pages/Contacto";
 import ScrollToTop from "./components/ScrollToTop";
 import { MaquinasEnvolvedoras } from "./pages/maquinasEnvolvedoras/MaquinasEnvolvedoras";
+import { Products } from "./pages/Products";
 
 export const router = createBrowserRouter([
     {path: "/", element: <><ScrollToTop/><Layout /></> , children: [
         {path: "/", element: <Home />},
         {path: "/envolvedora", element: <MaquinasEnvolvedoras/>},
+        {path: "/productos", element: <Products/>},
         {path: "/servicio-tecnico", element: <ServicioTecnico/>},
         {path: "/zunchos", element: <Zunchos/>}, 
         {path: "/recursos", element: <Recursos/>},
