@@ -5,6 +5,7 @@ import parse from "html-react-parser";
 
 export const ProductDetails = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [selectedTab, setSelectedTab] = useState("especificaciones");
 
   const prevSlide = () => {
     setCurrentImage((prev) =>
@@ -20,7 +21,7 @@ export const ProductDetails = () => {
 
   return (
     <>
-      <section className="bg-primaryGray p-5 max-w-[1250px] mx-auto mb-24 h-auto">
+      <section className="bg-primaryGray p-5 max-w-[1250px] mx-auto mb-5 h-auto">
         <div className="h-[500px] relative group">
           <div
             style={{
@@ -61,6 +62,80 @@ export const ProductDetails = () => {
           </div>
           {parse(products[0].desc)}
           <Button link="/">Agregar a la Cotización</Button>
+        </div>
+      </section>
+      <section className="p-5 max-w-[1250px] mx-auto mb-24 h-auto my-10">
+        <ul className="flex flex-col justify-center items-center font-extralight text-lg mb-8">
+          {products[0].specifications.length > 0 && (
+            <li
+              className={`cursor-pointer hover:bg-primaryGray h-full w-full text-center py-3 ${
+                selectedTab === "especificaciones" && "bg-primaryGray"
+              }`}
+              onClick={() => setSelectedTab("especificaciones")}
+            >
+              Especificaciones
+            </li>
+          )}
+          {products[0].information && (
+            <li
+              className={`cursor-pointer hover:bg-primaryGray h-full w-full text-center py-3 ${
+                selectedTab === "información" && "bg-primaryGray"
+              }`}
+              onClick={() => setSelectedTab("información")}
+            >
+              Información
+            </li>
+          )}
+          {products[0].downloads.length > 0 && (
+            <li
+              className={`cursor-pointer hover:bg-primaryGray h-full w-full text-center py-3 ${
+                selectedTab === "descargas" && "bg-primaryGray"
+              }`}
+              onClick={() => setSelectedTab("descargas")}
+            >
+              Descargas
+            </li>
+          )}
+          {products[0].videos.length > 0 && (
+            <li
+              className={`cursor-pointer hover:bg-primaryGray h-full w-full text-center py-3 ${
+                selectedTab === "videos" && "bg-primaryGray"
+              }`}
+              onClick={() => setSelectedTab("videos")}
+            >
+              Videos
+            </li>
+          )}
+        </ul>
+        <div>
+          {selectedTab === "especificaciones" && (
+            <div>
+              {products[0].specifications?.map((spec) => (
+                <div key={spec.key} className="flex justify-between mb-5">
+                  <div className="w-[45%]">
+                    <p className="font-bold text-textGray">{spec.key}</p>
+                  </div>
+                  <div className="w-[45%]">
+                    <p className="font-extralight">{spec.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          {selectedTab === "información" && (
+            <div>{parse(products[0].information)}</div>
+          )}
+          {selectedTab === "videos" && (
+            <div>
+              {products[0].videos.map((video, index) => (
+                <div key={index} className="flex justify-between mb-5">
+                  <div className="w-full">
+                    <video src={video} controls></video>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>
