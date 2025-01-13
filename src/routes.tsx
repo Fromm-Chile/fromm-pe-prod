@@ -9,12 +9,14 @@ import { Contacto } from "./pages/Contacto";
 import ScrollToTop from "./components/ScrollToTop";
 import { MaquinasEnvolvedoras } from "./pages/maquinasEnvolvedoras/MaquinasEnvolvedoras";
 import { Products } from "./pages/Products";
+import { ProductDetails } from "./pages/ProductDetails";
 
 export const router = createBrowserRouter([
     {path: "/", element: <><ScrollToTop/><Layout /></> , children: [
         {path: "/", element: <Home />},
         {path: "/envolvedora", element: <MaquinasEnvolvedoras/>},
         {path: "/productos", element: <Products/>},
+        {path: "/productos/:slug", element: <ProductDetails />},
         {path: "/servicio-tecnico", element: <ServicioTecnico/>},
         {path: "/zunchos", element: <Zunchos/>}, 
         {path: "/recursos", element: <Recursos/>},

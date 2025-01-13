@@ -1,51 +1,6 @@
 import { InfoBanner } from "../components/InfoBanner";
 import { ProductCard } from "../components/ProductCard";
-
-type ProductsType = {
-  id: number;
-  srcImg: string[];
-  alt: string;
-  solution: string;
-  product: string;
-  desc: string;
-  link: string;
-};
-
-const products: ProductsType[] = [
-  {
-    id: 1,
-    srcImg: [
-      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraelectrica.jpg",
-    ],
-    alt: "enzunchadora-electrica",
-    solution: "ZUNCHOS",
-    product: "Enzunchadora a Bateria P328/P329",
-    desc: "Equipamiento de última tecnología FROMM", // This should be a JSX.Element
-    link: "/",
-  },
-  {
-    id: 2,
-    srcImg: [
-      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoramanual.jpeg",
-    ],
-    alt: "enzunchadora-manual",
-    solution: "ZUNCHOS",
-    product: "Enzunchadora para acero A333",
-    desc: "Equipamiento de última tecnología FROMM",
-    link: "/",
-  },
-  {
-    id: 3,
-    srcImg: [
-      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraneumatica.jpeg",
-    ],
-    alt: "enzunchadora-neumatica",
-    solution: "ZUNCHOS",
-    product: "Enzunchadora Neumática A380",
-    desc: "Equipamiento de última tecnología FROMM",
-    link: "/",
-  },
-];
+import { products } from "../Data/productsData";
 
 export const Products = () => {
   return (
@@ -64,10 +19,10 @@ export const Products = () => {
             key={product.id}
             srcImg={product.srcImg[0]}
             alt={product.alt}
-            solution={product.solution}
-            product={product.product}
-            desc={product.desc}
-            link={product.link}
+            category={product.category}
+            name={product.name}
+            subtitle={product.subtitle}
+            link={`/productos/${product.slug}`}
           />
         ))}
       </section>

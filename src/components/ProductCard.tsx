@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 type ProductCardProps = {
   srcImg: string;
   alt: string;
-  solution: string;
-  product: string;
-  desc: string;
+  category: string;
+  name: string;
+  subtitle: string;
   link: string;
 };
 
 export const ProductCard = ({
   srcImg,
   alt,
-  solution,
-  product,
-  desc,
+  category,
+  name,
+  subtitle,
   link,
 }: ProductCardProps) => {
   return (
@@ -24,10 +24,10 @@ export const ProductCard = ({
           <img src={srcImg} alt={alt} className="h-[250px] w-[250px] m-auto" />
           <div>
             <p className="tracking-widest text-red font-extralight text-lg">
-              {solution}
+              {category}
             </p>
-            <p className="text-lg font-bold mb-8">{product}</p>
-            <p className="text-lg font-bold mb-8">{desc}</p>
+            <p className="text-lg font-bold mb-8">{name}</p>
+            <p className="text-lg font-bold mb-8">{subtitle}</p>
           </div>
         </div>
       </div>
