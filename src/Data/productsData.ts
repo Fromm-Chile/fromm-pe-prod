@@ -31,7 +31,7 @@ type ProductsType = {
       alt: "enzunchadora-electrica",
       category: "ZUNCHOS",
       subcategory: "",
-      name: "Enzunchadora a Bateria P328/P329",
+      name: "Enzunchadora a Batería P328/P329",
       subtitle: "Equipamiento de última tecnología FROMM", // This should be a JSX.Element
       desc: `<p className="my-5">
             La FROMM P328 es una flejadora a batería para flejes de PET y PP y
@@ -170,8 +170,23 @@ type ProductsType = {
           pequeños y redondos. En la mayoría de los casos de flejado
           imaginables, el fleje permanece intacto.
         </p>`,
-      downloads: [],
-      videos: ["https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/s-series.mp4"],
+      downloads: [
+        {
+          name: "Ficha Técnica",
+          link: "https://fromm.com.mx",
+        },
+        {
+          name: "Manual de Usuario",
+          link: "https://fromm.com.mx",
+        },
+        {
+          name: "Certificado de Calidad",
+          link: "https://fromm.com.mx",
+        }
+      ],
+      videos: [
+        "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/s-series.mp4",
+        ],
     },
     {
       id: 2,
@@ -182,8 +197,8 @@ type ProductsType = {
       alt: "enzunchadora-manual",
       category: "ZUNCHOS",
       subcategory: "",
-      name: "Enzunchadora para acero A333",
-      subtitle: "Equipamiento de última tecnología FROMM",
+      name: "Enzunchadora para acero A337",
+      subtitle: "Enzunchado con cinta de acero",
       desc: "<p><strong>Hola Mundo</strong></p>",
       specifications: [
         {
