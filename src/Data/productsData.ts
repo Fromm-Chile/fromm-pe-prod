@@ -32,7 +32,7 @@ type ProductsType = {
       category: "ZUNCHOS",
       subcategory: "",
       name: "Enzunchadora a Batería P328/P329",
-      subtitle: "Equipamiento de última tecnología FROMM", // This should be a JSX.Element
+      subtitle: "Enzunchadoras eléctricas", // This should be a JSX.Element
       desc: `<p className="my-5">
             La FROMM P328 es una flejadora a batería para flejes de PET y PP y
             es adecuada para la mayoría de aplicaciones de flejado.
