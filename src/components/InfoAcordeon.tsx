@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { servicesData } from "../Data/ZunchosData";
+import { servicesData } from "../Data/enzunchadoData";
 
 export const InfoAcordeon = () => {
   const [openAcordeon, setOpenAcordeon] = useState<number | null>(1);

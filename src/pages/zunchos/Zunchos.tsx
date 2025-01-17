@@ -2,8 +2,11 @@ import { Button } from "../../components/commons/Button";
 import { FocusCards } from "../../components/ui/focus-card";
 import { InfoBanner } from "../../components/InfoBanner";
 import { InfoProductCard } from "../../components/InfoProductCard";
-import { herramientasEnzunchado, productsCard } from "../../Data/ZunchosData";
 import { InfoAcordeon } from "../../components/InfoAcordeon";
+import {
+  herramientasEnzunchado,
+  productsCard,
+} from "../../Data/enzunchadoData";
 
 export const Zunchos = () => {
   return (
