@@ -1,9 +1,9 @@
 export const categories = [
     {
         id: 1,
-        img: "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/zunchos.jpeg",
+        img: "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/zunchos-herramientas.jpeg",
         name: "Zunchos",
-        link: "/zunchos"
+        link: "/zunchos-herramientas"
     },
     {
         id: 2,

@@ -57,7 +57,7 @@ export const productsCard: ProductsCard[] = [
     id: 1,
     src: "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/zunchoglassclose.jpeg",
     title: "Zunchos",
-    link: "/zunchos",
+    link: "/zunchos-herramientas",
   },
   {
     id: 2,

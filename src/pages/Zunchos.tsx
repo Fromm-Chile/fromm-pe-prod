@@ -1,23 +1,21 @@
-import { Button } from "../../components/commons/Button";
-import { FocusCards } from "../../components/ui/focus-card";
-import { InfoBanner } from "../../components/InfoBanner";
-import { InfoProductCard } from "../../components/InfoProductCard";
-import { InfoAcordeon } from "../../components/InfoAcordeon";
-import {
-  herramientasEnzunchado,
-  productsCard,
-} from "../../Data/enzunchadoData";
+import { Button } from "../components/commons/Button";
+import { FocusCards } from "../components/ui/focus-card";
+import { InfoBanner } from "../components/InfoBanner";
+import { InfoProductCard } from "../components/InfoProductCard";
+import { InfoAcordeon } from "../components/InfoAcordeon";
+import { herramientasEnzunchado, productsCard } from "../Data/enzunchadoData";
 
 export const Zunchos = () => {
   return (
     <>
       <InfoBanner
+        category="SOLUCIONES"
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora.jpg"
         alt="enzunchadora"
-        title="ZUNCHOS"
+        title="ZUNCHOS Y HERRAMIENTAS"
         desc="HERRAMIENTAS DE ENZUNCHADO PARA USO A GRAN ESCALA"
         buttonTitle="VER PRODUCTOS"
-        link="/"
+        link="/productos"
       />
       <section className="px-10 md:max-w-[875px] md:m-auto">
         <div className="my-10 p-8">

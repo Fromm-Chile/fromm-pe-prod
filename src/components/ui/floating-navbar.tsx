@@ -71,7 +71,7 @@ export const FloatingNav = () => {
                   </Link>
                   {item.hasDropdown && item.submenu && (
                     <div className="h-auto w-[350px] rounded-lg border border-red bg-white z-[100] shadow-lgs absolute top-6 transition-opacity duration-300 ease-in-out opacity-0 hidden group-hover:opacity-100 group-hover:block">
-                      <ul>
+                      <ul className="py-5">
                         {item.submenu.map((submenu) => (
                           <Link to={submenu.link} key={submenu.id}>
                             <li className="p-1 hover:font-extrabold cursor-pointer flex items-center transition-all duration-300 ease-in">

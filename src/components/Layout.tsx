@@ -11,7 +11,7 @@ export const Layout = () => {
     <>
       <Navbar />
       <Outlet />
-      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9">
+      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 px-32">
         <Link className="mb-14" to="/">
           <img
             className="max-w-[310px]"

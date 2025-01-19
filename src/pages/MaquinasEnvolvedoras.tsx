@@ -1,21 +1,22 @@
-import { InfoAcordeon } from "../../components/InfoAcordeon";
-import { InfoBanner } from "../../components/InfoBanner";
-import { InfoProductCard } from "../../components/InfoProductCard";
-import { envolvedoras } from "../../Data/envolvedoraData";
+import { InfoAcordeon } from "../components/InfoAcordeon";
+import { InfoBanner } from "../components/InfoBanner";
+import { InfoProductCard } from "../components/InfoProductCard";
+import { envolvedoras } from "../Data/envolvedoraData";
 
 export const MaquinasEnvolvedoras = () => {
   return (
     <>
       <InfoBanner
+        category="SOLUCIONES"
         video
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maquinaenvolvedora.mp4"
         alt="Maquina envolvedora"
         title="ENVOLVEDORAS"
         desc="LIDERES EN MAQUINARIA ENVOLVEDORA"
-        sinBoton
-        link=""
+        buttonTitle="VER PRODUCTOS"
+        link="/productos"
       />
-      <section className="px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10">
+      <section className="px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10 md:mt-20">
         <div className="mb-10">
           <p className="mb-5">
             FROMM es especialista en soluciones de embalaje. Fabricamos máquinas

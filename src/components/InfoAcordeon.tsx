@@ -12,7 +12,7 @@ export const InfoAcordeon = () => {
       {servicesData.map((service) => (
         <div key={service.id}>
           <div
-            className="px-2 py-5 cursor-pointer flex justify-between items-center hover:bg-gray-100 transition-all duration-300 ease-in-out select-none font-medium text-lg text-textGray"
+            className="px-2 py-5 cursor-pointer flex justify-between items-center hover:bg-gray-100 select-none font-medium text-lg text-textGray"
             onClick={() => handleAccordion(service.id)}
           >
             <p>{service.title}</p>
@@ -31,7 +31,7 @@ export const InfoAcordeon = () => {
           >
             <p
               className={`px-3 py-5 ${
-                openAcordeon === service.id ? "visible" : "hidden"
+                openAcordeon === service.id ? "visible" : "invisible"
               }`}
             >
               {service.description}

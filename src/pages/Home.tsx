@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { NavButton } from "../components/NavButton";
 import { Button } from "../components/commons/Button";
 import { HomeCard } from "../components/HomeCard";
 import { CustomSelect } from "../components/commons/CustomSelect";
@@ -21,8 +20,8 @@ export const Home = () => {
             loop
             muted
           ></video>
-          <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-20 lg:w-[40%] lg:h-[300px] lg:left-16"></div>
-          <div className="hidden lg:block absolute z-50 h-10 w-full bottom-20 lg:w-[40%] lg:h-[300px] lg:left-16">
+          <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div>
+          <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
             <div className="flex flex-col items-center justify-start mt-14 h-full">
               <h2 className="text-white font-bold lg:text-[20px] xl:text-[26px]">
                 FROMM CHILE
@@ -33,7 +32,10 @@ export const Home = () => {
             </div>
             <ul className="flex gap-4 absolute bottom-4 left-0 p-8 text-white">
               <li className="group">
-                <Link className="flex items-center gap-2" to="/zunchos">
+                <Link
+                  className="flex items-center gap-2"
+                  to="/zunchos-herramientas"
+                >
                   <img
                     className="transition-transform duration-300 group-hover:-translate-x-2"
                     src="/icons/chevronRight.svg"
@@ -66,7 +68,10 @@ export const Home = () => {
                 </Link>
               </li>
               <li className="group">
-                <Link className="flex items-center gap-2" to="/zunchos">
+                <Link
+                  className="flex items-center gap-2"
+                  to="/zunchos-herramientas"
+                >
                   <img
                     className="transition-transform duration-300 group-hover:-translate-x-2"
                     src="/icons/chevronRight.svg"
@@ -92,7 +97,10 @@ export const Home = () => {
           </h2>
           <ul className="flex flex-col gap-4">
             <li className="group">
-              <Link className="flex items-center gap-4" to="/zunchos">
+              <Link
+                className="flex items-center gap-4"
+                to="/zunchos-herramientas"
+              >
                 <img
                   className="transition-transform duration-300 group-hover:-translate-x-2"
                   src="/icons/chevronRight.svg"
@@ -117,7 +125,10 @@ export const Home = () => {
               </Link>
             </li>
             <li className="group">
-              <Link className="flex items-center gap-4" to="/zunchos">
+              <Link
+                className="flex items-center gap-4"
+                to="/zunchos-herramientas"
+              >
                 <img
                   className="transition-transform duration-300 group-hover:-translate-x-2"
                   src="/icons/chevronRight.svg"
@@ -133,20 +144,20 @@ export const Home = () => {
       </section>
       <main>
         <section className="relative">
-          <div className="shadow-2xl rounded-lg mx-8 my-16 p-8 bg-white z-10 absolute top-[-300px] lg:absolute lg:top-[-143px] lg:w-[95%] lg:mx-0 lg:right-7 lg:flex lg:justify-between lg:items-center">
+          {/* <div className="shadow-2xl rounded-lg mx-8 my-16 p-8 bg-white z-10 absolute top-[-300px] lg:absolute lg:top-[-143px] lg:w-[95%] lg:mx-0 lg:right-7 lg:flex lg:justify-between lg:items-center">
             <h2 className="text-center mb-8 mt-3 font-bold text-xl lg:text-2xl lg:mb-0">
               QUÉ ESTAS BUSCANDO?
             </h2>
             <div className="flex flex-wrap gap-4 justify-center">
-              <NavButton link="/zunchos">ZUNCHOS</NavButton>
-              <NavButton link="/zunchos">SERVICIO</NavButton>
-              <NavButton link="/zunchos">MI INDUSTRIA</NavButton>
-              <NavButton link="/zunchos">COTIZAR</NavButton>
-              <NavButton link="/zunchos">TRABAJO</NavButton>
+              <NavButton link="/zunchos-herramientas">ZUNCHOS</NavButton>
+              <NavButton link="/zunchos-herramientas">SERVICIO</NavButton>
+              <NavButton link="/zunchos-herramientas">MI INDUSTRIA</NavButton>
+              <NavButton link="/zunchos-herramientas">COTIZAR</NavButton>
+              <NavButton link="/zunchos-herramientas">TRABAJO</NavButton>
             </div>
-          </div>
-          <div className="bg-primaryGray px-8 pt-[345px] lg:pt-24 w-full mt-[265px] lg:mt-0 pb-20 lg:flex xl:gap-16">
-            <div>
+          </div> */}
+          <div className="bg-primaryGray px-8 pt-[100px] lg:pt-24 w-full lg:mt-0 pb-20 lg:flex xl:gap-16">
+            <div className="md:w-[45%]">
               <p className="font-extralight text-xl text-red tracking-widest">
                 BIENVENIDO!
               </p>
