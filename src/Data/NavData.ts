@@ -13,7 +13,7 @@ type Submenu = {
   };
   
   export const navbarData: NavbarDataType[] = [
-    { id: 1, name: "SOLUCIONES", link: "#", hasDropdown: true, submenu: [
+    { id: 1, name: "SOLUCIONES", link: "/soluciones", hasDropdown: true, submenu: [
       {
         id: 1,
         link: "/zunchos-herramientas",
@@ -74,5 +74,5 @@ type Submenu = {
         name: "Organización de servicios",
       },
     ] },
-    { id: 5, name: "NOTICIAS", link: "/", hasDropdown: false },
+    { id: 5, name: "NOTICIAS", link: "/noticias", hasDropdown: false },
   ];

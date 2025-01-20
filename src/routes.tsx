@@ -15,10 +15,13 @@ import { AboutUs } from "./pages/AboutUs";
 import { EmbalajeEco } from "./pages/EmbalajeEco";
 import { OrganizacionServicios } from "./pages/OrganizacionServicios";
 import { Markets } from "./pages/Markets";
+import { Solutions } from "./pages/Solutions";
+import { News } from "./pages/News";
 
 export const router = createBrowserRouter([
     {path: "/", element: <><ScrollToTop/><Layout /></> , children: [
         {path: "/", element: <Home />},
+        {path: "/soluciones", element: <Solutions />},
         {path: "/envolvedora", element: <MaquinasEnvolvedoras/>},
         {path: "/film-embalaje", element: <FilmEmbalaje />}, 
         {path: "/productos", element: <Products/>},
@@ -32,6 +35,7 @@ export const router = createBrowserRouter([
         {path: "/embalaje-ecofriendly", element: <EmbalajeEco />},
         {path: "/organizacion-servicios", element: <OrganizacionServicios/>},
         {path: "/Contacto", element: <Contacto/>},
+        {path: "/noticias", element: <News/>},
         { path: "*", element: <Navigate to="/" /> },   
 ]}
 ]);
