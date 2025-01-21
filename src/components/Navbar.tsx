@@ -12,7 +12,7 @@ export const Navbar = () => {
           <p>+56 2 2571 1100</p>
         </Link>
         <Link to="/" className="cursor-pointer hover:underline">
-          <p>Servicio Técnico</p>
+          <a href="mailto:contacto@fromm-pack.cl">contacto@fromm-pack.cl</a>
         </Link>
         <Link to="/" className="cursor-pointer hover:underline">
           <p>Cotización</p>

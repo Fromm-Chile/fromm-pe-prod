@@ -71,8 +71,8 @@ export const MaquinasEnvolvedoras = () => {
         </div>
       </div>
       <section className="px-10 md:max-w-[1250px] md:m-auto md:mt-20 md:mb-10">
-        <div className="md:flex md:gap-10 md:max-w-[1250px] md:m-auto md:mb-10 md:flex-row-reverse">
-          <div className="md:w-[80%]">
+        <div className="md:flex md:gap-10 md:max-w-[1250px] md:m-auto md:mb-10 md:justify-between md:flex-row-reverse">
+          <div className="md:w-[50%]">
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
               Embalaje estable, precio económico
             </h2>
@@ -101,9 +101,9 @@ export const MaquinasEnvolvedoras = () => {
               </p>
             </div>
           </div>
-          <div className="mb-20 md:w-[50%]">
+          <div className="mb-20 md:w-[40%]">
             <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maquinazunchos.JPG"
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedorafoto1.webp"
               alt="maquina-enzunchadora"
               className=""
             />
@@ -111,8 +111,8 @@ export const MaquinasEnvolvedoras = () => {
         </div>
       </section>
       <section className="bg-primaryGray pt-10 pb-1 mb-10">
-        <div className="px-10 md:max-w-[1250px] md:m-auto md:mt-20 md:mb-10 md:flex">
-          <div className="mb-3 md:w-[80%]">
+        <div className="px-10 md:max-w-[1250px] md:m-auto md:mt-20 md:mb-10 md:justify-between md:flex">
+          <div className="mb-3 md:w-[50%]">
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
               Envoltorio. La solución para tu empresa
             </h2>
@@ -133,16 +133,16 @@ export const MaquinasEnvolvedoras = () => {
               nuestros especialistas en embalaje.
             </p>
           </div>
-          <div className="mb-20 md:w-[50%]">
+          <div className="mb-20 md:w-[40%]">
             <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maquinazunchos.JPG"
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedorafoto2.webp"
               alt="maquina-enzunchadora"
               className=""
             />
           </div>
         </div>
       </section>
-      <section className="px-10 md:max-w-[1250px] md:m-auto md:mt-20 md:mb-10">
+      <section className="px-10 md:max-w-[875px] md:m-auto md:mt-20 md:mb-10">
         <div>
           <h2 className="text-textGray text-lg font-bold mb-6 uppercase">
             Empaque con una sonrisa. <br /> Envuelva con FROMM
@@ -176,9 +176,9 @@ export const MaquinasEnvolvedoras = () => {
           </div>
         </div>
       </section>
-      <section className="pt-10 pb-1 mb-10">
-        <div className="px-10 md:max-w-[1250px] md:m-auto md:mt-20 md:mb-10 md:flex">
-          <div className="mb-3 md:w-[80%]">
+      <section className="pt-10 pb-1 mb-10 md:mb-32 md:max-w-[875px] md:m-auto">
+        <div className="px-10 md:m-auto md:mt-20 md:mb-10">
+          <div className="mb-3">
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
               ¿Cómo funciona exactamente el envoltorio?
             </h2>

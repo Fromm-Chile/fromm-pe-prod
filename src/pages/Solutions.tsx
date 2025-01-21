@@ -15,7 +15,7 @@ export const Solutions = () => {
         buttonTitle="Ver Productos"
         category="NUESTAS SOLUCIONES"
       />
-      <section className="px-10 mb-10 md:max-w-[1250px] md:m-auto md:mb-20 py-20">
+      <section className="px-10 mb-10 md:max-w-[1250px] md:m-auto py-20">
         <FocusCards cards={solutionCard} />
       </section>
       <section className="bg-primaryGray mb-24 py-10">

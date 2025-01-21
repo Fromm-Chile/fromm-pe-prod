@@ -51,7 +51,7 @@ export const Home = () => {
                 </Link>
               </li>
               <li className="group">
-                <Link className="flex items-center gap-2" to="/heramientas">
+                <Link className="flex items-center gap-2" to="/airpads">
                   <img
                     className="transition-transform duration-300 group-hover:-translate-x-2"
                     src="/icons/chevronRight.svg"
@@ -61,16 +61,14 @@ export const Home = () => {
                     <h3 className="font-medium text-white text-xs">
                       SOLUCIONES
                     </h3>
-                    <p className="text-white font-bold xl:text-base">
-                      HERRAMIENTAS
-                    </p>
+                    <p className="text-white font-bold xl:text-base">AIRPADS</p>
                   </div>
                 </Link>
               </li>
               <li className="group">
                 <Link
                   className="flex items-center gap-2"
-                  to="/zunchos-herramientas"
+                  to="/servicio-tecnico"
                 >
                   <img
                     className="transition-transform duration-300 group-hover:-translate-x-2"
@@ -229,6 +227,33 @@ export const Home = () => {
               colaboración con usted para lograr una solución de embalaje óptima
               al final de la línea. ¿Tiene tiempo libre?
             </p>
+          </div>
+        </section>
+        <section className="px-10 mb-8 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px]">
+          <div className="md:flex md:gap-10 md:m-auto md:mb-3 md:flex-col">
+            <h2 className="text-textGray text-lg font-bold md:text-3xl md:font-medium md:uppercase text-center">
+              <span className="text-red font-extralight">EN TODO EL MUNDO</span>{" "}
+              <br />
+              FROMM A NIVEL GLOBAL
+            </h2>
+            <div className="font-light">
+              <p className="md:text-lg">
+                FROMM trabaja en todo el mundo con más de 1.200 personas en el
+                desarrollo, producción y venta de máquinas, equipos y
+                consumibles de embalaje de final de línea. Porque el servicio y
+                la atención al cliente deben ser personales, trabajamos a nivel
+                local con más de 40 oficinas de ventas y servicio, 8 plantas de
+                producción propias repartidas por todo el mundo y más de 30
+                distribuidores a largo plazo en más de 50 países.
+              </p>
+            </div>
+          </div>
+          <div className="my-10 md:my-20">
+            <img
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-mundo.svg"
+              alt="maquina-enzunchadora"
+              className=""
+            />
           </div>
         </section>
       </main>

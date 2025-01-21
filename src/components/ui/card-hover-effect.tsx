@@ -18,12 +18,7 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div
-      className={cn(
-        "grid md:grid-cols-2 lg:grid-cols-3 py-10",
-        className
-      )}
-    >
+    <div className={cn("grid md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
       {items.map((item, idx) => (
         <Link
           to={item?.link}
@@ -50,7 +45,10 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card className="text-center hover:shadow-lg">
-            <img src={item.img} className="w-full md:h-48 h-[250px] object-contain" />
+            <img
+              src={item.img}
+              className="w-full md:h-[450px] h-[250px] object-contain"
+            />
             <CardTitle>{item.name}</CardTitle>
           </Card>
         </Link>

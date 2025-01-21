@@ -74,5 +74,5 @@ type Submenu = {
         name: "Organización de servicios",
       },
     ] },
-    { id: 5, name: "NOTICIAS", link: "/noticias", hasDropdown: false },
+    { id: 5, name: "SERVICIO TÉCNICO", link: "/servicio-tecnico", hasDropdown: false },
   ];

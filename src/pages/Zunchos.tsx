@@ -1,9 +1,8 @@
 import { Button } from "../components/commons/Button";
-import { FocusCards } from "../components/ui/focus-card";
 import { InfoBanner } from "../components/InfoBanner";
 import { InfoProductCard } from "../components/InfoProductCard";
 import { InfoAcordeon } from "../components/InfoAcordeon";
-import { herramientasEnzunchado, productsCard } from "../Data/enzunchadoData";
+import { herramientasEnzunchado } from "../Data/enzunchadoData";
 
 export const Zunchos = () => {
   return (
@@ -292,11 +291,6 @@ export const Zunchos = () => {
             </p>
           </div>
         </div>
-      </section>
-      <section className="px-10 mb-10 md:max-w-[1250px] md:m-auto md:mb-20">
-        <h2 className="text-textGray text-2xl font-semibold">PRODUCTOS</h2>
-        <p className="mb-10">NUESTRAS SOLUCIONES</p>
-        <FocusCards cards={productsCard} />
       </section>
     </>
   );
