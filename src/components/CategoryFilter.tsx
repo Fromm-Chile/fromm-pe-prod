@@ -44,12 +44,12 @@ export const CategoryFilter = ({
       {categories?.map((category) => (
         <div
           key={category.id}
-          className={`bg-white p-5 rounded-md shadow-md cursor-pointer text-textGray font-bold hover:border hover:border-red transition-all duration-300 ease-linear ${
+          className={`${
             isCategorySelected &&
             selectedCategory === category.id &&
             category.other_Categories.length === 0
-              ? "bg-rose-700 text-white"
-              : ""
+              ? "bg-red font-extrabold text-white p-5 rounded-md shadow-md cursor-pointer"
+              : "bg-white p-5 rounded-md shadow-md cursor-pointer text-textGray font-bold hover:border hover:border-red transition-all duration-300 ease-linear "
           }`}
         >
           <div
@@ -86,11 +86,11 @@ export const CategoryFilter = ({
                 return (
                   <li
                     key={subcategory.id}
-                    className={`cursor-pointer  transition-all duration-300 ease-linear p-3 ${
+                    className={`${
                       isSubCategorySelected &&
                       selectedSubCategory === subcategory.id
-                        ? "bg-red text-white"
-                        : "hover:bg-primaryGray hover:text-red"
+                        ? "bg-red text-white cursor-pointer p-3"
+                        : "hover:bg-primaryGray hover:text-red cursor-pointer  transition-all duration-300 ease-linear p-3"
                     }`}
                     onClick={
                       isSubCategorySelected &&

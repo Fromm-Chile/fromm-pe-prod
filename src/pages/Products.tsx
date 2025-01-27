@@ -4,6 +4,7 @@ import { Category, CategoryFilter } from "../components/CategoryFilter";
 import { InfoBanner } from "../components/InfoBanner";
 import { ProductCard } from "../components/ProductCard";
 import { useQuery } from "@tanstack/react-query";
+import { Loader } from "../components/Loader";
 
 export type ProductType = {
   id: number;
@@ -32,11 +33,12 @@ export const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState<
     ProductType[] | null
   >(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     data: products,
     error,
-    isLoading,
+    isLoading: productsLoading,
   } = useQuery({
     queryKey: ["products"],
     queryFn: async (): Promise<ProductType[]> => {
@@ -81,23 +83,31 @@ export const Products = () => {
       setFilteredProducts(products || []);
       return;
     }
-    const response = await fetch(`${apiUrl}/products/category/${categoryId}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await response.json();
-    setFilteredProducts(data);
-    return data;
+    try {
+      setIsLoading(true);
+      const response = await fetch(
+        `${apiUrl}/products/category/${categoryId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+      setFilteredProducts(data);
+      return data;
+    } catch (error) {
+      console.error("Error fetching products by category:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <>
-      {isLoading && categoriesLoading ? (
-        <div className="h-[70vh] flex justify-center items-center text-4xl font-semibold text-red">
-          Loading...
-        </div>
+      {productsLoading && categoriesLoading ? (
+        <Loader />
       ) : (
         <>
           <InfoBanner
@@ -110,8 +120,8 @@ export const Products = () => {
             buttonTitle="Contacto"
           />
           <section className="bg-primaryGray">
-            <div className="max-w-[1350px] m-auto flex items-start justify-center mb-20">
-              <div className="mt-24 w-[350px] mb-20">
+            <div className="max-w-[1350px] m-auto flex flex-col md:flex-row items-start justify-center mb-20">
+              <div className="mt-10 w-full px-10 md:px-0 md:mt-24 md:w-[350px] md:mb-20">
                 <CategoryFilter
                   categories={categories || []}
                   onFilterChange={onFilterChange}
@@ -119,21 +129,27 @@ export const Products = () => {
                   products={products || []}
                 />
               </div>
-              <div className="pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
-                {(!filteredProducts ? products ?? [] : filteredProducts).map(
-                  (product) => (
-                    <ProductCard
-                      key={product.id}
-                      srcImg={product.srcImg[0]}
-                      alt={product.alt}
-                      name={product.name}
-                      subtitle={product.subtitle}
-                      link={`/productos/${product.slug}`}
-                      state={{ productId: product.id }}
-                    />
-                  )
-                )}
-              </div>
+              {isLoading ? (
+                <div className="pt-16 p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
+                  <Loader />
+                </div>
+              ) : (
+                <div className="pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
+                  {(!filteredProducts ? products ?? [] : filteredProducts).map(
+                    (product) => (
+                      <ProductCard
+                        key={product.id}
+                        srcImg={product.srcImg[0]}
+                        alt={product.alt}
+                        name={product.name}
+                        subtitle={product.subtitle}
+                        link={`/productos/${product.slug}`}
+                        state={{ productId: product.id }}
+                      />
+                    )
+                  )}
+                </div>
+              )}
             </div>
           </section>
         </>

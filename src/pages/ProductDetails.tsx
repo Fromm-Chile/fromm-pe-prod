@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { apiUrl } from "../assets/variables";
 import { useLocation } from "react-router-dom";
 import { ProductType } from "./Products";
+import { Loader } from "../components/Loader";
 
 export const ProductDetails = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -58,9 +59,7 @@ export const ProductDetails = () => {
   return (
     <>
       {isFetching ? (
-        <div className="h-[70vh] flex justify-center items-center text-4xl font-semibold text-red">
-          Loading...
-        </div>
+        <Loader />
       ) : (
         <>
           <section className="bg-primaryGray pt-10">
