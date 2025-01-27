@@ -11,9 +11,9 @@ export const Navbar = () => {
           <img src="/icons/phoneGray.svg" height={23} width={23} />
           <p>+56 2 2571 1100</p>
         </Link>
-        <Link to="/" className="cursor-pointer hover:underline">
+        <div className="cursor-pointer hover:underline">
           <a href="mailto:contacto@fromm-pack.cl">contacto@fromm-pack.cl</a>
-        </Link>
+        </div>
         <Link to="/" className="cursor-pointer hover:underline">
           <p>Cotización</p>
         </Link>
