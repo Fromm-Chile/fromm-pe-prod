@@ -20,7 +20,7 @@ type CategoryFilterProps = {
 export const CategoryFilter = ({
   categories,
   // setSelectedCategory,
-  selectedCategory
+  selectedCategory,
 }: CategoryFilterProps) => {
   const navigate = useNavigate();
   const [internalCategory, setInternalCategory] = useState<number | null>(null);
@@ -36,33 +36,28 @@ export const CategoryFilter = ({
             isCategorySelected &&
             selectedCategory === category.id &&
             category.other_Categories.length === 0
-              ? "bg-red font-extrabold text-white p-5 rounded-md shadow-md cursor-pointer"
-              : "bg-white p-5 rounded-md shadow-md cursor-pointer text-textGray font-bold hover:border hover:border-red transition-all duration-300 ease-linear "
+              ? "bg-red font-extrabold text-white rounded-md shadow-md cursor-pointer"
+              : "bg-white rounded-md shadow-md cursor-pointer text-textGray font-bold hover:border hover:border-red transition-all duration-300 ease-linear "
           }`}
         >
           <div
-            className="flex items-center justify-between"
+            className="flex items-center justify-between p-5"
             onClick={() => {
-              const categoryLength = category.other_Categories.length
-              console.log(category)
-              if (
-                selectedCategory === category.id &&
-                categoryLength === 0
-              ) 
-              {
+              const categoryLength = category.other_Categories.length;
+              console.log(category);
+              if (selectedCategory === category.id && categoryLength === 0) {
                 navigate(`/productos`);
                 setInternalCategory(category.id);
               }
-              if(selectedCategory !== category.id && categoryLength > 0) {
+              if (selectedCategory !== category.id && categoryLength > 0) {
                 setInternalCategory(category.id);
                 setIsCategorySelected(false);
               }
-              if(selectedCategory !== category.id && categoryLength === 0) {
+              if (selectedCategory !== category.id && categoryLength === 0) {
                 navigate(`/productos?categoryId=${category.id}`);
                 setInternalCategory(category.id);
                 setIsCategorySelected(true);
               }
-              
             }}
           >
             <p>{category.name}</p>
@@ -72,7 +67,7 @@ export const CategoryFilter = ({
           </div>
           {category.other_Categories.length > 0 ? (
             <ul
-              className={`mt-5 font-light ${
+              className={`mb-5 font-light ${
                 internalCategory === category.id ? "h-auto block" : "h-0 hidden"
               }`}
             >
@@ -90,7 +85,7 @@ export const CategoryFilter = ({
                       isSubCategorySelected &&
                       selectedCategory === subcategory.id
                         ? () => {
-                          navigate(`/productos`);
+                            navigate(`/productos`);
                             setIsSubCategorySelected(false);
                           }
                         : () => {
