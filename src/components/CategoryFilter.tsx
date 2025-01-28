@@ -67,7 +67,7 @@ export const CategoryFilter = ({
           </div>
           {category.other_Categories.length > 0 ? (
             <ul
-              className={`mt-5 font-light ${
+              className={`mb-5 font-light ${
                 internalCategory === category.id ? "h-auto block" : "h-0 hidden"
               }`}
             >
