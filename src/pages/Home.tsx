@@ -142,25 +142,13 @@ export const Home = () => {
       </section>
       <main>
         <section className="relative">
-          {/* <div className="shadow-2xl rounded-lg mx-8 my-16 p-8 bg-white z-10 absolute top-[-300px] lg:absolute lg:top-[-143px] lg:w-[95%] lg:mx-0 lg:right-7 lg:flex lg:justify-between lg:items-center">
-            <h2 className="text-center mb-8 mt-3 font-bold text-xl lg:text-2xl lg:mb-0">
-              QUÉ ESTAS BUSCANDO?
-            </h2>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <NavButton link="/zunchos-herramientas">ZUNCHOS</NavButton>
-              <NavButton link="/zunchos-herramientas">SERVICIO</NavButton>
-              <NavButton link="/zunchos-herramientas">MI INDUSTRIA</NavButton>
-              <NavButton link="/zunchos-herramientas">COTIZAR</NavButton>
-              <NavButton link="/zunchos-herramientas">TRABAJO</NavButton>
-            </div>
-          </div> */}
           <div className="bg-primaryGray px-8 pt-[100px] lg:pt-24 w-full lg:mt-0 pb-20 lg:flex xl:gap-16">
             <div className="md:w-[45%]">
               <p className="font-extralight text-xl text-red tracking-widest">
                 BIENVENIDO!
               </p>
               <p className="text-2xl font-bold text-textGray">FROMM CHILE</p>
-              <p className="text-2xl font-extralight text-textGray">
+              <p className="text-2xl font-extralight text-textGray text-left">
                 TRANSFORMAMOS EL EMBAJALE EN UNA EXPERIENCIA
               </p>
             </div>
@@ -170,7 +158,7 @@ export const Home = () => {
                 src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/equipoFromm.webp"
                 alt="fromm-team"
               />
-              <p className="font-extralight text-lg text-textGray">
+              <p className="font-extralight text-lg text-textGray text-justify">
                 El grupo FROMM desarrolla y fabrica diferentes sistemas de
                 embalaje, para asegurar las mercancías: Máquinas flejadoras e
                 instalaciones de flejado, envolvedoras de film estirable, robots
@@ -196,7 +184,7 @@ export const Home = () => {
             <p className="text-textGray font-semibold text-2xl">
               ENTREGAMOS LA SOLUCION PERFECTA PARA CADA MERCADO
             </p>
-            <p>
+            <p className="text-justify">
               Desde la industria del hormigón hasta los centros de distribución
               y desde la madera hasta la industria agrícola. Ofrecemos la
               solución perfecta para su empresa. Sea cual sea el mercado en el
@@ -210,11 +198,11 @@ export const Home = () => {
           </div>
         </section>
         <section className="mb-24 py-10">
-          <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] lg:text-center lg:font-light">
+          <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
             <h3 className="text-textGray font-semibold text-2xl">
               ESPECIALISTAS EN SOLUCIONES DE EMBALAJE
             </h3>
-            <p>
+            <p className="text-justify">
               Somos FROMM, especialistas en soluciones de embalaje. Desde
               nuestra sede central en Suiza, nuestros especialistas trabajan día
               y noche para conseguir los mejores productos posibles. Para
@@ -237,7 +225,7 @@ export const Home = () => {
               FROMM A NIVEL GLOBAL
             </h2>
             <div className="font-light">
-              <p className="md:text-lg">
+              <p className="md:text-lg text-justify">
                 FROMM trabaja en todo el mundo con más de 1.200 personas en el
                 desarrollo, producción y venta de máquinas, equipos y
                 consumibles de embalaje de final de línea. Porque el servicio y

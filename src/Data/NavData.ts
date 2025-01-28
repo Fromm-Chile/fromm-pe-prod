@@ -1,24 +1,29 @@
 type Submenu = {
-    id: number;
-    link: string;
-    name: string;
-  }
-  
-  type NavbarDataType = {
-    id: number
-    name: string;
-    link: string;
-    hasDropdown?: boolean;
-    submenu?: Submenu[];
-  };
-  
-  export const navbarData: NavbarDataType[] = [
-    { id: 1, name: "SOLUCIONES", link: "/soluciones", hasDropdown: true, submenu: [
+  id: number;
+  link: string;
+  name: string;
+};
+
+type NavbarDataType = {
+  id: number;
+  name: string;
+  link: string;
+  hasDropdown?: boolean;
+  submenu?: Submenu[];
+};
+
+export const navbarData: NavbarDataType[] = [
+  { id: 1, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
+  {
+    id: 2,
+    name: "SOLUCIONES",
+    link: "/soluciones",
+    hasDropdown: true,
+    submenu: [
       {
         id: 1,
         link: "/zunchos-herramientas",
         name: "ZUNCHOS Y HERRAMIENTAS",
-
       },
       {
         id: 2,
@@ -35,29 +40,37 @@ type Submenu = {
         link: "/airpads",
         name: "AIRPADS",
       },
-    ]},
-    { id: 2, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
-    { id: 3, name: "MERCADOS", link: "/mercados", hasDropdown: true, submenu: [
+    ],
+  },
+  {
+    id: 3,
+    name: "MERCADOS",
+    link: "/mercados",
+    hasDropdown: true,
+    submenu: [
       {
         id: 1,
         link: "/celulosa",
         name: "Celulosa",
-
       },
       {
         id: 2,
         link: "/mineria",
         name: "Minería",
-
       },
       {
         id: 3,
         link: "/Agricultura",
         name: "Agricultura",
-
       },
-    ] },
-    { id: 4, name: "NOSOTROS", link: "/nosotros", hasDropdown: true, submenu: [
+    ],
+  },
+  {
+    id: 4,
+    name: "NOSOTROS",
+    link: "/nosotros",
+    hasDropdown: true,
+    submenu: [
       {
         id: 1,
         link: "/nosotros",
@@ -73,6 +86,12 @@ type Submenu = {
         link: "/organizacion-servicios",
         name: "Organización de servicios",
       },
-    ] },
-    { id: 5, name: "SERVICIO TÉCNICO", link: "/servicio-tecnico", hasDropdown: false },
-  ];
+    ],
+  },
+  {
+    id: 5,
+    name: "SERVICIO TÉCNICO",
+    link: "/servicio-tecnico",
+    hasDropdown: false,
+  },
+];

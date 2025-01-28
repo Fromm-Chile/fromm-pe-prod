@@ -48,7 +48,7 @@ export const FloatingNav = () => {
           duration: 0.2,
         }}
         className={cn(
-          "hidden lg:flex max-w-fit  fixed top-10 inset-x-0 mx-auto bg-white rounded-lg border border-red z-[150] pr-2 pl-8 py-2  items-center justify-center space-x-4"
+          "hidden lg:flex max-w-fit  fixed top-5 inset-x-0 mx-auto bg-white rounded-lg border border-red z-[150] pr-2 pl-8 py-2  items-center justify-center space-x-4"
         )}
       >
         {/* <div className="flex h-[90px] justify-center items-center bg-white lg:px-3 xl:px-8 lg:h-[130px] lg:justify-between"> */}

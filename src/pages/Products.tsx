@@ -5,7 +5,7 @@ import { ProductCard } from "../components/ProductCard";
 import { useQuery } from "@tanstack/react-query";
 import { Loader } from "../components/Loader";
 import axios from "axios";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 export type ProductType = {
   id: number;
@@ -33,27 +33,29 @@ export type ProductType = {
 export const Products = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const category = Number(queryParams.get('categoryId')) === 0 ? null : Number(queryParams.get('categoryId'));
+  const category =
+    Number(queryParams.get("categoryId")) === 0
+      ? null
+      : Number(queryParams.get("categoryId"));
   // const [category, setCategory] = useState<number | null>(null);
   const {
     data: products,
     error,
     isLoading: isProductsLoading,
   } = useQuery({
-    queryKey: ["products", {categoryId: category}],
+    queryKey: ["products", { categoryId: category }],
     queryFn: async (a): Promise<ProductType[]> => {
-      console.log(a)
+      console.log(a);
       const response = await axios(`${apiUrl}/products`, {
         method: "GET",
         params: a.queryKey[1],
         headers: {
           "Content-Type": "application/json",
-        }
+        },
       });
       const data = await response.data;
       return data;
     },
-    
   });
 
   const {
@@ -111,19 +113,17 @@ export const Products = () => {
                 </div>
               ) : (
                 <div className="pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
-                  {(!products ? products ?? [] : products).map(
-                    (product) => (
-                      <ProductCard
-                        key={product.id}
-                        srcImg={product.srcImg[0]}
-                        alt={product.alt}
-                        name={product.name}
-                        subtitle={product.subtitle}
-                        link={`/productos/${product.slug}`}
-                        state={{ productId: product.id }}
-                      />
-                    )
-                  )}
+                  {(!products ? products ?? [] : products).map((product) => (
+                    <ProductCard
+                      key={product.id}
+                      srcImg={product.srcImg[0]}
+                      alt={product.alt}
+                      name={product.name}
+                      subtitle={product.subtitle}
+                      link={`/productos/${product.slug}`}
+                      state={{ productId: product.id }}
+                    />
+                  ))}
                 </div>
               )}
             </div>
