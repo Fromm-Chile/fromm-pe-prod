@@ -1,10 +1,11 @@
-import { useState } from "react";
 import { apiUrl } from "../assets/variables";
 import { Category, CategoryFilter } from "../components/CategoryFilter";
 import { InfoBanner } from "../components/InfoBanner";
 import { ProductCard } from "../components/ProductCard";
 import { useQuery } from "@tanstack/react-query";
 import { Loader } from "../components/Loader";
+import axios from "axios";
+import { useLocation } from 'react-router-dom';
 
 export type ProductType = {
   id: number;
@@ -30,27 +31,29 @@ export type ProductType = {
 };
 
 export const Products = () => {
-  const [filteredProducts, setFilteredProducts] = useState<
-    ProductType[] | null
-  >(null);
-  const [isLoading, setIsLoading] = useState(false);
-
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const category = Number(queryParams.get('categoryId')) === 0 ? null : Number(queryParams.get('categoryId'));
+  // const [category, setCategory] = useState<number | null>(null);
   const {
     data: products,
     error,
-    isLoading: productsLoading,
+    isLoading: isProductsLoading,
   } = useQuery({
-    queryKey: ["products"],
-    queryFn: async (): Promise<ProductType[]> => {
-      const response = await fetch(`${apiUrl}/products`, {
+    queryKey: ["products", {categoryId: category}],
+    queryFn: async (a): Promise<ProductType[]> => {
+      console.log(a)
+      const response = await axios(`${apiUrl}/products`, {
         method: "GET",
+        params: a.queryKey[1],
         headers: {
           "Content-Type": "application/json",
-        },
+        }
       });
-      const data = await response.json();
+      const data = await response.data;
       return data;
     },
+    
   });
 
   const {
@@ -78,35 +81,9 @@ export const Products = () => {
     );
   }
 
-  const onFilterChange = async (categoryId: number | null) => {
-    if (!categoryId) {
-      setFilteredProducts(products || []);
-      return;
-    }
-    try {
-      setIsLoading(true);
-      const response = await fetch(
-        `${apiUrl}/products/category/${categoryId}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const data = await response.json();
-      setFilteredProducts(data);
-      return data;
-    } catch (error) {
-      console.error("Error fetching products by category:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   return (
     <>
-      {productsLoading && categoriesLoading ? (
+      {isProductsLoading && categoriesLoading ? (
         <Loader />
       ) : (
         <>
@@ -124,18 +101,17 @@ export const Products = () => {
               <div className="mt-10 w-full px-10 md:px-0 md:mt-24 md:w-[350px] md:mb-20">
                 <CategoryFilter
                   categories={categories || []}
-                  onFilterChange={onFilterChange}
-                  handleAllProducts={setFilteredProducts}
-                  products={products || []}
+                  selectedCategory={category}
+                  // setSelectedCategory={setCategory}
                 />
               </div>
-              {isLoading ? (
+              {isProductsLoading ? (
                 <div className="pt-16 p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
                   <Loader />
                 </div>
               ) : (
                 <div className="pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
-                  {(!filteredProducts ? products ?? [] : filteredProducts).map(
+                  {(!products ? products ?? [] : products).map(
                     (product) => (
                       <ProductCard
                         key={product.id}

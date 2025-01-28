@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ProductType } from "../pages/Products";
+import { useNavigate } from "react-router-dom";
 
 export type Category = {
   id: number;
@@ -11,34 +11,22 @@ export type Category = {
 };
 
 type CategoryFilterProps = {
-  products: ProductType[];
   categories: Category[];
-  onFilterChange: (categoryId: number | null) => void;
-  handleAllProducts: (product: ProductType[] | null) => void;
+  // onFilterChange: (categoryId: number | null) => void;
+  // setSelectedCategory: (categoryId: number | null) => void;
+  selectedCategory: number | null;
 };
 
 export const CategoryFilter = ({
-  products,
   categories,
-  onFilterChange,
-  handleAllProducts,
+  // setSelectedCategory,
+  selectedCategory
 }: CategoryFilterProps) => {
-  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
-  const [selectedSubCategory, setSelectedSubCategory] = useState<number | null>(
-    null
-  );
+  const navigate = useNavigate();
+  const [internalCategory, setInternalCategory] = useState<number | null>(null);
   const [isCategorySelected, setIsCategorySelected] = useState<boolean>(false);
   const [isSubCategorySelected, setIsSubCategorySelected] =
     useState<boolean>(false);
-
-  const handleSelectedCategory = (id: number) => {
-    setSelectedCategory((prev) => (prev === id ? null : id));
-  };
-
-  const handleSelectedSubCategory = (id: number) => {
-    setSelectedSubCategory((prev) => (prev === id ? null : id));
-  };
-
   return (
     <div className="flex flex-col gap-2 w-full">
       {categories?.map((category) => (
@@ -55,20 +43,26 @@ export const CategoryFilter = ({
           <div
             className="flex items-center justify-between"
             onClick={() => {
+              const categoryLength = category.other_Categories.length
+              console.log(category)
               if (
                 selectedCategory === category.id &&
-                category.other_Categories.length === 0
-              ) {
-                handleAllProducts(products);
-                handleSelectedCategory(category.id);
-                setIsCategorySelected(false);
-              } else {
-                setIsCategorySelected(true);
-                handleSelectedCategory(category.id);
-                onFilterChange(
-                  category.other_Categories.length > 0 ? null : category.id
-                );
+                categoryLength === 0
+              ) 
+              {
+                navigate(`/productos`);
+                setInternalCategory(category.id);
               }
+              if(selectedCategory !== category.id && categoryLength > 0) {
+                setInternalCategory(category.id);
+                setIsCategorySelected(false);
+              }
+              if(selectedCategory !== category.id && categoryLength === 0) {
+                navigate(`/productos?categoryId=${category.id}`);
+                setInternalCategory(category.id);
+                setIsCategorySelected(true);
+              }
+              
             }}
           >
             <p>{category.name}</p>
@@ -79,7 +73,7 @@ export const CategoryFilter = ({
           {category.other_Categories.length > 0 ? (
             <ul
               className={`mt-5 font-light ${
-                selectedCategory === category.id ? "h-auto block" : "h-0 hidden"
+                internalCategory === category.id ? "h-auto block" : "h-0 hidden"
               }`}
             >
               {category.other_Categories?.map((subcategory) => {
@@ -88,22 +82,20 @@ export const CategoryFilter = ({
                     key={subcategory.id}
                     className={`${
                       isSubCategorySelected &&
-                      selectedSubCategory === subcategory.id
+                      selectedCategory === subcategory.id
                         ? "bg-red text-white cursor-pointer p-3"
                         : "hover:bg-primaryGray hover:text-red cursor-pointer  transition-all duration-300 ease-linear p-3"
                     }`}
                     onClick={
                       isSubCategorySelected &&
-                      selectedSubCategory === subcategory.id
+                      selectedCategory === subcategory.id
                         ? () => {
-                            handleAllProducts(products);
-                            handleSelectedSubCategory(subcategory.id);
+                          navigate(`/productos`);
                             setIsSubCategorySelected(false);
                           }
                         : () => {
                             setIsSubCategorySelected(true);
-                            handleSelectedSubCategory(subcategory.id);
-                            onFilterChange(subcategory.id);
+                            navigate(`/productos?categoryId=${subcategory.id}`);
                           }
                     }
                   >
