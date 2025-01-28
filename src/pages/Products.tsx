@@ -56,6 +56,7 @@ export const Products = () => {
       const data = await response.data;
       return data;
     },
+    staleTime: 5 * 60 * 1000,
   });
 
   const {
@@ -74,6 +75,7 @@ export const Products = () => {
       const data = await response.json();
       return data;
     },
+    staleTime: 5 * 60 * 1000,
   });
 
   if (error || categoriesError) {
