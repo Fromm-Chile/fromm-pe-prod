@@ -45,7 +45,6 @@ export const Products = () => {
   } = useQuery({
     queryKey: ["products", { categoryId: category }],
     queryFn: async (a): Promise<ProductType[]> => {
-      console.log(a);
       const response = await axios(`${apiUrl}/products`, {
         method: "GET",
         params: a.queryKey[1],

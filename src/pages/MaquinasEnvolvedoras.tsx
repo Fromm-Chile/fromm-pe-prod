@@ -90,20 +90,19 @@ export const MaquinasEnvolvedoras = () => {
             </h2>
             <div className="mb-3">
               <p className="mb-5 md:text-lg">
-                El embalaje consiste en envolver productos o palés con una fina
-                lámina de plástico. Esto se hace de forma manual o mecánica. De
-                esta forma, los materiales quedan agrupados, asegurados y
-                protegidos contra daños y suciedad. El embalaje es una forma
-                relativamente barata y sencilla de asegurar la carga durante el
-                transporte. Además, permite mantener unidos los productos
-                fácilmente. El embalaje es adecuado para los productos más
-                diversos, incluidos los suyos.
+                El embalaje consiste en envolver productos o pallets con una
+                fina lámina de plástico. Esto se hace de forma manual o
+                mecánica. De esta forma, los materiales quedan agrupados,
+                asegurados y protegidos contra daños y suciedad. El embalaje es
+                una forma relativamente barata y sencilla de asegurar la carga
+                durante el transporte. Además, permite mantener unidos los
+                productos fácilmente.
               </p>
             </div>
           </div>
           <div className="mb-20 md:w-[40%]">
             <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedorafoto1.webp"
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fotoenvolvedora3.jpeg"
               alt="maquina-enzunchadora"
               className=""
             />

@@ -81,11 +81,9 @@ export const FilmEmbalaje = () => {
               <p className="mb-5 md:text-lg">
                 El film de embalaje se utiliza para proteger los productos del
                 polvo, la suciedad, la humedad y los daños durante el transporte
-                o el almacenamiento. También es ideal para mantener los
-                productos juntos. Piense, por ejemplo, en las cajas de un palé.
-                Al envolver los productos con el film, se crea un embalaje
-                resistente y seguro. Esto evita que los productos se muevan o se
-                dañen.
+                o el almacenamiento. Al envolver los productos con el film, se
+                crea un embalaje resistente y seguro. Esto evita que los
+                productos se muevan o se dañen.
               </p>
               <p className="mb-5 md:text-lg">
                 La aplicación del film de embalaje se puede realizar
@@ -116,7 +114,7 @@ export const FilmEmbalaje = () => {
         <div className="md:flex md:gap-10 md:max-w-[1250px] md:m-auto md:mb-10">
           <div className="md:w-[60%]">
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
-              Film estirable y las mejores máquinas estiradoras
+              Film estirable y las mejores máquinas envolvedoras
             </h2>
             <div className="mb-3 font-light">
               <p className="mb-5 md:text-lg">

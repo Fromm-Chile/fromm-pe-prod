@@ -98,10 +98,6 @@ const Airpads = () => {
         <div className="px-10 md:max-w-[1250px] md:m-auto md:mt-20 md:mb-10 md:flex md:justify-between md:flex-row-reverse">
           <div className="mb-3 md:w-[50%]">
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
-              <span className="text-red font-extralight">
-                La elección es enorme
-              </span>{" "}
-              <br />
               Máquinas de llenado de papel
             </h2>
             <p className="mb-5 md:text-lg">
@@ -112,10 +108,10 @@ const Airpads = () => {
               material de relleno, automatizadas y sostenibles.
             </p>
             <p className="mb-5 md:text-lg">
-              ¿Qué le parece Paperpad? La solución de embalaje segura,
-              silenciosa y económica. La máquina utiliza nuestro método
-              patentado de plegado de papel. Conseguirá una protección óptima de
-              sus productos con una cantidad mínima de papel.
+              La solución de embalaje segura, silenciosa y económica. La máquina
+              utiliza nuestro método patentado de plegado de papel. Conseguirá
+              una protección óptima de sus productos con una cantidad mínima de
+              papel.
             </p>
           </div>
           <div className="mb-20 md:w-[40%]">
@@ -158,8 +154,7 @@ const Airpads = () => {
                 El relleno con cojines de aire es la forma más eficaz de fijar
                 los productos en un paquete y hacerlos resistentes a los
                 impactos. Debido a que se crea una barrera protectora, esta
-                técnica se utiliza a menudo para enviar artículos frágiles o
-                frágiles.
+                técnica se utiliza a menudo para enviar artículos frágiles.
               </p>
               <p className="mb-5 md:text-lg">
                 Nuestra película Airpad™ es una forma sostenible e innovadora de

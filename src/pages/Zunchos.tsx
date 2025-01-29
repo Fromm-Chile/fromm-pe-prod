@@ -113,26 +113,21 @@ export const Zunchos = () => {
         <div className="md:flex md:gap-10 md:max-w-[1250px] md:m-auto md:mb-10 md:flex-row-reverse">
           <div className="md:w-[80%]">
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
-              Tipos de cinta de zunchos
+              Tipos de Zunchos
             </h2>
             <div className="mb-3">
               <p className="mb-5 md:text-lg">
-                No hay solución de flejado sin cinta de fleje. Para encontrar
-                siempre una solución adecuada, ofrecemos cuatro tipos diferentes
-                de cinta de fleje. En primer lugar: fleje de PP. Perfecto para
-                trabajos más ligeros como listones pequeños y paquetes. Nuestro
-                fleje de PP está disponible en varios tamaños y es resistente a
-                las condiciones climáticas. También ofrecemos fleje de PET. Este
-                tiene una excelente elasticidad. Esto le permite flejar
-                firmemente paquetes y paquetes con una pérdida mínima de
-                elasticidad. ¿Busca una cinta de fleje para entornos pesados?
-                Entonces nuestro fleje de PET más resistente o fleje de acero es
-                la elección correcta. Extremadamente fuerte y resistente. Y eso
-                sin usar mucho material. Haga los cálculos. Por último: cinta de
-                fleje de papel. Flejar con papel, ¿quién lo hubiera pensado? Es
-                respetuoso con el medio ambiente, totalmente reciclable y
-                auténtico. Le da a sus clientes una sensación sostenible y
-                exclusiva al desembalar. Grandes beneficios, si nos pregunta.
+                Para encontrar siempre una solución adecuada, ofrecemos cuatro
+                tipos diferentes de cinta de fleje. En primer lugar: fleje de
+                PP. Perfecto para trabajos más ligeros como listones pequeños y
+                paquetes. Nuestro fleje de PP está disponible en varios tamaños
+                y es resistente a las condiciones climáticas. También ofrecemos
+                fleje de PET. Este tiene una excelente elasticidad. Esto le
+                permite flejar firmemente paquetes y paquetes con una pérdida
+                mínima de elasticidad. ¿Busca una cinta de fleje para entornos
+                pesados? Entonces nuestro fleje de PET más resistente o fleje de
+                acero es la elección correcta. Extremadamente fuerte y
+                resistente. Y eso sin usar mucho material.
               </p>
             </div>
           </div>

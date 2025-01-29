@@ -160,16 +160,16 @@ export const Home = () => {
               />
               <p className="font-extralight text-lg text-textGray text-justify">
                 El grupo FROMM desarrolla y fabrica diferentes sistemas de
-                embalaje, para asegurar las mercancías: Máquinas flejadoras e
-                instalaciones de flejado, envolvedoras de film estirable, robots
-                envolvedor, flejes de acero, flejes de poliéster, flejes de
+                embalaje para asegurar las mercancías: máquinas flejadoras e
+                instalaciones de flejado, envolvedoras de stretch film, máquinas
+                envolvedoras, zunchos de acero, flejes de poliéster, flejes de
                 polipropileno y el sistema patentado Airpad de protección y
                 relleno.
               </p>
             </div>
           </div>
           <Button link="/" className="mb-12 mt-[-28px] w-[170px] m-auto">
-            CONTACTANOS
+            CONTÁCTANOS
           </Button>
         </section>
         <HomeCard />
@@ -205,15 +205,14 @@ export const Home = () => {
             <p className="text-justify">
               Somos FROMM, especialistas en soluciones de embalaje. Desde
               nuestra sede central en Suiza, nuestros especialistas trabajan día
-              y noche para conseguir los mejores productos posibles. Para
-              asegurar, envolver, rellenar y proteger. Una cosa es cierta: nos
-              aseguramos de que sus productos se empaqueten de forma segura. Lo
-              hacemos con máquinas y consumibles de alta calidad. Con plazos de
-              entrega rápidos y atención personalizada. Y con bajos costes de
-              embalaje y acceso a un servicio de primera. FROMM no húye a los
-              desafíos. Los afrontamos con ambas manos. Trabajamos en estrecha
-              colaboración con usted para lograr una solución de embalaje óptima
-              al final de la línea. ¿Tiene tiempo libre?
+              y noche para conseguir los mejores productos posibles: para
+              asegurar, envolver, rellenar y proteger. Nos aseguramos de que sus
+              productos se empaqueten de forma segura. Lo hacemos con máquinas y
+              consumibles de alta calidad, plazos de entrega rápidos, atención
+              personalizada, bajos costos de embalaje y acceso a un servicio de
+              primera. FROMM no huye de los desafíos; los afrontamos con ambas
+              manos. Trabajamos en estrecha colaboración con usted para lograr
+              una solución de embalaje óptima.
             </p>
           </div>
         </section>
