@@ -1,7 +1,5 @@
 import { InfoAcordeon } from "../components/InfoAcordeon";
 import { InfoBanner } from "../components/InfoBanner";
-import { FocusCards } from "../components/ui/focus-card";
-import { usSectionCard } from "../Data/AboutUsData";
 
 export const AboutUs = () => {
   return (
