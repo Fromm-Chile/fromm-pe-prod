@@ -30,8 +30,8 @@ export const ProductCard = ({
             <p className="tracking-widest text-red font-extralight text-lg">
               PRODUCTO
             </p>
-            <p className="text-lg font-bold mb-8">{name}</p>
-            <p className="text-lg font-light mb-8">{subtitle}</p>
+            <p className="text-lg font-bold mb-8 text-left">{name}</p>
+            <p className="text-lg font-light mb-8 text-left">{subtitle}</p>
           </div>
         </div>
       </div>

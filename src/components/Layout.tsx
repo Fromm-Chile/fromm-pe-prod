@@ -153,7 +153,9 @@ export const Layout = () => {
                 src={isOpen ? "/icons/closeMob.svg" : "/icons/menuMob.svg"}
               />
             </div>
-            <Button link="/contacto">CONTACTO</Button>
+            <div>
+              <Button link="/contacto">CONTACTO</Button>
+            </div>
           </div>
         </div>
       </footer>

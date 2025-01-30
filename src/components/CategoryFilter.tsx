@@ -44,7 +44,6 @@ export const CategoryFilter = ({
             className="flex items-center justify-between p-5"
             onClick={() => {
               const categoryLength = category.other_Categories.length;
-              console.log(category);
               if (selectedCategory === category.id && categoryLength === 0) {
                 navigate(`/productos`);
                 setInternalCategory(category.id);

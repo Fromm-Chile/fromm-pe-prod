@@ -98,11 +98,38 @@ export const AboutUs = () => {
           </div>
           <div className="md:w-[40%]">
             <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Caprino.jpg"
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Reinhard-Fromm.jpg"
               alt="maquina-enzunchadora"
               className=""
             />
           </div>
+        </div>
+      </section>
+      <section className="px-10 mb-8 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px]">
+        <div className="md:flex md:gap-10 md:m-auto md:mb-3 md:flex-col">
+          <h2 className="text-textGray text-lg font-bold md:text-3xl md:font-medium md:uppercase">
+            <span className="text-red font-extralight">EMPRESA MODELO</span>{" "}
+            <br />
+            EJEMPLO DE PRODUCCIÓN ECOLÓGICA Y SUSTENTABLE
+          </h2>
+          <div className="font-light">
+            <p className="md:text-lg">
+              Fromm ha sido escogida como empresa modelo al ser ejemplo de
+              producción ecológica y sustentable por unificar principios y
+              sistemas de reciclaje que aportan un real y efectivo cuidado del
+              medioambiente. En este contexto se ha promulgado la ley REP
+              (Responsabilidad Reciclaje del Productor) y como empresa líder
+              mundial del rubro, el Ministerio del Medioambiente nos ha pedido
+              dar nuestro testimonio el cual se plasma en el reportaje exhibido
+              en este video.
+            </p>
+          </div>
+        </div>
+        <div className="my-10 md:my-20">
+          <iframe
+            className="w-full h-[400px]"
+            src="https://www.youtube.com/embed/ahhvrOdJYSo?autoplay=0&enablejsapi=1&wmode=opaque"
+          ></iframe>
         </div>
       </section>
       <div className="px-10 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px] mb-8">
@@ -148,9 +175,9 @@ export const AboutUs = () => {
           />
         </div>
       </section>
-      <section className="px-10 mb-10 md:max-w-[1250px] md:m-auto md:mb-20 bg-primaryGray py-10">
+      {/* <section className="px-10 mb-10 md:max-w-[1250px] md:m-auto md:mb-20 bg-primaryGray py-10">
         <FocusCards cards={usSectionCard} />
-      </section>
+      </section> */}
     </>
   );
 };

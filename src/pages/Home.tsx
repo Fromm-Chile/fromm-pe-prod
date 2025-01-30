@@ -199,7 +199,7 @@ export const Home = () => {
         </section>
         <section className="mb-24 py-10">
           <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
-            <h3 className="text-textGray font-semibold text-2xl">
+            <h3 className="text-textGray font-semibold text-2xl text-left">
               ESPECIALISTAS EN SOLUCIONES DE EMBALAJE
             </h3>
             <p className="text-justify">

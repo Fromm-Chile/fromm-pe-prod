@@ -1,39 +1,39 @@
 type ProductsType = {
-    id: number;
-    slug: string;
-    srcImg: string[];
-    alt: string;
-    category: string;
-    subcategory: string;
+  id: number;
+  slug: string;
+  srcImg: string[];
+  alt: string;
+  category: string;
+  subcategory: string;
+  name: string;
+  subtitle: string;
+  desc: string;
+  specifications: {
+    key: string;
+    value: string;
+  }[];
+  information: string;
+  downloads: {
     name: string;
-    subtitle: string;
-    desc: string;
-    specifications: {
-      key: string;
-      value: string;
-    }[];
-    information: string;
-    downloads: {
-      name: string;
-      link: string;
-    }[];
-    videos: string[];
-  };
-  
-  export const products: ProductsType[] = [
-    {
-      id: 1,
-      slug: "enzunchadoras-electricas", // unico por producto
-      srcImg: [
-        "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraelectrica.jpg",
-        "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora.jpg",
-      ],
-      alt: "enzunchadora-electrica",
-      category: "ZUNCHOS",
-      subcategory: "",
-      name: "Enzunchadora a Batería P328/P329",
-      subtitle: "Enzunchadoras eléctricas", 
-      desc: `<p className="my-5">
+    link: string;
+  }[];
+  videos: string[];
+};
+
+export const products: ProductsType[] = [
+  {
+    id: 1,
+    slug: "enzunchadoras-electricas", // unico por producto
+    srcImg: [
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraelectrica.jpg",
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora.jpg",
+    ],
+    alt: "enzunchadora-electrica",
+    category: "ZUNCHOS",
+    subcategory: "",
+    name: "Enzunchadora a Batería P328/P329",
+    subtitle: "Enzunchadoras eléctricas",
+    desc: `<p className="my-5">
             La FROMM P328 es una flejadora a batería para flejes de PET y PP y
             es adecuada para la mayoría de aplicaciones de flejado.
           </p>
@@ -63,37 +63,39 @@ type ProductsType = {
               <p>Más ligero de usar gracias a su diseño inteligente</p>
             </li>
           </ul>`,
-      specifications: [
-        {
-          key: "Dimensiones de la máquina:",
-          value: "Largo 351 x Ancho 134 x Alto 143 mm",
-        },
-        {
-          key: "Fuerza de tensión:",
-          value: "250 - 2.600 N (infinitamente variable)",
-        },
-        {
-          key: "Adecuada para:",
-          value: "Fleje de PP y PET en anchos de 12,0 - 16,0 mm y espesores de 0,40 - 1,05 mm",
-        },
-        {
-          key: "Velocidad de expansión:",
-          value: "67 - 124 mm/sec.",
-        },
-        {
-          key: "Calidad media de la soldadura",
-          value: "Aproximadamente el 75 %, dependiendo de la calidad del neumático.",
-        },
-        {
-          key: "Corriente",
-          value: "Batería 18V / 4.0Ah Li-ion",
-        },
-        {
-          key: "Peso:",
-          value: "4.3 kg (incl. 4.0 Ah battery)",
-        },
-      ],
-      information: `<p className="my-3">
+    specifications: [
+      {
+        key: "Dimensiones de la máquina:",
+        value: "Largo 351 x Ancho 134 x Alto 143 mm",
+      },
+      {
+        key: "Fuerza de tensión:",
+        value: "250 - 2.600 N (infinitamente variable)",
+      },
+      {
+        key: "Adecuada para:",
+        value:
+          "Fleje de PP y PET en anchos de 12,0 - 16,0 mm y espesores de 0,40 - 1,05 mm",
+      },
+      {
+        key: "Velocidad de expansión:",
+        value: "67 - 124 mm/sec.",
+      },
+      {
+        key: "Calidad media de la soldadura",
+        value:
+          "Aproximadamente el 75 %, dependiendo de la calidad del neumático.",
+      },
+      {
+        key: "Corriente",
+        value: "Batería 18V / 4.0Ah Li-ion",
+      },
+      {
+        key: "Peso:",
+        value: "4.3 kg (incl. 4.0 Ah battery)",
+      },
+    ],
+    information: `<p className="my-3">
           Herramienta flejadora a batería para fleje de PET y fleje de PP para
           las aplicaciones más comunes.
         </p>
@@ -170,85 +172,84 @@ type ProductsType = {
           pequeños y redondos. En la mayoría de los casos de flejado
           imaginables, el fleje permanece intacto.
         </p>`,
-      downloads: [
-        {
-          name: "Ficha Técnica",
-          link: "https://fromm.com.mx",
-        },
-        {
-          name: "Manual de Usuario",
-          link: "https://fromm.com.mx",
-        },
-        {
-          name: "Certificado de Calidad",
-          link: "https://fromm.com.mx",
-        }
-      ],
-      videos: [
-        "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/s-series.mp4",
-        ],
-    },
-    {
-      id: 2,
-      slug: "enzunchadoras-manuales",
-      srcImg: [
-        "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoramanual.jpeg",
-      ],
-      alt: "enzunchadora-manual",
-      category: "ZUNCHOS",
-      subcategory: "",
-      name: "Enzunchadora para acero A337",
-      subtitle: "Enzunchado con cinta de acero",
-      desc: "<p><strong>Hola Mundo</strong></p>",
-      specifications: [
-        {
-          key: "",
-          value: "",
-        },
-        {
-          key: "",
-          value: "",
-        },
-      ],
-      information: "<p><strong>Hola Mundo</strong></p>",
-      downloads: [
-        {
-          name: "",
-          link: "",
-        },
-      ],
-      videos: [""],
-    },
-    {
-      id: 3,
-      slug: "enzunchadoras-neumaticas",
-      srcImg: [
-        "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraneumatica.jpeg",
-      ],
-      alt: "enzunchadora-neumatica",
-      category: "ZUNCHOS",
-      subcategory: "",
-      name: "Enzunchadora Neumática A380",
-      subtitle: "Equipamiento de última tecnología FROMM",
-      desc: "<p><strong>Hola Mundo</strong></p>",
-      specifications: [
-        {
-          key: "",
-          value: "",
-        },
-        {
-          key: "",
-          value: "",
-        },
-      ],
-      information: "<p><strong>Hola Mundo</strong></p>",
-      downloads: [
-        {
-          name: "",
-          link: "",
-        },
-      ],
-      videos: [""],
-    },
-  ];
-  
+    downloads: [
+      {
+        name: "Ficha Técnica",
+        link: "https://fromm.com.mx",
+      },
+      {
+        name: "Manual de Usuario",
+        link: "https://fromm.com.mx",
+      },
+      {
+        name: "Certificado de Calidad",
+        link: "https://fromm.com.mx",
+      },
+    ],
+    videos: [
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/s-series.mp4",
+    ],
+  },
+  {
+    id: 2,
+    slug: "enzunchadoras-manuales",
+    srcImg: [
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoramanual.jpeg",
+    ],
+    alt: "enzunchadora-manual",
+    category: "ZUNCHOS",
+    subcategory: "",
+    name: "Enzunchadora para acero A337",
+    subtitle: "Enzunchado con cinta de acero",
+    desc: "<p><strong>Hola Mundo</strong></p>",
+    specifications: [
+      {
+        key: "",
+        value: "",
+      },
+      {
+        key: "",
+        value: "",
+      },
+    ],
+    information: "<p><strong>Hola Mundo</strong></p>",
+    downloads: [
+      {
+        name: "",
+        link: "",
+      },
+    ],
+    videos: [""],
+  },
+  {
+    id: 3,
+    slug: "enzunchadoras-neumaticas",
+    srcImg: [
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraneumatica.jpeg",
+    ],
+    alt: "enzunchadora-neumatica",
+    category: "ZUNCHOS",
+    subcategory: "",
+    name: "Enzunchadora Neumática A380",
+    subtitle: "Equipamiento de última tecnología FROMM",
+    desc: "<p><strong>Hola Mundo</strong></p>",
+    specifications: [
+      {
+        key: "",
+        value: "",
+      },
+      {
+        key: "",
+        value: "",
+      },
+    ],
+    information: "<p><strong>Hola Mundo</strong></p>",
+    downloads: [
+      {
+        name: "",
+        link: "",
+      },
+    ],
+    videos: [""],
+  },
+];

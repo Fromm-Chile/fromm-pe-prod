@@ -215,7 +215,10 @@ export const ProductDetails = () => {
                   {productDetails?.jsonDetails?.videos.map((video, index) => (
                     <div key={index} className="flex justify-between mb-5">
                       <div className="w-full">
-                        <video src={video} controls></video>
+                        <iframe
+                          src={video}
+                          className="w-[640px] h-[360px]"
+                        ></iframe>
                       </div>
                     </div>
                   ))}

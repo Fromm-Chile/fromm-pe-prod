@@ -43,10 +43,12 @@ export const InfoBanner = ({
           />
         )}
         <div className="parent p-6 text-white bg-red flex flex-col gap-5 md:w-[40%] md:absolute md:bottom-[-20px] md:left-[40px] md:mix-blend-hard-light md:z-50 md:rounded-lg">
-          <p className="child font-extralight tracking-widest mt-10 md:mt-5 md:text-2xl">
+          <p className="child font-extralight tracking-widest mt-10 md:mt-5 md:text-2xl text-left">
             {category}
           </p>
-          <p className="child font-bold text-2xl md:text-3xl">{title}</p>
+          <p className="child font-bold text-2xl md:text-3xl text-left">
+            {title}
+          </p>
           <p className="child font-extralight md:text-lg">{desc}</p>
           {sinBoton ? null : (
             <Button link={link} whiteButton>

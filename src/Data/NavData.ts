@@ -77,15 +77,20 @@ export const navbarData: NavbarDataType[] = [
         name: "Acerca de Nosotros",
       },
       {
-        id: 2,
-        link: "/embalaje-ecofriendly",
-        name: "Embalaje Ecofriendly",
+        id: 1,
+        link: "/politica-calidad",
+        name: "Politica de Calidad",
       },
-      {
-        id: 3,
-        link: "/organizacion-servicios",
-        name: "Organización de servicios",
-      },
+      // {
+      //   id: 2,
+      //   link: "/embalaje-ecofriendly",
+      //   name: "Embalaje Ecofriendly",
+      // },
+      // {
+      //   id: 3,
+      //   link: "/organizacion-servicios",
+      //   name: "Organización de servicios",
+      // },
     ],
   },
   {
