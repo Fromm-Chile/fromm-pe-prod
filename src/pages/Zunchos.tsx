@@ -133,7 +133,7 @@ export const Zunchos = () => {
           </div>
           <div className="mb-20 md:w-[50%]">
             <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maquinazunchos.JPG"
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommstraps.jpeg"
               alt="maquina-enzunchadora"
               className=""
             />

@@ -23,7 +23,7 @@ export const navbarData: NavbarDataType[] = [
       {
         id: 1,
         link: "/zunchos-herramientas",
-        name: "ZUNCHOS Y HERRAMIENTAS",
+        name: "ZUNCHOS",
       },
       {
         id: 2,
@@ -50,18 +50,23 @@ export const navbarData: NavbarDataType[] = [
     submenu: [
       {
         id: 1,
-        link: "/celulosa",
-        name: "Celulosa",
+        link: "/mineria",
+        name: "MINERÍA",
       },
       {
         id: 2,
-        link: "/mineria",
-        name: "Minería",
+        link: "/forestal",
+        name: "FORESTAL",
       },
       {
         id: 3,
-        link: "/Agricultura",
-        name: "Agricultura",
+        link: "/agricola",
+        name: "AGRÍCOLA",
+      },
+      {
+        id: 4,
+        link: "/siderurgica",
+        name: "SIDERÚRGICA",
       },
     ],
   },
@@ -77,9 +82,14 @@ export const navbarData: NavbarDataType[] = [
         name: "Acerca de Nosotros",
       },
       {
-        id: 1,
+        id: 2,
         link: "/politica-calidad",
         name: "Politica de Calidad",
+      },
+      {
+        id: 3,
+        link: "/codigo-etica",
+        name: "Código de Ética",
       },
       // {
       //   id: 2,

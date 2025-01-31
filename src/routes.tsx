@@ -18,6 +18,11 @@ import { Markets } from "./pages/Markets";
 import { Solutions } from "./pages/Solutions";
 import { News } from "./pages/News";
 import { PoliticaCalidad } from "./pages/PoliticaCalidad";
+import { CodigoEtica } from "./pages/CodigoEtica";
+import { Mineria } from "./pages/Mercados/Mineria";
+import { Forestal } from "./pages/Mercados/Forestal";
+import { Agricola } from "./pages/Mercados/Agricola";
+import { Siderurgica } from "./pages/Mercados/Siderurgica";
 
 export const router = createBrowserRouter([
   {
@@ -40,8 +45,13 @@ export const router = createBrowserRouter([
       { path: "/recursos", element: <Recursos /> },
       { path: "/Airpads", element: <Airpads /> },
       { path: "/mercados", element: <Markets /> },
+      { path: "/mineria", element: <Mineria /> },
+      { path: "/forestal", element: <Forestal /> },
+      { path: "/siderurgica", element: <Siderurgica /> },
+      { path: "/agricola", element: <Agricola /> },
       { path: "/nosotros", element: <AboutUs /> },
       { path: "/politica-calidad", element: <PoliticaCalidad /> },
+      { path: "/codigo-etica", element: <CodigoEtica /> },
       // {path: "/embalaje-ecofriendly", element: <EmbalajeEco />},
       // {path: "/organizacion-servicios", element: <OrganizacionServicios/>},
       { path: "/Contacto", element: <Contacto /> },
