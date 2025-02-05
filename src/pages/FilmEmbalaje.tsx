@@ -1,3 +1,4 @@
+import { ContactForm } from "../components/ContactForm";
 import { InfoBanner } from "../components/InfoBanner";
 import { InfoProductCard } from "../components/InfoProductCard";
 import { FocusCards } from "../components/ui/focus-card";
@@ -153,6 +154,10 @@ export const FilmEmbalaje = () => {
         <p className="mb-10">NUESTRAS SOLUCIONES</p>
         <FocusCards cards={productsCard} />
       </section>
+      <ContactForm
+        titulo="¿Buscas un film de embalaje resistente?"
+        descripcion="En FROMM estás en el lugar correcto. Nuestros expertos estarán encantados de asesorarte. Déjanos tus datos y nos pondremos en contacto contigo."
+      />
     </>
   );
 };

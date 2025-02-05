@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "./commons/Button";
 import { FloatingNav } from "./ui/floating-navbar";
 import { navbarData } from "../Data/NavData";
+import { useProductStore } from "../store/useStore";
 
 export const Navbar = () => {
+  const products = useProductStore((state) => state.products);
+
+  console.log(products);
+
   return (
     <>
       <div className="hidden lg:flex bg-primaryGray h-[45px] lg:items-center lg:justify-end lg:pr-16 text-textGray gap-16">
@@ -14,8 +19,24 @@ export const Navbar = () => {
         <div className="cursor-pointer hover:underline">
           <a href="mailto:contacto@fromm-pack.cl">contacto@fromm-pack.cl</a>
         </div>
-        <Link to="/" className="cursor-pointer hover:underline">
+        <Link
+          to="/cotizacion"
+          className="cursor-pointer flex gap-3 items-center hover:underline"
+        >
           <p>Cotización</p>
+          {products.length > 0 && (
+            <>
+              <img
+                src="/icons/paperclip.svg"
+                height={20}
+                width={20}
+                className="hover:scale-125 transition-hover duration-300 ease-linear"
+              />
+              <div className="border-2 border-red rounded-full w-10 h-10 flex items-center justify-center bg-white">
+                <p className="text-red font-bold text-lg">{products.length}</p>
+              </div>
+            </>
+          )}
         </Link>
       </div>
       <FloatingNav />

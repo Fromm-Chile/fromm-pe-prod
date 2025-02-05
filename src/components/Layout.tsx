@@ -138,9 +138,25 @@ export const Layout = () => {
               </div>
               <div className="flex items-center justify-start gap-4">
                 <img src="/icons/Layout/mail.svg" height={30} width={30} />
-                <p className="text-textGray font-light">
+                <a
+                  href="mailto:contacto@fromm-pack.cl"
+                  onClick={() => setIsOpen(false)}
+                  className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
+                >
                   contacto@fromm-pack.cl
-                </p>
+                </a>
+              </div>
+              <div className="flex items-center justify-start gap-4 ml-[-9px]">
+                <img src="/icons/money.svg" />
+                <Link
+                  to="/cotizacion"
+                  className="ml-[-10px]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <p className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear">
+                    Cotización
+                  </p>
+                </Link>
               </div>
             </div>
           </div>

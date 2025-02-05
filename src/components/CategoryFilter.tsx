@@ -12,14 +12,11 @@ export type Category = {
 
 type CategoryFilterProps = {
   categories: Category[];
-  // onFilterChange: (categoryId: number | null) => void;
-  // setSelectedCategory: (categoryId: number | null) => void;
   selectedCategory: number | null;
 };
 
 export const CategoryFilter = ({
   categories,
-  // setSelectedCategory,
   selectedCategory,
 }: CategoryFilterProps) => {
   const navigate = useNavigate();
@@ -59,7 +56,7 @@ export const CategoryFilter = ({
               }
             }}
           >
-            <p>{category.name}</p>
+            <p className="text-left">{category.name}</p>
             {category.other_Categories.length > 0 && (
               <img src="/icons/chevronDown.svg" className="h-8 w-8" />
             )}

@@ -49,7 +49,7 @@ export const zunchoPoliester = (
       </li>
       <li className="flex gap-2 items-center">
         <img src="/icons/checkList.svg" />
-        <p>Un manejo sencillo y limpio en comparación con flejes de acero</p>
+        <p>Un manejo sencillo y limpio en comparación con zunchos de acero</p>
       </li>
     </ul>
   </>
@@ -150,8 +150,8 @@ export const eszuchadoraManualA337 = (
   <>
     <h2 className="text-textGray font-bold text-xl mt-10">FROMM A337</h2>
     <p className="my-5">
-      El A337 es un dispositivo manual mecánico sin precinto para flejes de
-      acero. Este dispositivo se utiliza para procesar flejes de acero FROMM
+      El A337 es un dispositivo manual mecánico sin precinto para zunchos de
+      acero. Este dispositivo se utiliza para procesar zunchos de acero FROMM
       Uniflex™ y Ultraflex™.
     </p>
     <h2 className="text-textGray font-bold text-xl mt-10">Ventajas</h2>
@@ -167,7 +167,7 @@ export const eszuchadoraManualA337 = (
       <li className="flex gap-2 items-center">
         <img src="/icons/checkList.svg" />
         <p>
-          Puede tensar flejes de acero de hasta un grosor de 0,64 mm con poco
+          Puede tensar zunchos de acero de hasta un grosor de 0,64 mm con poco
           esfuerzo.
         </p>
       </li>
@@ -205,13 +205,13 @@ export const eszuchadoraManualA337 = (
       La FROMM A337 está equipada con el sistema de cierre MicroLock™. Se trata
       de un sistema de cierre sin precinto patentado por FROMM que es más fiable
       que otros sistemas de cierre sin precinto. Mientras que un cierre sin
-      precinto "normal" se afloja cuando el fleje de acero pierde tensión, el
+      precinto "normal" se afloja cuando el zuncho de acero pierde tensión, el
       cierre MicroLock permanece sujeto. Esto se debe a que el sello está
-      diseñado de tal manera que bloquea el fleje de acero en ambas direcciones
+      diseñado de tal manera que bloquea el zuncho de acero en ambas direcciones
       durante el cierre. Esto mantiene sus mercancías aún más firmemente sujetas
-      con fleje de acero durante el transporte y el almacenamiento. Además, sus
+      con zuncho de acero durante el transporte y el almacenamiento. Además, sus
       colegas de transporte y almacenamiento trabajan con mayor seguridad porque
-      la posibilidad de que el fleje de acero se suelte se reduce al mínimo.
+      la posibilidad de que el zuncho de acero se suelte se reduce al mínimo.
     </p>
     <h2 className="text-textGray font-light text-xl mt-10">
       Llave dinamométrica

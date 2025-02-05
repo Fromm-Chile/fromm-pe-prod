@@ -23,6 +23,8 @@ import { Mineria } from "./pages/Mercados/Mineria";
 import { Forestal } from "./pages/Mercados/Forestal";
 import { Agricola } from "./pages/Mercados/Agricola";
 import { Siderurgica } from "./pages/Mercados/Siderurgica";
+import { Cotizacion } from "./pages/Cotizacion";
+import { Confirmacion } from "./pages/Confirmacion";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +42,8 @@ export const router = createBrowserRouter([
       { path: "/film-embalaje", element: <FilmEmbalaje /> },
       { path: "/productos", element: <Products /> },
       { path: "/productos/:slug", element: <ProductDetails /> },
+      { path: "/cotizacion", element: <Cotizacion /> },
+      { path: "/confirmacion", element: <Confirmacion /> },
       { path: "/servicio-tecnico", element: <ServicioTecnico /> },
       { path: "/zunchos-herramientas", element: <Zunchos /> },
       { path: "/recursos", element: <Recursos /> },

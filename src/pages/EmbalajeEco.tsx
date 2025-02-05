@@ -73,8 +73,8 @@ export const EmbalajeEco = () => {
               ¿Sabías que FROMM es una de las empresas líderes en reciclaje de
               PET del mundo? El emprendimiento sostenible es nuestro enfoque. En
               nuestra fábrica de la ciudad alemana de Wolfen, fabricamos la base
-              para flejes a partir de botellas de PET usadas. También es la base
-              para nuevas botellas de PET (bottle to bottle) y envases
+              para zunchos a partir de botellas de PET usadas. También es la
+              base para nuevas botellas de PET (bottle to bottle) y envases
               sostenibles para la industria alimentaria.
             </p>
           </div>
@@ -165,12 +165,13 @@ export const EmbalajeEco = () => {
         </div>
         <ul className="flex flex-col gap-2 mb-10">
           <li>
-            <strong>Flejes de poliéster</strong>
+            <strong>zunchos de poliéster</strong>
             <br />
-            Los flejes de plástico STARstrap™ son uno de los flejes de poliéster
-            más ligeros que existen en la actualidad. Los flejes se fabrican con
-            hasta un 98 % de material de botellas recicladas y en líneas de
-            extrusión de la más alta calidad en nuestros centros de producción.
+            Los zunchos de plástico STARstrap™ son uno de los zunchos de
+            poliéster más ligeros que existen en la actualidad. Los zunchos se
+            fabrican con hasta un 98 % de material de botellas recicladas y en
+            líneas de extrusión de la más alta calidad en nuestros centros de
+            producción.
           </li>
           <li>
             <strong>Proteger con aire</strong>

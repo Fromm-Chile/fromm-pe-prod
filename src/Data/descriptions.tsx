@@ -12,7 +12,7 @@ export const zunchosPoliester = {
         manipulación es muy superior al zuncho de acero ya que bien en bobinas
         de 23 kg disminuyendo el riesgo de cortes al reemplazar la bobina. Las
         excelentes características de alargamiento permiten el reemplazo de los
-        flejes de acero para la misma aplicación con un zuncho de poliéster.
+        zunchos de acero para la misma aplicación con un zuncho de poliéster.
       </p>
     </>
   ),
@@ -127,7 +127,7 @@ export const esquineros = {
     <>
       <p className="my-5">
         Con nuestras esquinas de plástico para cajas, protege su carga contra
-        cortes durante el flejado. Utilícelas cuando utilice flejes de acero o
+        cortes durante el flejado. Utilícelas cuando utilice zunchos de acero o
         plástico.
       </p>
     </>

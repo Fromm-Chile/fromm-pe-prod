@@ -1,4 +1,5 @@
 import { CustomSelect } from "../components/commons/CustomSelect";
+import { ContactForm } from "../components/ContactForm";
 import { InfoBanner } from "../components/InfoBanner";
 import { FocusCards } from "../components/ui/focus-card";
 import { solutionCard } from "../Data/SolutionsData";
@@ -32,13 +33,17 @@ export const Solutions = () => {
             perfecta para su empresa. Sea cual sea el mercado en el que esté
             activo. Nuestros especialistas estarán encantados de pensar junto
             con usted en las soluciones de embalaje más ergonómicas. Piense en
-            materiales de embalaje resistentes, flejes reciclables y máquinas de
-            alta calidad. Por supuesto, totalmente adaptadas a sus deseos,
+            materiales de embalaje resistentes, zunchos reciclables y máquinas
+            de alta calidad. Por supuesto, totalmente adaptadas a sus deseos,
             presupuesto y situación.
           </p>
           <CustomSelect />
         </div>
       </section>
+      <ContactForm
+        titulo="SOLICITUD DE INFORMACIÓN"
+        descripcion="Si desea recibir más información sobre nuestros productos y soluciones de embalaje, no dude en contactarnos."
+      />
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { ContactForm } from "../components/ContactForm";
 import { InfoAcordeon } from "../components/InfoAcordeon";
 import { InfoBanner } from "../components/InfoBanner";
 
@@ -210,6 +211,10 @@ const Airpads = () => {
           </div>
         </div>
       </section>
+      <ContactForm
+        titulo="Ahorre material de relleno. ¡Nuestros expertos le cuentan cómo!"
+        descripcion="Estaremos encantados de ayudarle a tomar la decisión correcta. Póngase en contacto con nosotros y le llamaremos."
+      />
       <section className="px-10 mb-10 md:max-w-[875px] md:m-auto">
         <div>
           <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">

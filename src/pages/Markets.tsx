@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CustomSelect } from "../components/commons/CustomSelect";
 import { InfoBanner } from "../components/InfoBanner";
 
@@ -46,20 +47,28 @@ export const Markets = () => {
               Industria Minera
             </h2>
             <div className="mb-3 font-light">
-              <p className="mb-5 md:text-lg">
-                El relleno con cojines de aire es la forma más eficaz de fijar
-                los productos en un paquete y hacerlos resistentes a los
-                impactos. Debido a que se crea una barrera protectora, esta
-                técnica se utiliza a menudo para enviar artículos frágiles.
+              <p className="mb-5 md:text-lg font-extralight">
+                En la industria minera, la eficiencia y la seguridad son
+                primordiales. Nuestros productos de embalaje están diseñados
+                para soportar las condiciones más duras y garantizar que sus
+                materiales lleguen a su destino de manera segura y eficiente.
+                Desde zunchos resistentes hasta envolvedoras robustas, ofrecemos
+                soluciones que se adaptan a las necesidades específicas de la
+                minería.
               </p>
-              <p className="mb-5 md:text-lg">
-                Nuestra película Airpad™ es una forma sostenible e innovadora de
-                proteger sus productos durante el transporte. Adecuada tanto
-                para aplicaciones ligeras como pesadas. ¿Cómo funciona? La
-                película pasa por la máquina y transforma el material en bolsas
-                con cojines de aire. Listas para proteger sus productos y
-                reciclarse más tarde.
+              <p className="mb-5 md:text-lg font-extralight">
+                Nuestras soluciones de embalaje no solo protegen sus productos,
+                sino que también optimizan sus procesos logísticos, reduciendo
+                costos y mejorando la productividad. Con nuestra tecnología de
+                vanguardia, puede estar seguro de que sus materiales estarán
+                seguros durante el transporte y el almacenamiento.
               </p>
+              <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
+                <Link className="flex items-center" to="/mineria">
+                  <p>EXPLORA ESTE MERCADO</p>
+                  <img src="/icons/chevronRightSmall.svg" />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="mb-20 md:w-[30%]">
@@ -80,19 +89,25 @@ export const Markets = () => {
             </h2>
             <div className="mb-3 font-light">
               <p className="mb-5 md:text-lg">
-                El relleno con cojines de aire es la forma más eficaz de fijar
-                los productos en un paquete y hacerlos resistentes a los
-                impactos. Debido a que se crea una barrera protectora, esta
-                técnica se utiliza a menudo para enviar artículos frágiles.
+                También tenemos soluciones adecuadas para la industria de la
+                madera. ¿Nuestro consejo? Utilice material de embalaje que se
+                mueva con la madera. Según la temperatura y el contenido de
+                humedad, la madera se expande o se contrae. Por lo tanto, para
+                la industria de la madera es importante utilizar material de
+                embalaje que se mueva con la madera durante el transporte y el
+                almacenamiento. El zuncho de PET ofrece una solución. Con una
+                excelente capacidad elástica, se asegura de poder flejar
+                firmemente paquetes y fardos de madera con una pérdida mínima de
+                elasticidad. ¿Plantas largas o rodapiés? Entonces nuestras
+                máquinas envolvedoras de láminas verticales y envolvedoras de
+                túnel son perfectas.
               </p>
-              <p className="mb-5 md:text-lg">
-                Nuestra película Airpad™ es una forma sostenible e innovadora de
-                proteger sus productos durante el transporte. Adecuada tanto
-                para aplicaciones ligeras como pesadas. ¿Cómo funciona? La
-                película pasa por la máquina y transforma el material en bolsas
-                con cojines de aire. Listas para proteger sus productos y
-                reciclarse más tarde.
-              </p>
+              <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
+                <Link className="flex items-center" to="/forestal">
+                  <p>EXPLORA ESTE MERCADO</p>
+                  <img src="/icons/chevronRightSmall.svg" />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="mb-20 md:w-[30%]">
@@ -113,19 +128,23 @@ export const Markets = () => {
             </h2>
             <div className="mb-3 font-light">
               <p className="mb-5 md:text-lg">
-                El relleno con cojines de aire es la forma más eficaz de fijar
-                los productos en un paquete y hacerlos resistentes a los
-                impactos. Debido a que se crea una barrera protectora, esta
-                técnica se utiliza a menudo para enviar artículos frágiles.
+                Embalajes robustos y un trabajo eficiente. Eso es lo que se
+                necesita en el sector agrícola. Siempre se trabaja con plazos de
+                entrega cortos y productos que deben llegar al cliente muy
+                rápidamente. Nuestras robustas máquinas de embalaje resisten a
+                las condiciones de trabajo de la A a la Z. Por ejemplo, nuestra
+                cinta de flejado es extremadamente resistente, no se oxida y
+                garantiza que las pilas estén en su lugar correcto. Ya sean
+                cajas, barriles, cajas o cartones. La carga de transporte
+                también entra en el camión de forma estable. ¡Y su carga se
+                mantiene perfectamente en posición vertical durante el viaje!
               </p>
-              <p className="mb-5 md:text-lg">
-                Nuestra película Airpad™ es una forma sostenible e innovadora de
-                proteger sus productos durante el transporte. Adecuada tanto
-                para aplicaciones ligeras como pesadas. ¿Cómo funciona? La
-                película pasa por la máquina y transforma el material en bolsas
-                con cojines de aire. Listas para proteger sus productos y
-                reciclarse más tarde.
-              </p>
+              <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
+                <Link className="flex items-center" to="/agricola">
+                  <p>EXPLORA ESTE MERCADO</p>
+                  <img src="/icons/chevronRightSmall.svg" />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="mb-20 md:w-[30%]">
@@ -146,19 +165,21 @@ export const Markets = () => {
             </h2>
             <div className="mb-3 font-light">
               <p className="mb-5 md:text-lg">
-                El relleno con cojines de aire es la forma más eficaz de fijar
-                los productos en un paquete y hacerlos resistentes a los
-                impactos. Debido a que se crea una barrera protectora, esta
-                técnica se utiliza a menudo para enviar artículos frágiles.
+                En la industria metalúrgica, se trabaja con plazos de entrega
+                cortos para entregar los productos a los clientes en el momento
+                justo. Nuestras máquinas robustas son extremadamente resistentes
+                a las duras condiciones de trabajo. Por ejemplo, nuestros
+                zunchos de alta calidad son extremadamente fuertes, no se oxidan
+                y garantizan que el acero se mantenga bien unido. ¡No importa lo
+                pesada que sea su carga! No en vano estamos presentes en la
+                industria metalúrgica desde hace años.
               </p>
-              <p className="mb-5 md:text-lg">
-                Nuestra película Airpad™ es una forma sostenible e innovadora de
-                proteger sus productos durante el transporte. Adecuada tanto
-                para aplicaciones ligeras como pesadas. ¿Cómo funciona? La
-                película pasa por la máquina y transforma el material en bolsas
-                con cojines de aire. Listas para proteger sus productos y
-                reciclarse más tarde.
-              </p>
+              <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
+                <Link className="flex items-center" to="/siderurgica">
+                  <p>EXPLORA ESTE MERCADO</p>
+                  <img src="/icons/chevronRightSmall.svg" />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="mb-20 md:w-[30%]">

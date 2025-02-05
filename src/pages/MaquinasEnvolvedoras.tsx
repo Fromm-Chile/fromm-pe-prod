@@ -1,3 +1,4 @@
+import { ContactForm } from "../components/ContactForm";
 import { InfoAcordeon } from "../components/InfoAcordeon";
 import { InfoBanner } from "../components/InfoBanner";
 import { InfoProductCard } from "../components/InfoProductCard";
@@ -141,6 +142,10 @@ export const MaquinasEnvolvedoras = () => {
           </div>
         </div>
       </section>
+      <ContactForm
+        titulo="Ahorre embalaje. ¡Nuestros expertos le cuentan cómo!"
+        descripcion="Estaremos encantados de ayudarle a tomar la decisión correcta. Póngase en contacto con nosotros y le llamaremos."
+      />
       <section className="px-10 md:max-w-[875px] md:m-auto md:mt-20 md:mb-10">
         <div>
           <h2 className="text-textGray text-lg font-bold mb-6 uppercase">

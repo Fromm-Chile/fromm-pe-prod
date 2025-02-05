@@ -162,7 +162,7 @@ export const Home = () => {
                 El grupo FROMM desarrolla y fabrica diferentes sistemas de
                 embalaje para asegurar las mercancías: máquinas flejadoras e
                 instalaciones de flejado, envolvedoras de stretch film, máquinas
-                envolvedoras, zunchos de acero, flejes de poliéster, flejes de
+                envolvedoras, zunchos de acero, zunchos de poliéster, zunchos de
                 polipropileno y el sistema patentado Airpad de protección y
                 relleno.
               </p>
@@ -190,7 +190,7 @@ export const Home = () => {
               solución perfecta para su empresa. Sea cual sea el mercado en el
               que esté activo. Nuestros especialistas estarán encantados de
               pensar junto con usted en las soluciones de embalaje más
-              ergonómicas. Piense en materiales de embalaje resistentes, flejes
+              ergonómicas. Piense en materiales de embalaje resistentes, zunchos
               reciclables y máquinas de alta calidad. Por supuesto, totalmente
               adaptadas a sus deseos, presupuesto y situación.
             </p>

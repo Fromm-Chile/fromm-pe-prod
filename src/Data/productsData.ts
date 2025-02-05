@@ -34,12 +34,12 @@ export const products: ProductsType[] = [
     name: "Enzunchadora a Batería P328/P329",
     subtitle: "Enzunchadoras eléctricas",
     desc: `<p className="my-5">
-            La FROMM P328 es una flejadora a batería para flejes de PET y PP y
+            La FROMM P328 es una flejadora a batería para zunchos de PET y PP y
             es adecuada para la mayoría de aplicaciones de flejado.
           </p>
           <p className="my-5">
             Con la FROMM p328 podrá flejar fácilmente todos los tamaños de
-            flejes de polipropileno (PP) y poliéster (PET) hasta un ancho de 16
+            zunchos de polipropileno (PP) y poliéster (PET) hasta un ancho de 16
             mm.
           </p>
           <ul className="flex flex-col gap-5 my-5">
@@ -75,7 +75,7 @@ export const products: ProductsType[] = [
       {
         key: "Adecuada para:",
         value:
-          "Fleje de PP y PET en anchos de 12,0 - 16,0 mm y espesores de 0,40 - 1,05 mm",
+          "zuncho de PP y PET en anchos de 12,0 - 16,0 mm y espesores de 0,40 - 1,05 mm",
       },
       {
         key: "Velocidad de expansión:",
@@ -96,11 +96,11 @@ export const products: ProductsType[] = [
       },
     ],
     information: `<p className="my-3">
-          Herramienta flejadora a batería para fleje de PET y fleje de PP para
+          Herramienta flejadora a batería para zuncho de PET y zuncho de PP para
           las aplicaciones más comunes.
         </p>
         <p className="my-3">
-          Con la P328 podrá flejar fácilmente todos los tamaños de flejes de
+          Con la P328 podrá flejar fácilmente todos los tamaños de zunchos de
           polipropileno (PP) y poliéster (PET) de hasta 16 mm.
         </p>
         <h2 className="text-textGray font-bold text-xl mt-10">
@@ -130,7 +130,7 @@ export const products: ProductsType[] = [
         </ul>
         <h2 className="text-textGray font-bold text-xl mt-10">Adecuado para</h2>
         <p>
-          Fleje de poliéster (PET) liso y ondulado FROMM STARstrap TM Fleje de
+          zuncho de poliéster (PET) liso y ondulado FROMM STARstrap TM zuncho de
           polipropileno (PP)
         </p>
         <ul className="flex flex-col gap-5 my-5">
@@ -149,8 +149,8 @@ export const products: ProductsType[] = [
           prácticas. Por ejemplo, los motores son sin escobillas y están
           equipados con protección contra sobrecargas, lo que significa que
           estos dispositivos requieren menos mantenimiento y ofrecen una vida
-          útil más larga. Un contador de flejes integrado permite leer el número
-          de flejes realizados con un lector disponible opcionalmente.
+          útil más larga. Un contador de zunchos integrado permite leer el número
+          de zunchos realizados con un lector disponible opcionalmente.
         </p>
         <h2 className="text-textGray font-bold text-xl mt-10">Diseño</h2>
         <p className="my-3">
@@ -168,9 +168,9 @@ export const products: ProductsType[] = [
           Para facilitar su uso, FROMM ha mejorado su equipamiento con nuevas
           técnicas y ha trabajado de forma eficaz en el diseño de la placa base.
           Ahora se necesita menos fuerza para retirar el dispositivo de debajo
-          del fleje tensado. Esto también se aplica al flejado de paquetes
+          del zuncho tensado. Esto también se aplica al flejado de paquetes
           pequeños y redondos. En la mayoría de los casos de flejado
-          imaginables, el fleje permanece intacto.
+          imaginables, el zuncho permanece intacto.
         </p>`,
     downloads: [
       {

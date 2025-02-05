@@ -6,12 +6,16 @@ import { apiUrl } from "../assets/variables";
 import { useLocation } from "react-router-dom";
 import { ProductType } from "./Products";
 import { Loader } from "../components/Loader";
+import { useProductStore } from "../store/useStore";
 
 export const ProductDetails = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [selectedTab, setSelectedTab] = useState("información");
+  const [quantity, setQuantity] = useState(1);
 
   const { state } = useLocation();
+
+  const { addProduct, products } = useProductStore();
 
   const {
     data: productDetails,
@@ -20,7 +24,7 @@ export const ProductDetails = () => {
   } = useQuery({
     queryKey: ["productDetails"],
     queryFn: async (): Promise<ProductType> => {
-      const response = await fetch(`${apiUrl}/products/${state.productId}`, {
+      const response = await fetch(`${apiUrl}/products/${state?.productId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -55,6 +59,21 @@ export const ProductDetails = () => {
       productDetails && prev === productDetails.srcImg.length - 1 ? 0 : prev + 1
     );
   };
+
+  const handleAddProduct = () => {
+    addProduct({
+      userId: state?.productId,
+      id: productDetails?.id || 0,
+      image: productDetails?.srcImg[0] || "",
+      name: productDetails?.name || "",
+      quantity,
+    });
+  };
+
+  const isProductInInvoice = products.find(
+    (product) => product.id === state?.productId
+  );
+  console.log(isProductInInvoice);
 
   return (
     <>
@@ -108,7 +127,42 @@ export const ProductDetails = () => {
                   </h2>
                 </div>
                 {parse(productDetails?.desc as string)}
-                <Button link="/">Agregar a la Cotización</Button>
+                <div className="flex flex-col gap-5 md:flex-row md:gap-0 justify-between items-center mt-5">
+                  <div className="border-2 border-red rounded-xl p-5 flex justify-center items-center bg-white">
+                    <img
+                      src="/icons/InvoiceMinus.svg"
+                      className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
+                      height={25}
+                      width={25}
+                      onClick={() =>
+                        setQuantity((prev) => (prev === 0 ? 0 : prev - 1))
+                      }
+                    />
+                    <input
+                      type="number"
+                      value={quantity}
+                      onChange={(e) => console.log(e.target.value)}
+                      className="text-lg text-center w-10 md:w-8 no-arrows focus:outline-none"
+                      min={0}
+                      max={455}
+                      inputMode="numeric"
+                      autoComplete="off"
+                      step={1}
+                    />
+                    <img
+                      src="/icons/InvoicePlus.svg"
+                      className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
+                      height={25}
+                      width={25}
+                      onClick={() => setQuantity((prev) => prev + 1)}
+                    />
+                  </div>
+                  <div>
+                    <Button link="" onClick={handleAddProduct}>
+                      Agregar a la Cotización
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

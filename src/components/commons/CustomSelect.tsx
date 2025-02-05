@@ -26,12 +26,12 @@ export const CustomSelect = () => {
     {
       id: 3,
       value: "Maderera",
-      link: "/maderera",
+      link: "/agricola",
     },
     {
       id: 4,
       value: "Agrícola",
-      link: "/agricola",
+      link: "/siderurgica",
     },
   ];
 

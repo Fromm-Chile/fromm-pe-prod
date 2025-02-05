@@ -16,6 +16,7 @@ export type ProductType = {
   name: string;
   subtitle: string;
   desc?: string;
+  quantity?: number;
   jsonDetails?: {
     specifications: {
       key: string;
@@ -37,7 +38,7 @@ export const Products = () => {
     Number(queryParams.get("categoryId")) === 0
       ? null
       : Number(queryParams.get("categoryId"));
-  // const [category, setCategory] = useState<number | null>(null);
+
   const {
     data: products,
     error,
@@ -96,7 +97,7 @@ export const Products = () => {
             alt="products"
             title="PRODUCTOS"
             desc="NUESTROS PRODUCTOS"
-            link=""
+            link="/contacto"
             buttonTitle="Contacto"
           />
           <section className="bg-primaryGray">
@@ -113,7 +114,7 @@ export const Products = () => {
                   <Loader />
                 </div>
               ) : (
-                <div className="pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-5 max-w-[1250px] mx-auto mb-20 w-[70%]">
+                <div className="pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5  p-5 max-w-[1250px] md:mx-auto mb-20 md:w-[70%]">
                   {(!products ? products ?? [] : products).map((product) => (
                     <ProductCard
                       key={product.id}

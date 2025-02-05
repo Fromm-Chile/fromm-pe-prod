@@ -3,6 +3,7 @@ import { InfoBanner } from "../components/InfoBanner";
 import { InfoProductCard } from "../components/InfoProductCard";
 import { InfoAcordeon } from "../components/InfoAcordeon";
 import { herramientasEnzunchado } from "../Data/enzunchadoData";
+import { ContactForm } from "../components/ContactForm";
 
 export const Zunchos = () => {
   return (
@@ -118,15 +119,15 @@ export const Zunchos = () => {
             <div className="mb-3">
               <p className="mb-5 md:text-lg">
                 Para encontrar siempre una solución adecuada, ofrecemos cuatro
-                tipos diferentes de cinta de fleje. En primer lugar: fleje de
+                tipos diferentes de cinta de zuncho. En primer lugar: zuncho de
                 PP. Perfecto para trabajos más ligeros como listones pequeños y
-                paquetes. Nuestro fleje de PP está disponible en varios tamaños
+                paquetes. Nuestro zuncho de PP está disponible en varios tamaños
                 y es resistente a las condiciones climáticas. También ofrecemos
-                fleje de PET. Este tiene una excelente elasticidad. Esto le
+                zuncho de PET. Este tiene una excelente elasticidad. Esto le
                 permite flejar firmemente paquetes y paquetes con una pérdida
-                mínima de elasticidad. ¿Busca una cinta de fleje para entornos
-                pesados? Entonces nuestro fleje de PET más resistente o fleje de
-                acero es la elección correcta. Extremadamente fuerte y
+                mínima de elasticidad. ¿Busca una cinta de zuncho para entornos
+                pesados? Entonces nuestro zuncho de PET más resistente o zuncho
+                de acero es la elección correcta. Extremadamente fuerte y
                 resistente. Y eso sin usar mucho material.
               </p>
             </div>
@@ -142,31 +143,31 @@ export const Zunchos = () => {
         <div className="md:flex md:gap-10 md:max-w-[1250px] md:m-auto md:mb-10">
           <div>
             <h2 className="text-textGray text-lg font-bold mb-6 md:text-3xl md:font-medium md:uppercase">
-              ¿El fleje de PET es más ecológico que el fleje de acero?
+              ¿El zuncho de PET es más ecológico que el zuncho de acero?
             </h2>
             <div className="mb-10">
               <p className="mb-5 md:text-lg">
                 La respuesta es concisa: sí. La producción y la logística de los
-                flejes de PET son mucho más respetuosas con el medio ambiente
-                que las de los flejes de acero. En primer lugar, para la
-                producción de flejes de acero se utilizan altos hornos que
+                zunchos de PET son mucho más respetuosas con el medio ambiente
+                que las de los zunchos de acero. En primer lugar, para la
+                producción de zunchos de acero se utilizan altos hornos que
                 queman continuamente a altas temperaturas. Por otro lado, la
-                producción y el reciclaje de flejes de PET es un proceso
-                energéticamente eficiente. Además, los flejes de PET son cinco
+                producción y el reciclaje de zunchos de PET es un proceso
+                energéticamente eficiente. Además, los zunchos de PET son cinco
                 veces más ligeros que los de acero. Por lo tanto, se utilizan
                 menos energía y combustibles fósiles en todos los movimientos
                 logísticos de la cadena.
               </p>
               <p className="mb-5 md:text-lg">
-                Los flejes de acero se fabrican a partir de mineral de hierro,
+                Los zunchos de acero se fabrican a partir de mineral de hierro,
                 que primero debe extraerse, con todos los procesos logísticos
-                que ello conlleva. Una vez fabricados, los flejes de PET se
+                que ello conlleva. Una vez fabricados, los zunchos de PET se
                 reciclan constantemente. Y el sistema de depósito en los Países
                 Bajos también contribuye al proceso de reciclaje respetuoso con
-                el medio ambiente de los flejes de PET. Este sistema de depósito
-                para botellas de PET se ha ampliado recientemente y seguirá
-                desarrollándose en el futuro, lo que convierte a los flejes de
-                PET en una solución a largo plazo.
+                el medio ambiente de los zunchos de PET. Este sistema de
+                depósito para botellas de PET se ha ampliado recientemente y
+                seguirá desarrollándose en el futuro, lo que convierte a los
+                zunchos de PET en una solución a largo plazo.
               </p>
             </div>
           </div>
@@ -203,6 +204,10 @@ export const Zunchos = () => {
           </div>
         </div>
       </section>
+      <ContactForm
+        titulo="Ahorre en zunchos. ¡Nuestros expertos le cuentan cómo!"
+        descripcion="Nuestros expertos están listos para asesorarlo sobre las mejores soluciones de embalaje posibles que mejor se ajusten a su industria."
+      />
       <section className="px-10 mb-10 md:max-w-[875px] md:m-auto">
         <div>
           <h2 className="text-textGray text-lg font-bold mb-6">
