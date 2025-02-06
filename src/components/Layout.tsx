@@ -3,15 +3,74 @@ import { Navbar } from "./Navbar";
 import { Button } from "./commons/Button";
 import { useState } from "react";
 import { navbarData } from "../Data/NavData";
+import { useProductStore } from "../store/useStore";
+
+type SubSeccion = {
+  id: number;
+  name: string;
+  link: string;
+};
+
+type FooterNavDataType = {
+  id: number;
+  name: string;
+  subSeccion: SubSeccion[];
+};
+
+const footerNavData: FooterNavDataType[] = [
+  {
+    id: 1,
+    name: "PRODUCTOS",
+    subSeccion: [
+      { id: 1, name: "Accesorios de Embalaje", link: "/productos" },
+      { id: 2, name: "Airpads", link: "/productos" },
+      { id: 3, name: "Herramientas de Apoyo", link: "/productos" },
+      { id: 4, name: "Máquinas Envolvedoras", link: "/productos" },
+      { id: 5, name: "Máquinas y Heramientas", link: "/productos" },
+      { id: 6, name: "Sistemas de Embalaje", link: "/productos" },
+      { id: 7, name: "Zunchos", link: "/productos" },
+    ],
+  },
+  {
+    id: 2,
+    name: "SOLUCIONES",
+    subSeccion: [
+      { id: 1, name: "Zunchos", link: "/zunchos-herramientas" },
+      { id: 2, name: "Envolvedoras", link: "/envolvedora" },
+      { id: 3, name: "Film de Embalaje", link: "/film-embalaje" },
+      { id: 4, name: "Airpads", link: "/airpads" },
+    ],
+  },
+  {
+    id: 3,
+    name: "MERCADOS",
+    subSeccion: [
+      { id: 1, name: "Minería", link: "/mineria" },
+      { id: 2, name: "Forestal", link: "/forestal" },
+      { id: 3, name: "Agrícola", link: "/agricola" },
+      { id: 4, name: "Siderúrgica", link: "/siderurgica" },
+    ],
+  },
+  {
+    id: 4,
+    name: "NOSOTROS",
+    subSeccion: [
+      { id: 1, name: "Nosotros", link: "/nosotros" },
+      { id: 2, name: "Política de Calidad", link: "/politica-calidad" },
+      { id: 3, name: "Código de Ética", link: "/codigo-etica" },
+    ],
+  },
+];
 
 export const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const products = useProductStore((state) => state.products);
 
   return (
     <>
       <Navbar />
       <Outlet />
-      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32">
+      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32 w-full">
         <Link className="mb-14" to="/">
           <img
             className="max-w-[310px]"
@@ -33,67 +92,51 @@ export const Layout = () => {
           </div>
           <ul className="lg:hidden self-start ml-8 mb-8 text-red font-medium">
             <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/">
+              <Link className="flex items-center" to="/soluciones">
                 <p>Soluciones</p>
                 <img src="/icons/chevronRightSmall.svg" />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/">
-                <p>Industrias</p>
+              <Link className="flex items-center" to="/mercados">
+                <p>Mercados</p>
                 <img src="/icons/chevronRightSmall.svg" />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/">
+              <Link className="flex items-center" to="/nosotros">
                 <p>Acerca de Fromm</p>
                 <img src="/icons/chevronRightSmall.svg" />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/">
+              <Link className="flex items-center" to="/productos">
                 <p>Productos</p>
                 <img src="/icons/chevronRightSmall.svg" />
               </Link>
             </li>
           </ul>
-          <div className="hidden lg:flex gap-32 mr-10 mb-10">
-            <div>
-              <p className="text-red font-light text-lg mb-5">SOLUCIONES</p>
-              <ul className="flex flex-col gap-3">
-                <li>Zunchos</li>
-                <li>Envolvedoras</li>
-                <li>AirPads</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-red font-light text-lg mb-5">MERCADOS</p>
-              <ul className="flex flex-col gap-3">
-                <li>Minería</li>
-                <li>Construcción</li>
-                <li>Alimentación</li>
-                <li>Celulosa</li>
-                <li>Madera</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-red font-light text-lg mb-5">
-                ACERCA DE FROMM
-              </p>
-              <ul className="flex flex-col gap-3">
-                <li>Historia</li>
-                <li>Noticias</li>
-                <li>Sustentabilidad</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-red font-light text-lg mb-5">PRODUCTOS</p>
-              <ul className="flex flex-col gap-3">
-                <li>Herramientas</li>
-                <li>Consumibles</li>
-                <li>Equipos</li>
-                <li>Repuestos</li>
-              </ul>
+          <div className="hidden lg:block self-start ml-8 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {footerNavData.map((section) => (
+                <div key={section.id} className="text-textGray w-[200px]">
+                  <h3 className="text-lg font-bold mb-4 text-red">
+                    {section.name}
+                  </h3>
+                  <ul className="flex flex-col gap-3">
+                    {section.subSeccion.map((submenu) => (
+                      <li key={submenu.id}>
+                        <Link
+                          to={submenu.link}
+                          className="text-textGray hover:text-red transition duration-300"
+                        >
+                          <p className="text-left">{submenu.name}</p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -153,10 +196,23 @@ export const Layout = () => {
                   className="ml-[-10px]"
                   onClick={() => setIsOpen(false)}
                 >
-                  <p className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear">
+                  <p
+                    className={`${
+                      products.length > 0
+                        ? "font-bold hover:underline"
+                        : "text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
+                    }`}
+                  >
                     Cotización
                   </p>
                 </Link>
+                {products.length > 0 && (
+                  <div className="border border-red rounded-full w-16 h-8 flex items-center justify-center bg-white">
+                    <p className="text-red font-bold text-lg">
+                      {products.length}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

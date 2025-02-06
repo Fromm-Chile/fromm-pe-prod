@@ -3,7 +3,6 @@ import { persist } from "zustand/middleware";
 
 type Product = {
   id: number;
-  userId: number;
   image: string;
   name: string;
   quantity: number;
@@ -12,8 +11,8 @@ type Product = {
 type ProductStore = {
   products: Product[];
   addProduct: (product: Product) => void;
-  removeProduct: (userId: number) => void;
-  updateProduct: (userId: number, quantity: number) => void;
+  removeProduct: (productId: number) => void;
+  updateProduct: (productId: number, quantity: number) => void;
   reset: () => void;
 };
 
@@ -25,7 +24,7 @@ export const useProductStore = create<ProductStore>()(
         set((state) => ({ products: [...state.products, product] })),
       removeProduct: async (id) => {
         set((state) => ({
-          products: state.products.filter((product) => product.userId !== id),
+          products: state.products.filter((product) => product.id !== id),
         }));
       },
       updateProduct: async (id: number, quantity: number) => {

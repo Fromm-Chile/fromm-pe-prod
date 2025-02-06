@@ -6,7 +6,7 @@ type ProductCardProps = {
   name: string;
   subtitle: string;
   link: string;
-  state: object;
+  state?: object;
 };
 
 export const ProductCard = ({

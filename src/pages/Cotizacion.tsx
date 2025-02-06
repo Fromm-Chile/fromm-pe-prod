@@ -42,8 +42,6 @@ export const Cotizacion = () => {
   const products = useProductStore((state) => state.products);
   const { removeProduct, updateProduct, reset } = useProductStore();
 
-  console.log(products);
-
   const onSubmit = async (data: FormData) => {
     if (products.length === 0) {
       setError("Debes incluir al menos 1 producto en la cotización!");
@@ -97,7 +95,7 @@ export const Cotizacion = () => {
                     image={product.image}
                     name={product.name}
                     quantity={product.quantity}
-                    handleRemove={() => removeProduct(product.userId)}
+                    handleRemove={() => removeProduct(product.id)}
                     handleAddQuantity={() =>
                       updateProduct(product.id, product.quantity + 1)
                     }

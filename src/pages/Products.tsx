@@ -122,8 +122,7 @@ export const Products = () => {
                       alt={product.alt}
                       name={product.name}
                       subtitle={product.subtitle}
-                      link={`/productos/${product.slug}`}
-                      state={{ productId: product.id }}
+                      link={`/productos/${product.slug}?producto=${product.id}`}
                     />
                   ))}
                 </div>

@@ -3,7 +3,7 @@ import { Button } from "../components/commons/Button";
 import parse from "html-react-parser";
 import { useQuery } from "@tanstack/react-query";
 import { apiUrl } from "../assets/variables";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ProductType } from "./Products";
 import { Loader } from "../components/Loader";
 import { useProductStore } from "../store/useStore";
@@ -13,7 +13,9 @@ export const ProductDetails = () => {
   const [selectedTab, setSelectedTab] = useState("información");
   const [quantity, setQuantity] = useState(1);
 
-  const { state } = useLocation();
+  const { search } = useLocation();
+  const queryParams = new URLSearchParams(search);
+  const productId = queryParams.get("producto");
 
   const { addProduct, products } = useProductStore();
 
@@ -24,7 +26,7 @@ export const ProductDetails = () => {
   } = useQuery({
     queryKey: ["productDetails"],
     queryFn: async (): Promise<ProductType> => {
-      const response = await fetch(`${apiUrl}/products/${state?.productId}`, {
+      const response = await fetch(`${apiUrl}/products/${productId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +64,6 @@ export const ProductDetails = () => {
 
   const handleAddProduct = () => {
     addProduct({
-      userId: state?.productId,
       id: productDetails?.id || 0,
       image: productDetails?.srcImg[0] || "",
       name: productDetails?.name || "",
@@ -71,9 +72,8 @@ export const ProductDetails = () => {
   };
 
   const isProductInInvoice = products.find(
-    (product) => product.id === state?.productId
+    (product) => product.id === productDetails?.id
   );
-  console.log(isProductInInvoice);
 
   return (
     <>
@@ -89,7 +89,7 @@ export const ProductDetails = () => {
                     <img
                       src={`${productDetails?.srcImg[currentImage]}`}
                       alt={productDetails?.alt}
-                      className="w-full max-h-[400px] rounded-2xl object-contain"
+                      className="w-[400px] h-[400px] m-auto rounded-2xl object-contain"
                     />
                   </div>
                   <div
@@ -127,46 +127,55 @@ export const ProductDetails = () => {
                   </h2>
                 </div>
                 {parse(productDetails?.desc as string)}
-                <div className="flex flex-col gap-5 md:flex-row md:gap-0 justify-between items-center mt-5">
-                  <div className="border-2 border-red rounded-xl p-5 flex justify-center items-center bg-white">
-                    <img
-                      src="/icons/InvoiceMinus.svg"
-                      className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
-                      height={25}
-                      width={25}
-                      onClick={() =>
-                        setQuantity((prev) => (prev === 0 ? 0 : prev - 1))
-                      }
-                    />
-                    <input
-                      type="number"
-                      value={quantity}
-                      onChange={(e) => console.log(e.target.value)}
-                      className="text-lg text-center w-10 md:w-8 no-arrows focus:outline-none"
-                      min={0}
-                      max={455}
-                      inputMode="numeric"
-                      autoComplete="off"
-                      step={1}
-                    />
-                    <img
-                      src="/icons/InvoicePlus.svg"
-                      className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
-                      height={25}
-                      width={25}
-                      onClick={() => setQuantity((prev) => prev + 1)}
-                    />
+                {isProductInInvoice ? (
+                  <div className="flex flex-col gap-5 md:flex-row md:gap-0 justify-between items-center mt-5">
+                    <div className="bg-white p-5 flex justify-center items-center border border-red rounded-xl">
+                      <p>Producto agregado!</p>
+                    </div>
+                    <Button link="/cotizacion">Ir a mi Cotización</Button>
                   </div>
-                  <div>
-                    <Button link="" onClick={handleAddProduct}>
-                      Agregar a la Cotización
-                    </Button>
+                ) : (
+                  <div className="flex flex-col gap-5 md:flex-row md:gap-0 justify-between items-center mt-5">
+                    <div className="border-2 border-red rounded-xl p-5 flex justify-center items-center bg-white">
+                      <img
+                        src="/icons/InvoiceMinus.svg"
+                        className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
+                        height={25}
+                        width={25}
+                        onClick={() =>
+                          setQuantity((prev) => (prev === 0 ? 0 : prev - 1))
+                        }
+                      />
+                      <input
+                        type="number"
+                        value={quantity}
+                        onChange={(e) => console.log(e.target.value)}
+                        className="text-lg text-center w-10 md:w-8 no-arrows focus:outline-none"
+                        min={0}
+                        max={455}
+                        inputMode="numeric"
+                        autoComplete="off"
+                        step={1}
+                      />
+                      <img
+                        src="/icons/InvoicePlus.svg"
+                        className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
+                        height={25}
+                        width={25}
+                        onClick={() => setQuantity((prev) => prev + 1)}
+                      />
+                    </div>
+                    <div>
+                      <Button link="" onClick={handleAddProduct}>
+                        Agregar a la Cotización
+                      </Button>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </section>
-          <section className="p-5 max-w-[1250px] mx-auto mb-24 h-auto my-10">
+          <section className="p-5 max-w-[1250px] mx-auto mb-10 h-auto my-10">
             <ul className="flex flex-col justify-center items-center font-extralight text-lg mb-8 md:flex-row">
               {productDetails?.jsonDetails?.specifications.length &&
               productDetails?.jsonDetails?.specifications.length > 0 ? (
@@ -280,6 +289,33 @@ export const ProductDetails = () => {
               )}
             </div>
           </section>
+          <div className="max-w-[1250px] mx-auto mb-24 h-auto">
+            <Link to="/productos">
+              <button
+                type="button"
+                className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold border-4 border-white group"
+              >
+                <div className="bg-red rounded-xl h-12 w-1/4 grid place-items-center absolute left-0 top-0 group-hover:w-full z-10 duration-500">
+                  <svg
+                    width="25px"
+                    height="25px"
+                    viewBox="0 0 1024 1024"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="white"
+                      d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                    ></path>
+                    <path
+                      fill="white"
+                      d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                    ></path>
+                  </svg>
+                </div>
+                <p className="translate-x-14">Volver</p>
+              </button>
+            </Link>
+          </div>
         </>
       )}
     </>
