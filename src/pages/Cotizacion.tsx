@@ -60,6 +60,7 @@ export const Cotizacion = () => {
           invoiceDetails: products.map((product) => ({
             productId: product.id,
             quantity: product.quantity,
+            name: product.name,
           })),
         },
       });

@@ -59,7 +59,6 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
           contactType: "SERVICE",
         },
       });
-      console.log(data);
       navigate("/confirmacion");
     } catch (error) {
       console.log(error);

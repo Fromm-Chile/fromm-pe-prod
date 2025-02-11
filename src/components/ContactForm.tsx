@@ -52,9 +52,11 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
         headers: {
           "Content-Type": "application/json",
         },
-        data,
+        data: {
+          ...data,
+          contactType: "CONTACT",
+        },
       });
-      console.log(data);
       navigate("/confirmacion");
     } catch (error) {
       console.log(error);

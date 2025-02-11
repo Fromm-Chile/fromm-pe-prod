@@ -81,11 +81,11 @@ export const Layout = () => {
         <div className="lg:flex w-full justify-between">
           <div className="self-start ml-8 mb-6">
             <h2 className="font-bold text-2xl mb-8">FROMM CHILE</h2>
-            <p className="text-textGray font-light mb-4">
+            <p className="text-textGray font-light mb-4 text-left">
               Dirección: Avenida Aeropuerto #560 <br />
               Quilicura. Santiago de Chile.
             </p>
-            <p className="text-textGray font-light mb-4">
+            <p className="text-textGray font-light mb-4 text-left">
               E-mail: contacto@fromm-pack.cl <br />
               Teléfono: +56 2 2571 1100
             </p>

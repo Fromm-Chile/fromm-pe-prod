@@ -128,7 +128,8 @@ export const ProductDetails = () => {
                 </div>
                 {parse(productDetails?.desc as string)}
                 {isProductInInvoice ? (
-                  <div className="flex flex-col gap-5 md:flex-row md:gap-0 justify-between items-center mt-5">
+                  <div className="flex flex-col gap-5 md:flex-row md:gap-4 justify-between items-center mt-5">
+                    <Button link="/productos">Volver a productos</Button>
                     <div className="bg-white p-5 flex justify-center items-center border border-red rounded-xl">
                       <p>Producto agregado!</p>
                     </div>
@@ -143,7 +144,7 @@ export const ProductDetails = () => {
                         height={25}
                         width={25}
                         onClick={() =>
-                          setQuantity((prev) => (prev === 0 ? 0 : prev - 1))
+                          setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
                         }
                       />
                       <input
