@@ -22,14 +22,14 @@ export const Markets = () => {
               OFRECEMOS LA SOLUCIÓN PERFECTA PARA SU MERCADO
             </h2>
             <p className="mb-5 md:text-lg font-extralight">
-              Nuestras soluciones de embalaje fiables son perfectas para su uso
-              a gran escala en todos los mercados, desde la industria del
-              hormigón hasta los centros de distribución y desde la logística
-              hasta la industria del metal. En nuestra amplia gama, le
-              garantizamos que encontrará la solución adecuada para su empresa.
-              ¿Las mayores ventajas de nuestros productos? Embalaje estable a
-              bajo coste. Protección óptima contra daños. Adecuado para una gran
-              carga de trabajo durante todo el día. Fácil de utilizar y de bajo
+              Nuestras soluciones de embalaje son perfectas para su uso a gran
+              escala en todos los mercados, desde la industria del hormigón
+              hasta los centros de distribución y desde la logística hasta la
+              industria del metal. En nuestra amplia gama, le garantizamos que
+              encontrará la solución adecuada para su empresa. ¿Las mayores
+              ventajas de nuestros productos? Embalaje estable a bajo coste.
+              Protección óptima contra daños. Adecuado para una gran carga de
+              trabajo durante todo el día. Fácil de utilizar y de bajo
               mantenimiento. Y podríamos seguir y seguir. ¿Quiere saber qué
               podemos hacer por su mercado? Póngase en contacto con nosotros.
             </p>
@@ -135,9 +135,9 @@ export const Markets = () => {
                 las condiciones de trabajo de la A a la Z. Por ejemplo, nuestra
                 cinta de flejado es extremadamente resistente, no se oxida y
                 garantiza que las pilas estén en su lugar correcto. Ya sean
-                cajas, barriles, cajas o cartones. La carga de transporte
-                también entra en el camión de forma estable. ¡Y su carga se
-                mantiene perfectamente en posición vertical durante el viaje!
+                cajas, barriles o cartones. La carga de transporte también entra
+                en el camión de forma estable. ¡Y su carga se mantiene
+                perfectamente en posición vertical durante el viaje!
               </p>
               <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
                 <Link className="flex items-center" to="/agricola">

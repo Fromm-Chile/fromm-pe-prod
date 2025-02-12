@@ -84,15 +84,15 @@ export const Siderurgica = () => {
           <p className="text-justify">
             Nos aseguramos de que pueda lograr el resultado deseado con menos
             material de embalaje. Al hacerlo, innovamos todos los aspectos del
-            proceso de embalaje. La sustitución del acero por flejes de PET
+            proceso de embalaje. La sustitución del acero por zunchos de PET
             reduce el riesgo de lesiones al cortar un paquete bien flejado.
-            Además, los flejes de PET son infinitamente reciclables, lo que es
+            Además, los zunchos de PET son infinitamente reciclables, lo que es
             bueno para el medio ambiente y para su bolsillo. Al cambiar de
-            flejes de acero a flejes de PET, los grandes usuarios pueden ahorrar
-            miles de euros al año. Además, se obtienen ahorros adicionales
-            gracias a un peso más ligero y un menor consumo. ¿Quiere saber qué
-            puede hacer por usted? ¡Estaremos encantados de planificar su
-            período de amortización y sus ahorros!
+            zunchos de acero a zunchos de PET, los grandes usuarios pueden
+            ahorrar miles de pesos al año. Además, se obtienen ahorros
+            adicionales gracias a un peso más ligero y un menor consumo. ¿Quiere
+            saber qué podemos hacer por usted? ¡Estaremos encantados de
+            planificar su período de amortización y sus ahorros!
           </p>
         </div>
       </section>

@@ -16,8 +16,8 @@ export const Mineria = () => {
       <section className="mb-10 py-10">
         <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
           <h3 className="text-textGray font-semibold text-2xl text-left">
-            Aplicaciones de Flejado en la Industria Minera: Garantizando el
-            Transporte Seguro de Cargas Pesadas
+            Aplicaciones de flejado en la industria minera: Garantizando el
+            transporte seguro de cargas pesadas
           </h3>
           <p className="text-justify">
             En la industria minera, donde las cargas pesadas y las formas

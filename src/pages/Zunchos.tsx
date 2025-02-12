@@ -45,13 +45,13 @@ export const Zunchos = () => {
         </h2>
         <div className="mb-10">
           <p className="mb-5">
-            Fabricamos máquinas flejadoras y consumibles de alta calidad para su
+            Fabricamos máquinas enzunchadora e insumos de alta calidad para su
             uso a gran escala en la industria del hormigón, centros de
             distribución, logística, industria maderera y metalúrgica. En todo
             el mundo, colaboramos con más de 1.200 especialistas en el
             desarrollo, la producción y la venta de máquinas de embalaje de
-            final de línea, equipos y consumibles. En total, colaboramos con
-            veinte filiales y cincuenta socios especializados.
+            final de línea, equipos e insumos. En total, colaboramos con veinte
+            filiales y cincuenta socios especializados.
           </p>
           <Button className="m-auto" link="/">
             DEJANOS AYUDARTE
@@ -85,9 +85,9 @@ export const Zunchos = () => {
               <p className="mb-5">
                 Un embalaje logístico eficaz se basa en un equilibrio
                 inteligente entre costes y requisitos. Suministramos
-                herramientas de flejado de alta calidad y cintas de flejado de
-                máxima calidad. Esto le permite trabajar de forma rápida,
-                eficiente y sostenible.
+                herramientas de enzunchado de alta calidad y y zunchos de máxima
+                resistencia. Esto le permite trabajar de forma rápida, eficiente
+                y sostenible.
               </p>
             </div>
           </div>
@@ -98,13 +98,13 @@ export const Zunchos = () => {
             <div className="mb-3">
               <p className="mb-5">
                 Para el transporte de grandes cantidades de mercancías, una
-                máquina flejadora totalmente automática es la mejor opción desde
-                el punto de vista económico y empresarial. Cuanto más se
+                máquina enzunchadora totalmente automática es la mejor opción
+                desde el punto de vista económico y empresarial. Cuanto más se
                 empaqueta para el transporte, más rápido se recupera el dinero
                 de la máquina gracias al ahorro inteligente en horas de trabajo
-                y material de embalaje. El flejado es un método de embalaje
-                eficaz. Nuestras máquinas flejadoras garantizan que se utilice
-                la menor cantidad posible de cinta de flejado para asegurar la
+                y material de embalaje. El enzunchado es un método de embalaje
+                eficaz. Nuestras máquinas enzunchadoras garantizan que se
+                utilice la menor cantidad posible de zuncho para asegurar la
                 carga. ¿El resultado? Uso económico de materiales y estabilidad
                 óptima durante el transporte.
               </p>
@@ -119,16 +119,16 @@ export const Zunchos = () => {
             <div className="mb-3">
               <p className="mb-5 md:text-lg">
                 Para encontrar siempre una solución adecuada, ofrecemos cuatro
-                tipos diferentes de cinta de zuncho. En primer lugar: zuncho de
-                PP. Perfecto para trabajos más ligeros como listones pequeños y
+                tipos diferentes de zuncho. En primer lugar: zuncho de PP.
+                Perfecto para trabajos más ligeros como listones pequeños y
                 paquetes. Nuestro zuncho de PP está disponible en varios tamaños
                 y es resistente a las condiciones climáticas. También ofrecemos
                 zuncho de PET. Este tiene una excelente elasticidad. Esto le
-                permite flejar firmemente paquetes y paquetes con una pérdida
-                mínima de elasticidad. ¿Busca una cinta de zuncho para entornos
-                pesados? Entonces nuestro zuncho de PET más resistente o zuncho
-                de acero es la elección correcta. Extremadamente fuerte y
-                resistente. Y eso sin usar mucho material.
+                permite enzunchar firmemente paquetes con una pérdida mínima de
+                elasticidad. ¿Busca una cinta de zuncho para entornos pesados?
+                Entonces nuestro zuncho de PET más resistente o zuncho de acero
+                es la elección correcta. Extremadamente fuerte y resistente. Y
+                eso sin usar mucho material.
               </p>
             </div>
           </div>
@@ -150,11 +150,11 @@ export const Zunchos = () => {
                 La respuesta es concisa: sí. La producción y la logística de los
                 zunchos de PET son mucho más respetuosas con el medio ambiente
                 que las de los zunchos de acero. En primer lugar, para la
-                producción de zunchos de acero se utilizan altos hornos que
+                producción de zunchos de acero se utilizan grandes hornos que
                 queman continuamente a altas temperaturas. Por otro lado, la
                 producción y el reciclaje de zunchos de PET es un proceso
                 energéticamente eficiente. Además, los zunchos de PET son cinco
-                veces más ligeros que los de acero. Por lo tanto, se utilizan
+                veces más ligeros que los de acero. Por lo tanto, se utiliza
                 menos energía y combustibles fósiles en todos los movimientos
                 logísticos de la cadena.
               </p>
@@ -162,12 +162,12 @@ export const Zunchos = () => {
                 Los zunchos de acero se fabrican a partir de mineral de hierro,
                 que primero debe extraerse, con todos los procesos logísticos
                 que ello conlleva. Una vez fabricados, los zunchos de PET se
-                reciclan constantemente. Y el sistema de depósito en los Países
-                Bajos también contribuye al proceso de reciclaje respetuoso con
-                el medio ambiente de los zunchos de PET. Este sistema de
-                depósito para botellas de PET se ha ampliado recientemente y
-                seguirá desarrollándose en el futuro, lo que convierte a los
-                zunchos de PET en una solución a largo plazo.
+                reciclan constantemente. Y el sistema de reciclado en Chile
+                también contribuye al proceso de reciclaje respetuoso con el
+                medio ambiente de los zunchos de PET. Este sistema de reciclaje
+                de botellas de PET se ha ampliado recientemente y seguirá
+                desarrollándose en el futuro, lo que convierte a los zunchos de
+                PET en una solución a largo plazo.
               </p>
             </div>
           </div>
