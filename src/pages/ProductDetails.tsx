@@ -7,6 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ProductType } from "./Products";
 import { Loader } from "../components/Loader";
 import { useProductStore } from "../store/useStore";
+import { YoutubeEmbed } from "../components/YotubeEmbed";
 
 enum Tab {
   Specifications = "specifications",
@@ -286,10 +287,7 @@ export const ProductDetails = () => {
                   {productDetails?.jsonDetails?.videos.map((video, index) => (
                     <div key={index} className="flex justify-between mb-5">
                       <div className="w-full">
-                        <iframe
-                          src={video}
-                          className="w-[640px] h-[360px]"
-                        ></iframe>
+                        <YoutubeEmbed embedId={video} />
                       </div>
                     </div>
                   ))}

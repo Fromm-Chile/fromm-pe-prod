@@ -1,5 +1,6 @@
 import { InfoAcordeon } from "../components/InfoAcordeon";
 import { InfoBanner } from "../components/InfoBanner";
+import { YoutubeEmbed } from "../components/YotubeEmbed";
 
 export const AboutUs = () => {
   return (
@@ -124,10 +125,7 @@ export const AboutUs = () => {
           </div>
         </div>
         <div className="my-10 md:my-20">
-          <iframe
-            className="w-full h-[400px]"
-            src="https://www.youtube.com/embed/ahhvrOdJYSo?autoplay=0&enablejsapi=1&wmode=opaque"
-          ></iframe>
+          <YoutubeEmbed embedId="ahhvrOdJYSo" className="w-full" />
         </div>
       </section>
       <div className="px-10 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px] mb-8">

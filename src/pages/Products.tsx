@@ -60,7 +60,7 @@ export const Products = () => {
   });
 
   const {
-    data: categories,
+    data: categories = [],
     error: categoriesError,
     isLoading: categoriesLoading,
   } = useQuery({
@@ -104,9 +104,9 @@ export const Products = () => {
             <div className="max-w-[1350px] m-auto flex flex-col md:flex-row items-start justify-center mb-20">
               <div className="mt-10 w-full px-10 md:px-0 md:mt-24 md:w-[350px] md:mb-20">
                 <CategoryFilter
-                  categories={categories || []}
+                  categories={categories}
                   selectedCategory={category}
-                  // setSelectedCategory={setCategory}
+                  isLoading={categoriesLoading}
                 />
               </div>
               {isProductsLoading ? (
