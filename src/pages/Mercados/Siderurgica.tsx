@@ -44,7 +44,7 @@ export const Siderurgica = () => {
             ni absorber humedad.
           </p>
           <h3 className="text-textGray font-semibold text-2xl text-left">
-            Gran diversidad de formas de carga
+            Soluciones de embalaje ergonómicas para la industria siderurgica
           </h3>
           <p className="text-justify">
             Los especialistas de FROMM piensan junto con usted sobre las

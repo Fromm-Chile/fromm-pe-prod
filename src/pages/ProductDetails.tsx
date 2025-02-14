@@ -8,9 +8,16 @@ import { ProductType } from "./Products";
 import { Loader } from "../components/Loader";
 import { useProductStore } from "../store/useStore";
 
+enum Tab {
+  Specifications = "specifications",
+  Information = "information",
+  Downloads = "downloads",
+  Videos = "videos",
+}
+
 export const ProductDetails = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [selectedTab, setSelectedTab] = useState("información");
+  const [selectedTab, setSelectedTab] = useState<Tab>(Tab.Information);
   const [quantity, setQuantity] = useState(1);
 
   const { search } = useLocation();
@@ -89,7 +96,7 @@ export const ProductDetails = () => {
                     <img
                       src={`${productDetails?.srcImg[currentImage]}`}
                       alt={productDetails?.alt}
-                      className="w-[400px] h-[400px] m-auto rounded-2xl object-contain"
+                      className="m-auto max-h-[400px] rounded-2xl object-cover"
                     />
                   </div>
                   <div
@@ -109,7 +116,7 @@ export const ProductDetails = () => {
                   {productDetails?.srcImg.map((img, index) => (
                     <div
                       key={index}
-                      className={`w-20 h-20 rounded-lg bg-center bg-cover cursor-pointer ${
+                      className={`w-24 h-24 rounded-lg bg-center bg-cover cursor-pointer ${
                         currentImage === index
                           ? "border-2 border-red"
                           : "border-2 border-transparent"
@@ -182,11 +189,11 @@ export const ProductDetails = () => {
               productDetails?.jsonDetails?.specifications.length > 0 ? (
                 <li
                   className={`cursor-pointer h-full w-full text-center py-3 ${
-                    selectedTab === "especificaciones"
+                    selectedTab === Tab.Specifications
                       ? "bg-primaryGray md:bg-white md:border md:border-l-red md:border-t-red md:border-r-red md:border-b-white md:rounded-t-[8px]"
                       : "md:border md:border-b-red md:border-t-white md:border-r-white md:border-l-white"
                   }`}
-                  onClick={() => setSelectedTab("especificaciones")}
+                  onClick={() => setSelectedTab(Tab.Specifications)}
                 >
                   Especificaciones
                 </li>
@@ -194,11 +201,11 @@ export const ProductDetails = () => {
               {productDetails?.jsonDetails?.information && (
                 <li
                   className={`cursor-pointer h-full w-full text-center py-3 ${
-                    selectedTab === "información"
+                    selectedTab === Tab.Information
                       ? "bg-primaryGray md:bg-white md:border md:border-l-red md:border-t-red md:border-r-red md:border-b-white md:rounded-t-[8px]"
                       : "md:border md:border-b-red md:border-t-white md:border-r-white md:border-l-white"
                   }`}
-                  onClick={() => setSelectedTab("información")}
+                  onClick={() => setSelectedTab(Tab.Information)}
                 >
                   Información
                 </li>
@@ -207,11 +214,11 @@ export const ProductDetails = () => {
               productDetails?.jsonDetails?.downloads.length > 0 ? (
                 <li
                   className={`cursor-pointer h-full w-full text-center py-3 ${
-                    selectedTab === "descargas"
+                    selectedTab === Tab.Downloads
                       ? "bg-primaryGray md:bg-white md:border md:border-l-red md:border-t-red md:border-r-red md:border-b-white md:rounded-t-[8px]"
                       : "md:border md:border-b-red md:border-t-white md:border-r-white md:border-l-white"
                   }`}
-                  onClick={() => setSelectedTab("descargas")}
+                  onClick={() => setSelectedTab(Tab.Downloads)}
                 >
                   Descargas
                 </li>
@@ -224,15 +231,15 @@ export const ProductDetails = () => {
                       ? "bg-primaryGray md:bg-white md:border md:border-l-red md:border-t-red md:border-r-red md:border-b-white md:rounded-t-[8px]"
                       : "md:border md:border-b-red md:border-t-white md:border-r-white md:border-l-white"
                   }`}
-                  onClick={() => setSelectedTab("videos")}
+                  onClick={() => setSelectedTab(Tab.Videos)}
                 >
                   Videos
                 </li>
               ) : null}
             </ul>
             <div>
-              {selectedTab === "especificaciones" && (
-                <div className="md:w-[60%] pl-20 pt-10">
+              {selectedTab === Tab.Specifications && (
+                <div className="md:w-[90%] pl-20 pt-10">
                   {productDetails?.jsonDetails?.specifications.map((spec) => (
                     <div
                       key={spec.key}
@@ -248,14 +255,14 @@ export const ProductDetails = () => {
                   ))}
                 </div>
               )}
-              {selectedTab === "información" &&
+              {selectedTab === Tab.Information &&
               productDetails?.jsonDetails?.information &&
               productDetails.jsonDetails.information !== "" ? (
                 <div className="md:w-[60%] pl-20 pt-10">
-                  {parse(productDetails?.jsonDetails?.information as string)}
+                  <p>{productDetails?.jsonDetails?.information}</p>
                 </div>
               ) : null}
-              {selectedTab === "descargas" && (
+              {selectedTab === Tab.Downloads && (
                 <div>
                   {productDetails?.jsonDetails?.downloads.map((item, index) => (
                     <div
@@ -266,7 +273,7 @@ export const ProductDetails = () => {
                         <p className="font-bold text-textGray">{item.name}</p>
                       </div>
                       <div className="w-[35%] cursor-pointer">
-                        <a href={item.link}>
+                        <a href={item.link} target="_blank" rel="noreferrer">
                           <img src="/icons/download.svg" />
                         </a>
                       </div>

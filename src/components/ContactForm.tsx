@@ -140,7 +140,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
                 <img src="/icons/instantmessage.svg" height={30} width={30} />
                 <Link to="/cotizacion" className="">
                   <p className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear">
-                    Nuestro Whatsaap
+                    Nuestro Whatsapp
                   </p>
                 </Link>
               </div>

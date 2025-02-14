@@ -225,3 +225,15 @@ export const eszuchadoraManualA337 = (
     </p>
   </>
 );
+
+export const enzunchadoraP331 = (
+  <p className="my-5">
+    La herramienta de flejado de plástico P331 completa nuestra gama de
+    herramientas de flejado a batería para anchos de flejado de hasta 32 mm.
+    Este tamaño de flejado de PET puede reemplazar aplicaciones de flejado de
+    acero de alta resistencia y genera importantes ahorros de costos. La enorme
+    fuerza de tensión de hasta 7000 N arrastra los tamaños de flejes de PET más
+    resistentes al rango de trabajo ideal para beneficiarse de una gran
+    capacidad de absorción de impactos.
+  </p>
+);

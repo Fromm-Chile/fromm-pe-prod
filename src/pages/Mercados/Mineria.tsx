@@ -36,7 +36,7 @@ export const Mineria = () => {
       <section className="mb-24 py-10">
         <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
           <h3 className="text-textGray font-semibold text-2xl text-left">
-            Soluciones de Flejado Diversificadas para Aplicaciones Mineras
+            Soluciones de flejado diversificadas para aplicaciones mineras
           </h3>
           <p className="text-justify">
             La industria minera presenta una amplia gama de desafíos de flejado,
@@ -47,9 +47,6 @@ export const Mineria = () => {
             deben ser fuertes, resistentes a la corrosión y absorbentes de la
             humedad en entornos mineros.
           </p>
-          <h3 className="text-textGray font-semibold text-2xl text-left">
-            Soluciones de Flejado Personalizadas para Operaciones Mineras
-          </h3>
           <p className="text-justify">
             Nuestros expertos en FROMM colaboran con usted para desarrollar
             soluciones de embalaje ergonómicas adaptadas a la industria minera.
