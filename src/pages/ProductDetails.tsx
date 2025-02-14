@@ -92,7 +92,7 @@ export const ProductDetails = () => {
           <section className="bg-primaryGray pt-10">
             <div className="p-5 max-w-[1250px] mx-auto mb-5 h-auto md:flex md:justify-between">
               <div className="md:w-[50%]">
-                <div className="h-[400px] relative group">
+                <div className="md:h-[400px] relative group">
                   <div className="rounded-2xl bg-center bg-cover duration-500">
                     <img
                       src={`${productDetails?.srcImg[currentImage]}`}
@@ -240,16 +240,16 @@ export const ProductDetails = () => {
             </ul>
             <div>
               {selectedTab === Tab.Specifications && (
-                <div className="md:w-[90%] pl-20 pt-10">
+                <div className="md:w-[90%] md:pl-20 md:pt-10 w-full">
                   {productDetails?.jsonDetails?.specifications.map((spec) => (
                     <div
                       key={spec.key}
-                      className="flex justify-between mb-5 md:justify-normal"
+                      className="md:flex justify-between mb-5 md:justify-normal"
                     >
-                      <div className="w-[45%]">
+                      <div className="md:w-[45%]">
                         <p className="font-bold text-textGray">{spec.key}</p>
                       </div>
-                      <div className="w-[45%]">
+                      <div className="md:w-[45%]">
                         <p className="font-extralight">{spec.value}</p>
                       </div>
                     </div>
@@ -259,7 +259,7 @@ export const ProductDetails = () => {
               {selectedTab === Tab.Information &&
               productDetails?.jsonDetails?.information &&
               productDetails.jsonDetails.information !== "" ? (
-                <div className="md:w-[80%] pl-20 pt-10">
+                <div className="md:w-[80%] md:pl-20 md:pt-10">
                   {Array.isArray(productDetails?.jsonDetails?.information) ? (
                     productDetails?.jsonDetails?.information.map(
                       (item, index) => (
@@ -298,9 +298,12 @@ export const ProductDetails = () => {
               {selectedTab === "videos" && (
                 <div className="md:grid md:grid-cols-2 md:gap-5">
                   {productDetails?.jsonDetails?.videos.map((video, index) => (
-                    <div key={index} className="flex justify-between mb-5">
-                      <div className="w-full">
-                        <YoutubeEmbed embedId={video} />
+                    <div key={index} className="md:flex justify-between mb-5">
+                      <div className="md:w-full">
+                        <YoutubeEmbed
+                          embedId={video}
+                          className="max-w-[350px] h-[250px] md:max-w-[550px] md:h-[350px] m-auto"
+                        />
                       </div>
                     </div>
                   ))}
