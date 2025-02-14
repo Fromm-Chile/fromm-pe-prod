@@ -259,8 +259,21 @@ export const ProductDetails = () => {
               {selectedTab === Tab.Information &&
               productDetails?.jsonDetails?.information &&
               productDetails.jsonDetails.information !== "" ? (
-                <div className="md:w-[60%] pl-20 pt-10">
-                  <p>{productDetails?.jsonDetails?.information}</p>
+                <div className="md:w-[80%] pl-20 pt-10">
+                  {Array.isArray(productDetails?.jsonDetails?.information) ? (
+                    productDetails?.jsonDetails?.information.map(
+                      (item, index) => (
+                        <div key={index} className="flex justify-between mb-5">
+                          <div className="flex gap-2 items-center">
+                            <img src="/icons/checkList.svg" />
+                            <p>{item}</p>
+                          </div>
+                        </div>
+                      )
+                    )
+                  ) : (
+                    <p>{productDetails?.jsonDetails?.information}</p>
+                  )}
                 </div>
               ) : null}
               {selectedTab === Tab.Downloads && (
@@ -296,7 +309,7 @@ export const ProductDetails = () => {
             </div>
           </section>
           <div className="max-w-[1250px] mx-auto mb-24 h-auto">
-            <Link to="/productos">
+            <Link to={`/productos?categoryId=${productDetails?.categoryId}`}>
               <button
                 type="button"
                 className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold border-4 border-white group"
