@@ -68,6 +68,19 @@ export const Layout = () => {
 
   return (
     <>
+      <div className="fixed lg:bottom-0 lg:right-0 bottom-24 right-1 z-50 m-5 cursor-pointer">
+        <a
+          href="https://api.whatsapp.com/send?phone=56942212801"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="/icons/whatsapp.svg"
+            alt="mensajeria-movil"
+            className="lg:w-20 lg:h-20 w-16 h-16 hover:border-2 hover:border-red hover:shadow-2xl hover:rounded-xl transition-all duration-300 ease-in-out"
+          />
+        </a>
+      </div>
       <Navbar />
       <Outlet />
       <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32 w-full">

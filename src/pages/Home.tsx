@@ -181,7 +181,7 @@ export const Home = () => {
             <h3 className="font-extralight text-xl text-red tracking-widest">
               INDUSTRIAS
             </h3>
-            <p className="text-textGray font-semibold text-2xl">
+            <p className="text-textGray font-semibold text-2xl text-left">
               ENTREGAMOS LA SOLUCION PERFECTA PARA CADA MERCADO
             </p>
             <p className="text-justify">
