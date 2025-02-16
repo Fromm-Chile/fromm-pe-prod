@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { apiUrl } from "../assets/variables";
 import { Category, CategoryFilter } from "../components/CategoryFilter";
 import { InfoBanner } from "../components/InfoBanner";
@@ -35,7 +35,6 @@ export type ProductType = {
 
 export const Products = () => {
   const [search, setSearch] = useState<string>("");
-  // const [page, setPage] = useState<number>(1);
 
   const debouncedSearch = useDebounce(search, 800);
 
@@ -53,6 +52,14 @@ export const Products = () => {
       : Number(queryParams.get("categoryId"));
 
   const page = Number(queryParams.get("page")) || 1;
+
+  const productRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (productRef.current) {
+      productRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [page]);
 
   const {
     data: { products, totalPages = 1 } = {},
@@ -130,7 +137,7 @@ export const Products = () => {
             link="/contacto"
             buttonTitle="Contacto"
           />
-          <section className="bg-primaryGray">
+          <section className="bg-primaryGray" ref={productRef}>
             <div className="max-w-[1350px] m-auto flex flex-col md:flex-row items-start justify-center mb-20">
               <div className="mt-10 w-full px-10 md:px-0 md:mt-20 md:w-[350px] md:mb-20">
                 <div className="relative">
