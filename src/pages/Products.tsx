@@ -6,7 +6,7 @@ import { ProductCard } from "../components/ProductCard";
 import { useQuery } from "@tanstack/react-query";
 import { Loader } from "../components/Loader";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import useDebounce from "../hooks/useDebounce";
 
 export type ProductType = {
@@ -35,9 +35,11 @@ export type ProductType = {
 
 export const Products = () => {
   const [search, setSearch] = useState<string>("");
-  const [page, setPage] = useState<number>(1);
+  // const [page, setPage] = useState<number>(1);
 
   const debouncedSearch = useDebounce(search, 800);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setSearch(debouncedSearch);
@@ -50,16 +52,20 @@ export const Products = () => {
       ? null
       : Number(queryParams.get("categoryId"));
 
+  const page = Number(queryParams.get("page")) || 1;
+
   const {
-    data: products,
+    data: { products, totalPages = 1 } = {},
     error,
     isLoading: isProductsLoading,
   } = useQuery({
     queryKey: [
       "products",
-      { categoryId: category, skip: page - 1, name: debouncedSearch },
+      { categoryId: category, page: page - 1, name: debouncedSearch },
     ],
-    queryFn: async (a): Promise<ProductType[]> => {
+    queryFn: async (
+      a
+    ): Promise<{ products: ProductType[]; totalPages: number }> => {
       const response = await axios(`${apiUrl}/products`, {
         method: "GET",
         params: a.queryKey[1],
@@ -131,7 +137,10 @@ export const Products = () => {
                   <input
                     type="text"
                     className="w-full mb-5 border border-red rounded-md p-3"
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => {
+                      navigate(`/productos`);
+                      setSearch(e.target.value);
+                    }}
                     value={search}
                     placeholder="Buscar producto"
                   />
@@ -164,32 +173,7 @@ export const Products = () => {
                     </div>
                   ) : (
                     <>
-                      <div className="flex justify-center gap-5 items-center mt-20 bg-white border border-red w-fit m-auto rounded-md">
-                        <button
-                          onClick={() =>
-                            setPage((prev) => (prev === 1 ? 1 : prev - 1))
-                          }
-                          className="p-3 hover:text-white hover:bg-gray-500 border-r border-red"
-                        >
-                          Previo
-                        </button>
-                        <p>{page}</p>
-                        <button
-                          onClick={() =>
-                            setPage((prev) =>
-                              products
-                                ? products?.length < 9
-                                  ? prev
-                                  : prev + 1
-                                : prev
-                            )
-                          }
-                          className="p-3 hover:text-white hover:bg-gray-500 border-l border-red"
-                        >
-                          Siguiente
-                        </button>
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 p-5 max-w-[1250px] md:mx-auto mb-20 md:w-[100%]">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 p-5 max-w-[1250px] md:mx-auto mt-28 md:w-[100%]">
                         {(!products ? products ?? [] : products).map(
                           (product) => (
                             <ProductCard
@@ -202,6 +186,41 @@ export const Products = () => {
                             />
                           )
                         )}
+                      </div>
+                      <div className="flex justify-center gap-5 items-center mb-20 bg-white border border-red w-fit m-auto rounded-md">
+                        <button
+                          onClick={() =>
+                            navigate(
+                              typeof category === "number"
+                                ? `?categoryId=${category}&page=${
+                                    page === 0 ? 0 : page - 1
+                                  }`
+                                : `?page=${page === 0 ? 0 : page - 1}`
+                            )
+                          }
+                          className="p-3 hover:text-white hover:bg-gray-500 border-r border-red"
+                        >
+                          Previo
+                        </button>
+                        <p>
+                          {page} de {totalPages}
+                        </p>
+                        <button
+                          onClick={() =>
+                            navigate(
+                              typeof category === "number"
+                                ? `?categoryId=${category}&page=${
+                                    page === totalPages ? totalPages : page + 1
+                                  }`
+                                : `?page=${
+                                    page === totalPages ? totalPages : page + 1
+                                  }`
+                            )
+                          }
+                          className="p-3 hover:text-white hover:bg-gray-500 border-l border-red"
+                        >
+                          Siguiente
+                        </button>
                       </div>
                     </>
                   )}
