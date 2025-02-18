@@ -94,11 +94,13 @@ export const ProductDetails = () => {
               <div className="md:w-[50%]">
                 <div className="md:h-[400px] relative group">
                   <div className="rounded-2xl bg-center bg-cover duration-500">
-                    <img
-                      src={`${productDetails?.srcImg[currentImage]}`}
-                      alt={productDetails?.alt}
-                      className="m-auto max-h-[400px] rounded-2xl object-cover"
-                    />
+                    {productDetails && productDetails.srcImg.length > 0 && (
+                      <img
+                        src={productDetails.srcImg[currentImage]}
+                        alt={productDetails.alt}
+                        className="w-[400px] h-[400px] m-auto rounded-2xl object-contain"
+                      />
+                    )}
                   </div>
                   <div
                     onClick={prevSlide}
@@ -130,16 +132,16 @@ export const ProductDetails = () => {
               </div>
               <div className="md:w-[45%]">
                 <div className="flex flex-col gap-5 mt-5">
-                  <h2 className="text-4xl font-bold mt-5">
+                  <h2 className="text-4xl font-bold mt-5 mb-2">
                     {productDetails?.name}
                   </h2>
                 </div>
-                {parse(productDetails?.desc as string)}
+                <p>{productDetails?.desc}</p>
                 {isProductInInvoice ? (
                   <div className="flex flex-col gap-5 md:flex-row md:gap-4 justify-between items-center mt-5">
                     <Button link="/productos">Volver a productos</Button>
-                    <div className="bg-white p-5 flex justify-center items-center border border-red rounded-xl">
-                      <p>Producto agregado!</p>
+                    <div className="bg-white p-5 flex justify-center items-center border border-red rounded-xl h-4">
+                      <p>Agregado!</p>
                     </div>
                     <Button link="/cotizacion">Ir a mi Cotización</Button>
                   </div>
@@ -175,7 +177,10 @@ export const ProductDetails = () => {
                       />
                     </div>
                     <div>
-                      <Button link="" onClick={handleAddProduct}>
+                      <Button
+                        link={`/productos/${productDetails?.slug}?producto=${productDetails?.id}`}
+                        onClick={handleAddProduct}
+                      >
                         Agregar a la Cotización
                       </Button>
                     </div>

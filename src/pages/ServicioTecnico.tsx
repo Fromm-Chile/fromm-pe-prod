@@ -16,17 +16,42 @@ export const ServicioTecnico = () => {
       <section className="px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10 md:mt-20">
         <div className="mb-10">
           <p className="mb-5">
-            FROMM Chile. Cuenta con servicio técnico especializado para las
-            Enzunchadoras FROMM, posee técnicos con experiencia para realizar
-            mantenciones integrales, para maquinas manuales, eléctricas,
-            neumáticas y sistemas de fin de línea.
+            FROMM CHILE S.A. esta dispuesto a cuidar de nuestros clientes
+            brindándoles un servicio completo para nuestros equipos en toda la
+            región. Donde quiera que se encuentre, FROMM puede brindarle soporte
+            técnico, servicio de mantenimiento completo y entregas rápidas desde
+            sus (propios) centros de servicio locales.
           </p>
         </div>
-        <div className="text-textGray bg-primaryGray p-6">
+        <div className="text-textGray bg-primaryGray p-6 mb-10">
           <p className="text-xl font-bold mb-3">
-            Nuestro principal objetivo es entregar un servicio personalizado y
-            de calidad, garantizando el funcionamiento óptimo de sus
-            herramientas de embalaje.
+            Nuestra dedicación es garantizar una excelente vida útil y
+            funcionamiento de todas nuestras máquinas.
+          </p>
+        </div>
+        <div className="mb-10">
+          <p className="mb-5">
+            Las empresas FROMM ofrecen a sus clientes locales un Servicio y
+            Asistencia Técnica garantizado y de calidad, todo esto respaldado
+            con personal especializado en todo el equipamiento FROMM. Desde la
+            primera consulta, la instalación y la puesta en marcha, durante todo
+            el ciclo de vida (con mantenimiento, suministro de piezas de
+            repuesto y posibles actualizaciones), se puede estimar programas
+            para mantener sus productos FROMM en óptimas condiciones, limitar al
+            mínimo los tiempos de inactividad y prolongar su vida útil.
+          </p>
+        </div>
+        <div className="mb-10">
+          <p className="mb-5">
+            Para las instalaciones de producción es esencial mantener el tiempo
+            de inactividad al mínimo. Con el concepto de mantenimiento y
+            servicio preventivo FROMM, ofrecemos a nuestros clientes un programa
+            de servicio completo en todo el mundo para todos los equipos e
+            instalaciones FROMM. Lo mismo se aplica a los tiempos de respuesta,
+            el stock y las entregas de piezas y consumibles. Este servicio
+            rápido, personalizado y confiable es realizado por ingenieros de
+            ventas y servicio capacitados y experimentados, con el objetivo de
+            agregar valor a nuestras soluciones de productos.
           </p>
         </div>
       </section>

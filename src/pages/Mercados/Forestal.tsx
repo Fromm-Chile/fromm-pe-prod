@@ -39,14 +39,17 @@ export const Forestal = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/mederazuncho.webp"
           className="h-[400px] w-[400px]"
+          alt="zunchos madera"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maderazuncho2.webp"
           className="h-[400px] w-[400px]"
+          alt="zunchos madera"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maderazuncho3.webp"
           className="h-[400px] w-[400px]"
+          alt="zunchos madera"
         />
       </section>
       <section className="mb-24 py-10">

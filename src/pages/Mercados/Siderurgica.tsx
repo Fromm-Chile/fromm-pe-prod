@@ -29,6 +29,23 @@ export const Siderurgica = () => {
           </p>
         </div>
       </section>
+      <section className="mb-10 flex gap-5 max-w-[1150px] justify-center m-auto">
+        <img
+          src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/perfilesmetal.jpeg"
+          className="h-[400px] w-[400px]"
+          alt="perfiles metal"
+        />
+        <img
+          src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/rollosalambre.jpeg"
+          className="h-[400px] w-[400px]"
+          alt="rollos alambre"
+        />
+        <img
+          src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/rollosacerozuncho.jpeg"
+          className="h-[400px] w-[400px]"
+          alt="rollos acero zuncho"
+        />
+      </section>
       <section className="mb-24 py-10">
         <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
           <h3 className="text-textGray font-semibold text-2xl text-left">

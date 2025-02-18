@@ -170,7 +170,7 @@ export const Products = () => {
               ) : (
                 <div className="w-full md:w-[1014px] mx-auto">
                   {products?.length === 0 ? (
-                    <div className="pt-16 p-5 md:w-[1014px] w-full mx-auto mb-20 flex flex-col justify-center items-center">
+                    <div className="pt-16 p-5 md:w-[914px] w-full mx-auto mb-20 mt-20 flex flex-col justify-center items-center">
                       <img
                         src="icons/noresults.svg"
                         alt="sin-resultados"
