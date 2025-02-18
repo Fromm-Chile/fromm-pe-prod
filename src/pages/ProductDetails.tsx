@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "../components/commons/Button";
-import parse from "html-react-parser";
 import { useQuery } from "@tanstack/react-query";
 import { apiUrl } from "../assets/variables";
 import { Link, useLocation } from "react-router-dom";
