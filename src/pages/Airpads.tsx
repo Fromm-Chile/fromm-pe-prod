@@ -5,6 +5,12 @@ import { InfoBanner } from "../components/InfoBanner";
 const Airpads = () => {
   return (
     <>
+      <title>Airpads</title>
+      <meta
+        name="description"
+        content="información detallada de las materiales de relleno que comercializamos"
+      />
+      <meta name="keywords" content="Airpads" />
       <InfoBanner
         category="SOLUCIONES"
         srcImg="https://www.fromm.nl/wp-content/uploads/2024/01/Milieuvriendelijk-inpakken-fromm2-1920x1328.jpg"

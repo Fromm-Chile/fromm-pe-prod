@@ -128,6 +128,8 @@ export const Products = () => {
         <Loader />
       ) : (
         <>
+          <title>Productos</title>
+          <meta name="description" content="información sobre los productos" />
           <InfoBanner
             category="SIEMPRE UNA SOLUCIÓN"
             srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/products.webp"
@@ -180,7 +182,7 @@ export const Products = () => {
                     </div>
                   ) : (
                     <>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 p-5 max-w-[1250px] md:mx-auto mt-28 md:w-[100%]">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 p-5 max-w-[1250px] md:mx-auto md:mt-28 md:w-[100%]">
                         {(!products ? products ?? [] : products).map(
                           (product) => (
                             <ProductCard

@@ -8,9 +8,15 @@ import { ContactForm } from "../components/ContactForm";
 export const Zunchos = () => {
   return (
     <>
+      <title>Zunchos</title>
+      <meta
+        name="description"
+        content="información detallada de los Zunchos y enzunchadoras que produce Fromm Chile"
+      />
+      <meta name="keywords" content="zuncho" />
       <InfoBanner
         category="SOLUCIONES"
-        srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora.jpg"
+        srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadora1.jpeg"
         alt="enzunchadora"
         title="ZUNCHOS Y HERRAMIENTAS"
         desc="HERRAMIENTAS DE ENZUNCHADO PARA USO A GRAN ESCALA"

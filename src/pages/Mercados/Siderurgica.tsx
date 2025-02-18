@@ -4,6 +4,12 @@ import { InfoBanner } from "../../components/InfoBanner";
 export const Siderurgica = () => {
   return (
     <>
+      <title>Industria Siderurgica</title>
+      <meta
+        name="description"
+        content="Soluciones de embalaje en la industria siderurgica"
+      />
+      <meta name="keywords" content="Industria Siderurgica" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/metalindustry.webp"
         link=""

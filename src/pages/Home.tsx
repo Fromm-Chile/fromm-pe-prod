@@ -6,6 +6,11 @@ import { CustomSelect } from "../components/commons/CustomSelect";
 export const Home = () => {
   return (
     <>
+      <title>Fromm Chile</title>
+      <meta
+        name="description"
+        content="información de la empresa y productos"
+      />
       <section>
         <div className="relative">
           <img

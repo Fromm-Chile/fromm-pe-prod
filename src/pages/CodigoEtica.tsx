@@ -3,6 +3,9 @@ import { InfoBanner } from "../components/InfoBanner";
 export const CodigoEtica = () => {
   return (
     <>
+      <title>Código de Ética</title>
+      <meta name="description" content="Código de Ética de FROMM Chile" />
+      <meta name="keywords" content="Código de Ética" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/codigoetica.jpg"
         alt="codigo-etica"

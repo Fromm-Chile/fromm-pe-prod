@@ -4,6 +4,12 @@ import { InfoBanner } from "../../components/InfoBanner";
 export const Agricola = () => {
   return (
     <>
+      <title>Industria Agrícola</title>
+      <meta
+        name="description"
+        content="Soluciones de flejado en la industria agrícola"
+      />
+      <meta name="keywords" content="Industria Agrícola" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/agriculture.jpg"
         link=""

@@ -5,6 +5,15 @@ import { YoutubeEmbed } from "../components/YotubeEmbed";
 export const AboutUs = () => {
   return (
     <>
+      <title>Fromm Chile - Nosotros</title>
+      <meta
+        name="description"
+        content="FROMM Chile S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
+      />
+      <meta
+        name="keywords"
+        content="Fromm Chile, Fromm Holding Suiza, sistemas de embalaje, transporte, aseguramiento de cargas"
+      />
       <InfoBanner
         category="NOSOTROS"
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Flugzeug.jpg"

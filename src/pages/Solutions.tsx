@@ -7,6 +7,11 @@ import { solutionCard } from "../Data/SolutionsData";
 export const Solutions = () => {
   return (
     <>
+      <title>Soluciones</title>
+      <meta
+        name="description"
+        content="información detallada de cada categoría de soluciones"
+      />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/PETband.jpg"
         alt="soluciones"

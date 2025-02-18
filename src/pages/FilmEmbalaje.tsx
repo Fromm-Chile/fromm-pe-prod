@@ -7,6 +7,12 @@ import { productsCard } from "../Data/enzunchadoData";
 export const FilmEmbalaje = () => {
   return (
     <>
+      <title>Film de embalaje</title>
+      <meta
+        name="description"
+        content="información detallada de las Film de embalaje que comercializamos"
+      />
+      <meta name="keywords" content="Film de embalaje" />
       <InfoBanner
         category="SOLUCIONES"
         video
@@ -105,7 +111,7 @@ export const FilmEmbalaje = () => {
           <div className="mb-20 md:w-[70%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/filmfoto1.webp"
-              alt="film-ebalaje"
+              alt="film-embalaje"
               className="md:min-h-[400px] md:max-h-[450px] object-cover"
             />
           </div>
@@ -143,7 +149,7 @@ export const FilmEmbalaje = () => {
           <div className="mb-20 md:w-[70%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/filmfoto2.webp"
-              alt="film-ebalaje"
+              alt="film-embalaje"
               className=""
             />
           </div>

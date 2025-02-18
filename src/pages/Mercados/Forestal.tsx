@@ -4,6 +4,12 @@ import { InfoBanner } from "../../components/InfoBanner";
 export const Forestal = () => {
   return (
     <>
+      <title>Industria Forestal</title>
+      <meta
+        name="description"
+        content="Soluciones de embalaje en la industria forestal"
+      />
+      <meta name="keywords" content="Industria Forestal" />
       <InfoBanner
         video
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/woodindustry.mp4"

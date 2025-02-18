@@ -7,6 +7,12 @@ import { envolvedoras } from "../Data/envolvedoraData";
 export const MaquinasEnvolvedoras = () => {
   return (
     <>
+      <title>Envolvedoras</title>
+      <meta
+        name="description"
+        content="información detallada de las máquinas envolvedoras de FROMM"
+      />
+      <meta name="keywords" content="envolvedoras" />
       <InfoBanner
         category="SOLUCIONES"
         video
@@ -104,8 +110,7 @@ export const MaquinasEnvolvedoras = () => {
           <div className="mb-20 md:w-[40%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fotoenvolvedora3.jpeg"
-              alt="maquina-enzunchadora"
-              className=""
+              alt="maquina-envolvedora"
             />
           </div>
         </div>
@@ -136,7 +141,7 @@ export const MaquinasEnvolvedoras = () => {
           <div className="mb-20 md:w-[40%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedorafoto2.webp"
-              alt="maquina-enzunchadora"
+              alt="maquina-envolvedora"
               className=""
             />
           </div>

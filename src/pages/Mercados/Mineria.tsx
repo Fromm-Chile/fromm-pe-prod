@@ -4,6 +4,12 @@ import { InfoBanner } from "../../components/InfoBanner";
 export const Mineria = () => {
   return (
     <>
+      <title>Industria Minera</title>
+      <meta
+        name="description"
+        content="Soluciones de flejado en la industria minera"
+      />
+      <meta name="keywords" content="Industria Minera" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/mining.jpg"
         link=""

@@ -4,6 +4,12 @@ import { ServiceForm } from "../components/ServiceForm";
 export const ServicioTecnico = () => {
   return (
     <>
+      <title>Servicio Técnico</title>
+      <meta
+        name="description"
+        content="Servicio técnico y mantenimiento de maquinaria de embalaje"
+      />
+      <meta name="keywords" content="Servicio técnico" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/servicio-tecnico.webp"
         title="SERVICIO TÉCNICO"

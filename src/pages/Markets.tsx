@@ -5,6 +5,12 @@ import { InfoBanner } from "../components/InfoBanner";
 export const Markets = () => {
   return (
     <>
+      <title>Mercados</title>
+      <meta
+        name="description"
+        content="información de los mercados y aplicaciones de los zunchos"
+      />
+      <meta name="keywords" content="mercados para el zuncho" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/markets.webp"
         category="MERCADOS"
