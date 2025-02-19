@@ -89,10 +89,7 @@ export const ProductDetails = () => {
       ) : (
         <>
           <title>{productDetails?.name}</title>
-          <meta
-            name="description"
-            content="información detallada de cada producto"
-          />
+          <meta name="description" content={productDetails?.desc} />
           <meta name="keywords" content={productDetails?.name} />
           <section className="bg-primaryGray pt-10">
             <div className="p-5 max-w-[1250px] mx-auto mb-5 h-auto md:flex md:justify-between">

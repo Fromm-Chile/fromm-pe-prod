@@ -80,8 +80,8 @@ export const AboutUs = () => {
           </div>
           <div className="md:w-[40%]">
             <img
-              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/nuestroszunchos.jpg"
-              alt="maquina-enzunchadora"
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/automated-packaging.webp"
+              alt="sistemas-de-embalaje"
               className="h-[300px] w-full"
             />
           </div>
@@ -162,14 +162,23 @@ export const AboutUs = () => {
             Cualquiera que haga negocios con FROMM puede contar con:
           </h3>
           <ul className="flex flex-col gap-2 md:text-lg">
-            <li>
-              Equipos de bajo mantenimiento y consumibles de alta calidad;
+            <li className="flex gap-2 items-center">
+              <img src="/icons/checkList.svg" />
+              <p>
+                Equipos de bajo mantenimiento y consumibles de alta calidad;
+              </p>
             </li>
-            <li>
-              Atención personalizada de especialistas que optimizan su proceso
-              de empaque;
+            <li className="flex gap-2 items-center">
+              <img src="/icons/checkList.svg" />
+              <p>
+                Atención personalizada de especialistas que optimizan su proceso
+                de empaque;
+              </p>
             </li>
-            <li>Acuerdos claros en cuanto a servicio y mantenimiento;</li>
+            <li className="flex gap-2 items-center">
+              <img src="/icons/checkList.svg" />
+              <p>Acuerdos claros en cuanto a servicio y mantenimiento;</p>
+            </li>
           </ul>
         </div>
         <div className="my-10 md:my-20">
