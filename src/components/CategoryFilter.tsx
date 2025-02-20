@@ -27,13 +27,35 @@ export const CategoryFilter = ({
   const [isCategorySelected, setIsCategorySelected] = useState<boolean>(false);
   const [isSubCategorySelected, setIsSubCategorySelected] =
     useState<boolean>(false);
+
+  const categoryOrder = [
+    "ZUNCHOS",
+    "MÁQUINAS Y HERRAMIENTAS",
+    "AIRPAD",
+    "MÁQUINAS ENVOLVEDORAS",
+    "SISTEMAS DE EMBALAJE",
+    "HERRAMIENTAS DE APOYO",
+    "ACCESORIOS DE EMBALAJE",
+  ];
+
+  const sortByObject = categoryOrder.reduce((obj, item, index) => {
+    return {
+      ...obj,
+      [item]: index,
+    };
+  }, {});
+
+  const customSortCategories = categories?.sort(
+    (a, b) => sortByObject[a.name] - sortByObject[b.name]
+  );
+
   return (
     <>
       {isLoading ? (
         <Loader />
       ) : (
         <div className="flex flex-col gap-2 w-full">
-          {categories?.map((category) => (
+          {customSortCategories.map((category) => (
             <div
               key={category.id}
               className={`${

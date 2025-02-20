@@ -196,41 +196,47 @@ export const Products = () => {
                           )
                         )}
                       </div>
-                      <div className="flex justify-center gap-5 items-center mb-20 bg-white border border-red w-fit m-auto rounded-md">
-                        <button
-                          onClick={() =>
-                            navigate(
-                              typeof category === "number"
-                                ? `?categoryId=${category}&page=${
-                                    page === 0 ? 0 : page - 1
-                                  }`
-                                : `?page=${page === 0 ? 0 : page - 1}`
-                            )
-                          }
-                          className="p-3 hover:text-white hover:bg-gray-500 border-r border-red"
-                        >
-                          Previo
-                        </button>
-                        <p>
-                          {page} de {totalPages}
-                        </p>
-                        <button
-                          onClick={() =>
-                            navigate(
-                              typeof category === "number"
-                                ? `?categoryId=${category}&page=${
-                                    page === totalPages ? totalPages : page + 1
-                                  }`
-                                : `?page=${
-                                    page === totalPages ? totalPages : page + 1
-                                  }`
-                            )
-                          }
-                          className="p-3 hover:text-white hover:bg-gray-500 border-l border-red"
-                        >
-                          Siguiente
-                        </button>
-                      </div>
+                      {totalPages > 1 && (
+                        <div className="flex justify-center gap-5 items-center mb-20 bg-white border border-red w-fit m-auto rounded-md">
+                          <button
+                            onClick={() =>
+                              navigate(
+                                typeof category === "number"
+                                  ? `?categoryId=${category}&page=${
+                                      page === 0 ? 0 : page - 1
+                                    }`
+                                  : `?page=${page === 0 ? 0 : page - 1}`
+                              )
+                            }
+                            className="p-3 hover:text-white hover:bg-gray-500 border-r border-red"
+                          >
+                            Previo
+                          </button>
+                          <p>
+                            {page} de {totalPages}
+                          </p>
+                          <button
+                            onClick={() =>
+                              navigate(
+                                typeof category === "number"
+                                  ? `?categoryId=${category}&page=${
+                                      page === totalPages
+                                        ? totalPages
+                                        : page + 1
+                                    }`
+                                  : `?page=${
+                                      page === totalPages
+                                        ? totalPages
+                                        : page + 1
+                                    }`
+                              )
+                            }
+                            className="p-3 hover:text-white hover:bg-gray-500 border-l border-red"
+                          >
+                            Siguiente
+                          </button>
+                        </div>
+                      )}
                     </>
                   )}
                 </div>
