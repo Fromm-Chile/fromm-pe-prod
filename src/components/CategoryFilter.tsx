@@ -46,7 +46,9 @@ export const CategoryFilter = ({
   }, {});
 
   const customSortCategories = categories?.sort(
-    (a, b) => sortByObject[a.name] - sortByObject[b.name]
+    (a: Category, b: Category) =>
+      (sortByObject as Record<string, number>)[a.name] -
+      (sortByObject as Record<string, number>)[b.name]
   );
 
   return (
