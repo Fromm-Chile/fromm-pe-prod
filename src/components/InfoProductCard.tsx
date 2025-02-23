@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 type InfoProductCardProps = {
@@ -6,7 +5,6 @@ type InfoProductCardProps = {
   alt: string;
   solution: string;
   product?: string;
-  desc?: React.JSX.Element;
   link: string;
 };
 
@@ -15,7 +13,6 @@ export const InfoProductCard = ({
   alt,
   solution,
   product,
-  desc,
   link,
 }: InfoProductCardProps) => {
   return (
@@ -29,7 +26,6 @@ export const InfoProductCard = ({
             {solution}
           </p>
           <p className="text-lg font-bold mb-8">{product}</p>
-          {desc}
         </div>
       </div>
     </Link>

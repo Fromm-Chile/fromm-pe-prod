@@ -4,7 +4,6 @@ type Envolvedoras = {
   alt: string;
   solution: string;
   product: string;
-  desc?: React.JSX.Element;
   link: string;
 };
 

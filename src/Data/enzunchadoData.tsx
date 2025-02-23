@@ -1,5 +1,3 @@
-import React from "react";
-
 type ServiceData = {
   id: number;
   title: string;
@@ -79,7 +77,6 @@ type HerramientasEnzunchado = {
   alt: string;
   solution: string;
   product: string;
-  desc?: React.JSX.Element;
   link: string;
 };
 

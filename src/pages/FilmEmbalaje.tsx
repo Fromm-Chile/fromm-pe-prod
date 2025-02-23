@@ -69,12 +69,7 @@ export const FilmEmbalaje = () => {
             alt="film-embalaje"
             solution="EMBALAJE"
             product="Film de Embalaje"
-            desc={
-              <p>
-                Suministramos film de embalaje adecuado para todas nuestras
-                máquinas
-              </p>
-            }
+            link=""
           />
         </div>
       </div>
