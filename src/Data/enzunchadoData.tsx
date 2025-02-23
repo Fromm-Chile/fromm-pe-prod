@@ -79,7 +79,8 @@ type HerramientasEnzunchado = {
   alt: string;
   solution: string;
   product: string;
-  desc: React.JSX.Element;
+  desc?: React.JSX.Element;
+  link: string;
 };
 
 export const herramientasEnzunchado: HerramientasEnzunchado[] = [
@@ -90,17 +91,7 @@ export const herramientasEnzunchado: HerramientasEnzunchado[] = [
     alt: "enzunchadora-electrica",
     solution: "ZUNCHOS",
     product: "Enzunchadoras Eléctricas",
-    desc: (
-      <>
-        <p className="text-textGray text-base font-light mb-3">
-          Equipamiento de última tecnología FROMM para enzunchado manual
-        </p>
-        <ul className="text-textGray text-base font-light mb-3 flex flex-col gap-2">
-          <li>Diseno inteligente para bajo mantenimiento</li>
-          <li>El mejor equipo de enzunchado a nivel mundial</li>
-        </ul>
-      </>
-    ),
+    link: "/productos?categoryId=19",
   },
   {
     id: 2,
@@ -109,17 +100,7 @@ export const herramientasEnzunchado: HerramientasEnzunchado[] = [
     alt: "enzunchadora-electrica",
     solution: "ZUNCHOS",
     product: "Enzunchadoras Manuales",
-    desc: (
-      <>
-        <p className="text-textGray text-base font-light mb-3">
-          Equipamiento de última tecnología FROMM para enzunchado manual
-        </p>
-        <ul className="text-textGray text-base font-light mb-3 flex flex-col gap-2">
-          <li>Diseno inteligente para bajo mantenimiento</li>
-          <li>El mejor equipo de enzunchado a nivel mundial</li>
-        </ul>
-      </>
-    ),
+    link: "/productos?categoryId=20",
   },
   {
     id: 3,
@@ -128,16 +109,6 @@ export const herramientasEnzunchado: HerramientasEnzunchado[] = [
     alt: "enzunchadora-electrica",
     solution: "ZUNCHOS",
     product: "Enzunchadoras Neumáticas",
-    desc: (
-      <>
-        <p className="text-textGray text-base font-light mb-3">
-          Equipamiento de última tecnología FROMM para enzunchado manual
-        </p>
-        <ul className="text-textGray text-base font-light mb-3 flex flex-col gap-2">
-          <li>Diseno inteligente para bajo mantenimiento</li>
-          <li>El mejor equipo de enzunchado a nivel mundial</li>
-        </ul>
-      </>
-    ),
+    link: "/productos?categoryId=21",
   },
 ];

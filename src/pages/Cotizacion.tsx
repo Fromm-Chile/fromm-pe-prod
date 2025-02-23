@@ -20,7 +20,7 @@ type FormData = {
 
 const schema = yup.object().shape({
   name: yup.string().required("Nombre es requerido"),
-  email: yup.string().email().required("Email es requerido"),
+  email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
   company: yup.string(),
 });
@@ -86,7 +86,7 @@ export const Cotizacion = () => {
           <div className="border border-black p-5 md:py-10 md:px-3 bg-white mb-10 md:max-w-[1150px] md:m-auto md:mb-10">
             {products.length === 0 ? (
               <p className="text-center text-lg md:text-2xl text-textGray">
-                No hay productos en la cotización
+                No hay productos en la cotización.
               </p>
             ) : (
               <>
@@ -127,18 +127,18 @@ export const Cotizacion = () => {
               <InputController
                 control={control}
                 name="email"
-                placeholder="Email*"
+                placeholder="Correo*"
                 error={errors.email?.message}
               />
               <InputController
                 control={control}
                 name="phone"
-                placeholder="phone"
+                placeholder="Teléfono"
               />
               <InputController
                 control={control}
                 name="company"
-                placeholder="company"
+                placeholder="Empresa"
               />
             </div>
             <div>

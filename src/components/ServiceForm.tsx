@@ -26,7 +26,7 @@ type ServiceFormProps = {
 
 const schema = yup.object().shape({
   name: yup.string().required("Nombre es requerido"),
-  email: yup.string().email().required("Email es requerido"),
+  email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
   equipment: yup.string().required("Tipo de Máquina es requerido"),
   company: yup.string(),
@@ -92,13 +92,13 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               <InputController
                 control={control}
                 name="email"
-                placeholder="Email*"
+                placeholder="Correo*"
                 error={errors.email?.message}
               />
               <InputController
                 control={control}
                 name="phone"
-                placeholder="phone"
+                placeholder="Teléfono"
               />
               <InputController
                 control={control}
@@ -127,7 +127,7 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               </div>
             </div>
             <div className="px-6 py-2 mt-8 rounded-lg max-w-[90%] md:w-[50%]">
-              <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] mb-10">
+              <div className="w-[200px] h-[200px] m-auto md:w-[300px] md:h-[300px] md:mb-10">
                 <img src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/servicio.png" />
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">

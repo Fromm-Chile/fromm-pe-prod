@@ -77,6 +77,7 @@ export const Zunchos = () => {
               solution={herramienta.solution}
               product={herramienta.product}
               desc={herramienta.desc}
+              link={herramienta.link}
             />
           ))}
         </div>

@@ -25,7 +25,7 @@ type ContactFormProps = {
 
 const schema = yup.object().shape({
   name: yup.string().required("Nombre es requerido"),
-  email: yup.string().email().required("Email es requerido"),
+  email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
   company: yup.string(),
   message: yup.string().required("Mensaje es requerido"),
@@ -90,7 +90,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
               <InputController
                 control={control}
                 name="email"
-                placeholder="Email*"
+                placeholder="Correo*"
                 error={errors.email?.message}
               />
               <InputController
@@ -120,7 +120,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
               </div>
             </div>
             <div className="px-6 py-2 mt-8 rounded-lg max-w-[90%] md:w-[50%]">
-              <div className="w-[250px] h-[250px] mb-10">
+              <div className="md:w-[250px] md:h-[250px] h-[100px] w-[100px] m-auto mb-10">
                 <img src="/icons/contacthelp.svg" />
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">

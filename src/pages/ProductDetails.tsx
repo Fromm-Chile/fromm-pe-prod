@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "../components/commons/Button";
 import { useQuery } from "@tanstack/react-query";
 import { apiUrl } from "../assets/variables";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ProductType } from "./Products";
 import { Loader } from "../components/Loader";
 import { useProductStore } from "../store/useStore";
@@ -23,6 +23,8 @@ export const ProductDetails = () => {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const productId = queryParams.get("producto");
+
+  const navigate = useNavigate();
 
   const { addProduct, products } = useProductStore();
 
@@ -138,7 +140,7 @@ export const ProductDetails = () => {
                     {productDetails?.name}
                   </h2>
                 </div>
-                <p>{productDetails?.desc}</p>
+                <p>{productDetails?.desc || ""}</p>
                 {isProductInInvoice ? (
                   <div className="flex flex-col gap-5 md:flex-row md:gap-4 justify-between items-center mt-5">
                     <Button link="/productos">Volver a productos</Button>
@@ -319,31 +321,30 @@ export const ProductDetails = () => {
             </div>
           </section>
           <div className="max-w-[1250px] mx-auto mb-24 h-auto">
-            <Link to={`/productos?categoryId=${productDetails?.categoryId}`}>
-              <button
-                type="button"
-                className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold border-4 border-white group"
-              >
-                <div className="bg-red rounded-xl h-12 w-1/4 grid place-items-center absolute left-0 top-0 group-hover:w-full z-10 duration-500">
-                  <svg
-                    width="25px"
-                    height="25px"
-                    viewBox="0 0 1024 1024"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill="white"
-                      d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
-                    ></path>
-                    <path
-                      fill="white"
-                      d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
-                    ></path>
-                  </svg>
-                </div>
-                <p className="translate-x-14">Volver</p>
-              </button>
-            </Link>
+            <button
+              onClick={() => navigate(-1)}
+              type="button"
+              className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold border-4 border-white group"
+            >
+              <div className="bg-red rounded-xl h-12 w-1/4 grid place-items-center absolute left-0 top-0 group-hover:w-full z-10 duration-500">
+                <svg
+                  width="25px"
+                  height="25px"
+                  viewBox="0 0 1024 1024"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="white"
+                    d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                  ></path>
+                  <path
+                    fill="white"
+                    d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                  ></path>
+                </svg>
+              </div>
+              <p className="translate-x-14">Volver</p>
+            </button>
           </div>
         </>
       )}

@@ -173,7 +173,10 @@ export const Home = () => {
               </p>
             </div>
           </div>
-          <Button link="/" className="mb-12 mt-[-28px] w-[170px] m-auto">
+          <Button
+            link="/contacto"
+            className="mb-12 mt-[-28px] w-[170px] m-auto"
+          >
             CONTÁCTANOS
           </Button>
         </section>
