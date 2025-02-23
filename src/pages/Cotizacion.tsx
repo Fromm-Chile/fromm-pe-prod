@@ -10,6 +10,7 @@ import axios from "axios";
 import { apiUrl } from "../assets/variables";
 import { Loader } from "../components/Loader";
 import { useNavigate } from "react-router-dom";
+import { TextareaController } from "../components/TextareaController";
 
 type FormData = {
   name: string;
@@ -23,6 +24,7 @@ const schema = yup.object().shape({
   email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
   company: yup.string(),
+  message: yup.string(),
 });
 
 export const Cotizacion = () => {
@@ -117,7 +119,7 @@ export const Cotizacion = () => {
             INFORMACION DE CONTACTO
           </h2>
           <div className="border border-black p-5 md:px-20 md:py-5 bg-white md:max-w-[1150px] md:m-auto">
-            <div className="md:grid md:grid-cols-2 md:gap-5 my-10">
+            <div className="md:grid md:grid-cols-2 md:gap-5 mt-10 mb-3">
               <InputController
                 control={control}
                 name="name"
@@ -141,6 +143,12 @@ export const Cotizacion = () => {
                 placeholder="Empresa"
               />
             </div>
+            <TextareaController
+              control={control}
+              name="message"
+              placeholder="Comentarios adicionales (opcionales)"
+              rows={3}
+            />
             <div>
               <Button link="" onClick={handleSubmit(onSubmit)}>
                 Solicitar Cotización

@@ -143,7 +143,9 @@ export const ProductDetails = () => {
                 <p>{productDetails?.desc || ""}</p>
                 {isProductInInvoice ? (
                   <div className="flex flex-col gap-5 md:flex-row md:gap-4 justify-between items-center mt-5">
-                    <Button link="/productos">Volver a productos</Button>
+                    <Button link="" onClick={() => navigate(-1)}>
+                      Volver a productos
+                    </Button>
                     <div className="bg-white p-5 flex justify-center items-center border border-red rounded-xl h-4">
                       <p>Agregado!</p>
                     </div>

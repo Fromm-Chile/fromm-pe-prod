@@ -5,6 +5,7 @@ type TextareaControllerProps = {
   name: string;
   placeholder: string;
   error?: string;
+  rows?: number;
 };
 
 export const TextareaController = ({
@@ -12,6 +13,7 @@ export const TextareaController = ({
   name,
   placeholder,
   error,
+  rows,
 }: TextareaControllerProps) => {
   return (
     <Controller
@@ -24,7 +26,7 @@ export const TextareaController = ({
             placeholder={placeholder}
             className="w-full border md:border-2 border-black md:border-primaryGray p-2 rounded-lg focus:outline-red"
             cols={40}
-            rows={10}
+            rows={rows || 10}
             maxLength={2000}
           />
           <p className="text-red text-xs font-semibold">{error}</p>
