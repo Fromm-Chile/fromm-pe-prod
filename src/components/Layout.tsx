@@ -70,7 +70,7 @@ export const Layout = () => {
     <>
       <div className="fixed lg:bottom-0 lg:right-0 bottom-24 right-1 z-[1000] m-5 cursor-pointer">
         <a
-          href="https://api.whatsapp.com/send?phone=56942212801"
+          href="https://api.whatsapp.com/send?phone=56939522069"
           target="_blank"
           rel="noreferrer"
         >
