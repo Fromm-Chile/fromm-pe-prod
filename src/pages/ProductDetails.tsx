@@ -44,6 +44,7 @@ export const ProductDetails = () => {
       const data = await response.json();
       return data;
     },
+    refetchOnWindowFocus: false,
   });
 
   if (error) {
