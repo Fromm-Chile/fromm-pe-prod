@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TextareaController } from "../components/TextareaController";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { InputController } from "./InputController";
 import { Button } from "./commons/Button";
 import { useState } from "react";
