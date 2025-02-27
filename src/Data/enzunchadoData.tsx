@@ -76,7 +76,7 @@ type HerramientasEnzunchado = {
   srcImg: string;
   alt: string;
   solution: string;
-  product: string;
+  name: string;
   link: string;
 };
 
@@ -87,7 +87,7 @@ export const herramientasEnzunchado: HerramientasEnzunchado[] = [
       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraelectrica.jpg",
     alt: "enzunchadora-electrica",
     solution: "ZUNCHOS",
-    product: "Enzunchadoras Eléctricas",
+    name: "Enzunchadoras Eléctricas",
     link: "/productos?categoryId=19",
   },
   {
@@ -96,7 +96,7 @@ export const herramientasEnzunchado: HerramientasEnzunchado[] = [
       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoramanual.jpeg",
     alt: "enzunchadora-electrica",
     solution: "ZUNCHOS",
-    product: "Enzunchadoras Manuales",
+    name: "Enzunchadoras Manuales",
     link: "/productos?categoryId=20",
   },
   {
@@ -105,7 +105,7 @@ export const herramientasEnzunchado: HerramientasEnzunchado[] = [
       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/enzunchadoraneumatica.jpeg",
     alt: "enzunchadora-electrica",
     solution: "ZUNCHOS",
-    product: "Enzunchadoras Neumáticas",
+    name: "Enzunchadoras Neumáticas",
     link: "/productos?categoryId=21",
   },
 ];

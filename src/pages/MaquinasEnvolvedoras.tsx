@@ -71,7 +71,7 @@ export const MaquinasEnvolvedoras = () => {
               srcImg={herramienta.srcImg}
               alt={herramienta.alt}
               solution={herramienta.solution}
-              product={herramienta.product}
+              name={herramienta.name}
               link={herramienta.link}
             />
           ))}
