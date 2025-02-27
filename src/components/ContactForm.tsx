@@ -138,11 +138,15 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/instantmessage.svg" height={30} width={30} />
-                <Link to="/cotizacion" className="">
+                <a
+                  href="https://api.whatsapp.com/send?phone=56939522069"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <p className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear">
                     Nuestro Whatsapp
                   </p>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
