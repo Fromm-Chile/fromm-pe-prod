@@ -68,7 +68,7 @@ export const FilmEmbalaje = () => {
             srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedora2.jpeg"
             alt="film-embalaje"
             solution="EMBALAJE"
-            product="Film de Embalaje"
+            name="Film de Embalaje"
             link=""
           />
         </div>
