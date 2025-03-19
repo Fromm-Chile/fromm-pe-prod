@@ -1,9 +1,0 @@
-name = "fromm-peru"
-type = "module"
-account_id = "guzman.tech.cl@gmail.com"
-workers_dev = true
-
-[build]
-command = "npm run build"
-upload.format = "service-worker"
-upload.dir = "dist"  # Change to "build" if using Create React App
