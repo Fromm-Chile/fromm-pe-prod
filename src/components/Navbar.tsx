@@ -12,10 +12,10 @@ export const Navbar = () => {
       <div className="hidden lg:flex bg-primaryGray h-[45px] lg:items-center lg:justify-end lg:pr-16 text-textGray gap-16">
         <Link to="/" className="flex gap-1 cursor-pointer hover:underline">
           <img src="/icons/phoneGray.svg" height={23} width={23} />
-          <p>+56 2 2571 1100</p>
+          <p>01 7430272</p>
         </Link>
         <div className="cursor-pointer hover:underline">
-          <a href="mailto:contacto@fromm-pack.cl">contacto@fromm-pack.cl</a>
+          <a href="mailto:contacto@fromm-pack.pe">contacto@fromm-pack.pe</a>
         </div>
         <div className="flex gap-3 items-center relative">
           <Link

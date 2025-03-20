@@ -5,20 +5,20 @@ import { YoutubeEmbed } from "../components/YotubeEmbed";
 export const AboutUs = () => {
   return (
     <>
-      <title>Fromm Chile - Nosotros</title>
+      <title>Fromm Peru - Nosotros</title>
       <meta
         name="description"
-        content="FROMM Chile S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
+        content="FROMM Peru S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
       />
       <meta
         name="keywords"
-        content="Fromm Chile, Fromm Holding Suiza, sistemas de embalaje, transporte, aseguramiento de cargas"
+        content="Fromm Peru, Fromm Holding Suiza, sistemas de embalaje, transporte, aseguramiento de cargas"
       />
       <InfoBanner
         category="NOSOTROS"
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Flugzeug.jpg"
         alt="nosotros"
-        title="ACERCA DE FROMM CHILE"
+        title="ACERCA DE FROMM PERU"
         desc="LOS ESPECIALISTAS EN SOLUCIONES DE ENZUNCHADO."
         link="/productos"
         buttonTitle="Ver Productos"
@@ -27,14 +27,34 @@ export const AboutUs = () => {
         <div className="md:flex md:gap-10 md:m-auto md:mb-3 md:flex-col">
           <h2 className="text-textGray text-lg font-bold md:text-3xl md:font-medium md:uppercase">
             <span className="text-red font-extralight">
-              ACERCA DE FROMM CHILE
+              ACERCA DE FROMM PERU
             </span>{" "}
             <br />
             ENVOLVEMOS CON UNA SONRISA
           </h2>
           <div className="mb-3 font-light">
             <p className="mb-5 md:text-lg">
-              FROMM Chile S.A. es una filial productiva y comercial de Fromm
+              El grupo FROMM desarrolla y fabrica diferentes sistemas de
+              embalaje, para asegurar sus productos: Máquinas flejadoras e
+              instalaciones de flejado, envolvedoras de film estirable, robots
+              envolvedor, flejes de acero, flejes de poliéster, flejes de
+              polipropileno y el sistema patentado Airpad de protección y
+              relleno.
+            </p>
+            <p className="mb-5 md:text-lg">
+              Fundada en 1947, FROMM es una empresa familiar suiza que genera un
+              volumen de ventas cercano a 300 millones de euros y emplea a unas
+              1400 personas en todo el mundo. Más de 40 filiales en Europa,
+              América del Norte y del Sur, Sudáfrica, Asia y Australia, junto
+              con una multitud de socios comerciales especializados en todo el
+              mundo, garantizan -en su proximidad- un asesoramiento profesional,
+              un servicio de atención al cliente y un mantenimiento rápidos. La
+              empresa sigue una política de integración vertical lógica, al
+              tiempo que mantiene los valores tradicionales, que son la razón de
+              décadas de éxito.
+            </p>
+            {/* <p className="mb-5 md:text-lg">
+              FROMM Peru S.A. es una filial productiva y comercial de Fromm
               Holding Suiza, grupo industrial que desarrolla y produce una
               amplia variedad de sistemas de embalaje para el transporte y
               aseguramiento de cargas. El grupo cuenta con una amplia gama de
@@ -51,13 +71,13 @@ export const AboutUs = () => {
               conciencia ambiental.
             </p>
             <p className="mb-5 md:text-lg">
-              Fromm Chile es una de las tres plataformas mundiales productivas
-              de zunchos de PET responsable del abastecimiento de estos
-              productos para todas Las Américas. Nuestro equipo de especialistas
-              se encuentra altamente capacitado para la implementación y uso de
+              Fromm Peru es una de las tres plataformas mundiales productivas de
+              zunchos de PET responsable del abastecimiento de estos productos
+              para todas Las Américas. Nuestro equipo de especialistas se
+              encuentra altamente capacitado para la implementación y uso de
               productos destinados a satisfacer las más altas exigencias de
               calidad en sistemas productivos de vanguardia.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

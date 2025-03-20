@@ -93,14 +93,16 @@ export const Layout = () => {
         </Link>
         <div className="lg:flex w-full justify-between">
           <div className="self-start ml-8 mb-6">
-            <h2 className="font-bold text-2xl mb-8">FROMM CHILE</h2>
+            <h2 className="font-bold text-2xl mb-8">FROMM PERU</h2>
             <p className="text-textGray font-light mb-4 text-left">
-              Dirección: Avenida Aeropuerto #560 <br />
-              Quilicura. Santiago de Chile.
+              Dirección:
+              <br /> Carretera Panamericana <br /> Sur Km 29.5 <br /> Almacen G
+              19-20-21 <br />
+              Parque Industrial <br /> Megacentro Lurín <br /> Lurín - Lima
             </p>
             <p className="text-textGray font-light mb-4 text-left">
-              E-mail: contacto@fromm-pack.cl <br />
-              Teléfono: +56 2 2571 1100
+              E-mail: contacto@fromm-pack.pe <br />
+              Teléfono: 01 7430272
             </p>
           </div>
           <ul className="lg:hidden self-start ml-8 mb-8 text-red font-medium">
@@ -155,7 +157,7 @@ export const Layout = () => {
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
           <p className="text-textGray font-light mt-4">
-            © 2025 Fromm Chile. Todos los derechos reservados.
+            © 2025 Fromm Peru. Todos los derechos reservados.
           </p>
         </div>
         <div
@@ -190,16 +192,16 @@ export const Layout = () => {
             <div className="border-[1px] border-red px-6 py-2 mt-8 rounded-lg m-auto max-w-[90%]">
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/Layout/phone.svg" height={30} width={30} />
-                <p className="text-textGray font-light">+56 2 2571 1100</p>
+                <p className="text-textGray font-light">01 7430272</p>
               </div>
               <div className="flex items-center justify-start gap-4">
                 <img src="/icons/Layout/mail.svg" height={30} width={30} />
                 <a
-                  href="mailto:contacto@fromm-pack.cl"
+                  href="mailto:contacto@fromm-pack.pe"
                   onClick={() => setIsOpen(false)}
                   className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
                 >
-                  contacto@fromm-pack.cl
+                  contacto@fromm-pack.pe
                 </a>
               </div>
               <div className="flex items-center justify-start gap-4 ml-[-9px]">

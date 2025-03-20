@@ -4,13 +4,13 @@ export const CodigoEtica = () => {
   return (
     <>
       <title>Código de Ética</title>
-      <meta name="description" content="Código de Ética de FROMM Chile" />
+      <meta name="description" content="Código de Ética de FROMM Peru" />
       <meta name="keywords" content="Código de Ética" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/codigoetica.jpg"
         alt="codigo-etica"
         category="NOSOTROS"
-        desc="FROMM Chile"
+        desc="FROMM Peru"
         link=""
         title="CÓDIGO DE ETICA"
         sinBoton
@@ -22,7 +22,7 @@ export const CodigoEtica = () => {
             CÓDIGO DE ÉTICA
           </h2>
           <h2 className="text-textGray text-lg font-bold mb-6 md:text-xl md:font-medium">
-            1. Declaración de la Política de Fromm Chile S.A
+            1. Declaración de la Política de Fromm Peru S.A
           </h2>
           <p className="mb-5">
             El Grupo Fromm es una de las mejores empresas en la fabricación de
@@ -55,8 +55,8 @@ export const CodigoEtica = () => {
             enfoque central en todas nuestras operaciones.
           </p>
           <p className="mb-5">
-            El Código de Conducta para el Lugar de Trabajo de Fromm Chile S.A
-            (en lo sucesivo referido como “el Código”) y la Norma del Lugar de
+            El Código de Conducta para el Lugar de Trabajo de Fromm Peru S.A (en
+            lo sucesivo referido como “el Código”) y la Norma del Lugar de
             Trabajo (en lo sucesivo referido como “la Norma”) reflejan nuestra
             ambición por ser un buen ciudadano corporativo y cubren las
             expectativas de nuestras partes interesadas.
@@ -66,7 +66,7 @@ export const CodigoEtica = () => {
           </h2>
           <p className="mb-5">
             El Código es aplicable a todas las localidades y unidades dentro de
-            Fromm Chile S.A y se requiere igualmente del cumplimiento de los
+            Fromm Peru S.A y se requiere igualmente del cumplimiento de los
             proveedores.
           </p>
           <h2 className="text-textGray text-lg font-bold mb-6 md:text-xl md:font-medium">
@@ -93,7 +93,7 @@ export const CodigoEtica = () => {
           </h2>
           <p className="mb-5">Leyes y reglamentos</p>
           <p className="mb-5">
-            Todas las unidades y proveedores de Fromm Chile S.A deben operar en
+            Todas las unidades y proveedores de Fromm Peru S.A deben operar en
             total cumplimiento con las leyes y reglamentos relevantes de
             aplicación a sus operaciones y empleo en los países en que operan.
             Este es un requisito mínimo en todas las secciones de este Código.
@@ -103,7 +103,7 @@ export const CodigoEtica = () => {
           </h2>
           <p className="mb-5">
             Todos los proveedores deberán aceptar cumplir con el Código de Fromm
-            Chile S.A. El proveedor es responsable de exigir que sus proveedores
+            Peru S.A. El proveedor es responsable de exigir que sus proveedores
             cumplan con las disposiciones del Código.
           </p>
 
@@ -111,10 +111,10 @@ export const CodigoEtica = () => {
             Corrupción, soborno y ética en los negocios
           </h2>
           <p className="mb-5">
-            Fromm Chile S.A no tolera la corrupción, el soborno o las prácticas
+            Fromm Peru S.A no tolera la corrupción, el soborno o las prácticas
             de negocios no éticas de ninguna forma. Todas las unidades y
-            proveedores de Fromm Chile S.A y sus empleados, deberán abstenerse
-            de ofrecer, entregar, exigir o recibir sobornos u otro beneficio
+            proveedores de Fromm Peru S.A y sus empleados, deberán abstenerse de
+            ofrecer, entregar, exigir o recibir sobornos u otro beneficio
             inapropiado.
           </p>
 
@@ -134,7 +134,7 @@ export const CodigoEtica = () => {
           </p>
           <p className="mb-5">
             Si se encuentra un menor trabajando en un sitio donde se producen
-            componentes o productos de Fromm Chile S.A, todas las acciones
+            componentes o productos de Fromm Peru S.A, todas las acciones
             tomadas deben apuntar hacia el mejor interés del menor y deben
             tomarse todas las acciones de remediación para mantener o mejorar la
             situación social del menor.
@@ -175,7 +175,7 @@ export const CodigoEtica = () => {
             No discriminación
           </h2>
           <p className="mb-5">
-            Fromm Chile S.A reconoce y respeta la diversidad y las diferencias
+            Fromm Peru S.A reconoce y respeta la diversidad y las diferencias
             culturales. Todos los empleados deben ser tratados estrictamente de
             acuerdo con sus capacidades y calificaciones en cualquier decisión
             de empleo, incluyendo, pero no limitado a la contratación, progreso,
@@ -207,7 +207,7 @@ export const CodigoEtica = () => {
             Horas de trabajo
           </h2>
           <p className="mb-5">
-            Fromm Chile S.A reconoce la necesidad de un equilibrio saludable
+            Fromm Peru S.A reconoce la necesidad de un equilibrio saludable
             entre el trabajo y el tiempo libre para todos los empleados. No se
             exigirá a los empleados, de forma regularmente programada, que
             trabajen una semana laboral estándar de más de 48 horas a la semana
@@ -225,7 +225,7 @@ export const CodigoEtica = () => {
           <p className="mb-5">
             Los salarios, incluida la compensación por horas extras y
             beneficios, deberán ser equivalentes o superiores al nivel requerido
-            por la ley aplicable. Fromm Chile S.A promueve la consideración del
+            por la ley aplicable. Fromm Peru S.A promueve la consideración del
             costo para cumplir las necesidades básicas de los trabajadores y sus
             familias, como parte de la definición de los niveles salariales.
           </p>
@@ -251,7 +251,7 @@ export const CodigoEtica = () => {
           <p className="mb-5">
             Todas las unidades deberán operar en estricto cumplimiento con la
             legislación ambiental aplicable y los requisitos específicos de
-            Fromm Chile S.A. Deberá implementar un sistema de gestión, destinado
+            Fromm Peru S.A. Deberá implementar un sistema de gestión, destinado
             a mejorar continuamente los estándares ambientales y el desempeño de
             la unidad. Cada unidad deberá identificar todos los aspectos
             ambientales relevantes y deberá tomar medidas apropiadas para

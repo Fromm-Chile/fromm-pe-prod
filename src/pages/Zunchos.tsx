@@ -11,7 +11,7 @@ export const Zunchos = () => {
       <title>Zunchos</title>
       <meta
         name="description"
-        content="información detallada de los Zunchos y enzunchadoras que produce Fromm Chile"
+        content="información detallada de los Zunchos y enzunchadoras que produce Fromm Peru"
       />
       <meta name="keywords" content="zuncho" />
       <InfoBanner
@@ -168,7 +168,7 @@ export const Zunchos = () => {
                 Los zunchos de acero se fabrican a partir de mineral de hierro,
                 que primero debe extraerse, con todos los procesos logísticos
                 que ello conlleva. Una vez fabricados, los zunchos de PET se
-                reciclan constantemente. Y el sistema de reciclado en Chile
+                reciclan constantemente. Y el sistema de reciclado en Peru
                 también contribuye al proceso de reciclaje respetuoso con el
                 medio ambiente de los zunchos de PET. Este sistema de reciclaje
                 de botellas de PET se ha ampliado recientemente y seguirá

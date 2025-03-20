@@ -22,7 +22,7 @@ export const ServicioTecnico = () => {
       <section className="px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10 md:mt-20">
         <div className="mb-10">
           <p className="mb-5">
-            FROMM CHILE S.A. esta dispuesto a cuidar de nuestros clientes
+            FROMM PERU S.A. esta dispuesto a cuidar de nuestros clientes
             brindándoles un servicio completo para nuestros equipos en toda la
             región. Donde quiera que se encuentre, FROMM puede brindarle soporte
             técnico, servicio de mantenimiento completo y entregas rápidas desde

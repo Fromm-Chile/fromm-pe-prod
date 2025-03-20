@@ -139,10 +139,10 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/Layout/mail.svg" height={30} width={30} />
                 <a
-                  href="mailto:contacto@fromm-pack.cl"
+                  href="mailto:contacto@fromm-pack.pe"
                   className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
                 >
-                  contacto@fromm-pack.cl
+                  contacto@fromm-pack.pe
                 </a>
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">

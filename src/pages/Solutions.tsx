@@ -16,7 +16,7 @@ export const Solutions = () => {
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/PETband.jpg"
         alt="soluciones"
         title="PRODUCTOS Y SOLUCIONES DE EMBALAJE"
-        desc="FROMM Chile S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
+        desc="FROMM Peru S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
         link="/productos"
         buttonTitle="Ver Productos"
         category="NUESTAS SOLUCIONES"
