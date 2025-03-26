@@ -1,6 +1,6 @@
 import { InfoAcordeon } from "../components/InfoAcordeon";
 import { InfoBanner } from "../components/InfoBanner";
-import { YoutubeEmbed } from "../components/YotubeEmbed";
+// import { YoutubeEmbed } from "../components/YotubeEmbed";
 
 export const AboutUs = () => {
   return (
