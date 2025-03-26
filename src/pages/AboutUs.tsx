@@ -133,7 +133,7 @@ export const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="px-10 mb-8 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px]">
+      {/* <section className="px-10 mb-8 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px]">
         <div className="md:flex md:gap-10 md:m-auto md:mb-3 md:flex-col">
           <h2 className="text-textGray text-lg font-bold md:text-3xl md:font-medium md:uppercase">
             <span className="text-red font-extralight">EMPRESA MODELO</span>{" "}
@@ -156,7 +156,7 @@ export const AboutUs = () => {
         <div className="my-10 md:my-20">
           <YoutubeEmbed embedId="ahhvrOdJYSo" className="w-full" />
         </div>
-      </section>
+      </section> */}
       <div className="px-10 md:m-auto md:mt-20 md:mb-10 md:max-w-[875px] mb-8">
         <InfoAcordeon />
       </div>

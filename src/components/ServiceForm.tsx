@@ -132,9 +132,7 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/Layout/phone.svg" height={30} width={30} />
-                <p className="text-textGray font-light">
-                  +56 2 257 111 38 / +56 2 257 111 26
-                </p>
+                <p className="text-textGray font-light">(01) 7430272</p>
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/Layout/mail.svg" height={30} width={30} />
@@ -148,7 +146,7 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/instantmessage.svg" height={30} width={30} />
                 <a
-                  href="https://api.whatsapp.com/send?phone=56939522069"
+                  href="https://api.whatsapp.com/send?phone=51981318730"
                   target="_blank"
                   rel="noreferrer"
                 >

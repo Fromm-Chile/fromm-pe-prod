@@ -13,9 +13,8 @@ type NavbarDataType = {
 };
 
 export const navbarData: NavbarDataType[] = [
-  { id: 1, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
   {
-    id: 2,
+    id: 1,
     name: "SOLUCIONES",
     link: "/soluciones",
     hasDropdown: true,
@@ -42,6 +41,7 @@ export const navbarData: NavbarDataType[] = [
       },
     ],
   },
+  { id: 2, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
   {
     id: 3,
     name: "MERCADOS",
