@@ -15,6 +15,30 @@ type NavbarDataType = {
 export const navbarData: NavbarDataType[] = [
   {
     id: 1,
+    name: "NOSOTROS",
+    link: "/nosotros",
+    hasDropdown: true,
+    submenu: [
+      {
+        id: 1,
+        link: "/nosotros",
+        name: "ACERCA DE NOSOTROS",
+      },
+      {
+        id: 2,
+        link: "/politica-calidad",
+        name: "POLÍTICA DE CALIDAD",
+      },
+      {
+        id: 3,
+        link: "/codigo-etica",
+        name: "CÓDIGO DE ÉTICA",
+      },
+    ],
+  },
+  { id: 2, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
+  {
+    id: 3,
     name: "SOLUCIONES",
     link: "/soluciones",
     hasDropdown: true,
@@ -41,9 +65,8 @@ export const navbarData: NavbarDataType[] = [
       },
     ],
   },
-  { id: 2, name: "PRODUCTOS", link: "/productos", hasDropdown: false },
   {
-    id: 3,
+    id: 4,
     name: "MERCADOS",
     link: "/mercados",
     hasDropdown: true,
@@ -67,29 +90,6 @@ export const navbarData: NavbarDataType[] = [
         id: 4,
         link: "/siderurgica",
         name: "SIDERÚRGICA",
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "NOSOTROS",
-    link: "/nosotros",
-    hasDropdown: true,
-    submenu: [
-      {
-        id: 1,
-        link: "/nosotros",
-        name: "ACERCA DE NOSOTROS",
-      },
-      {
-        id: 2,
-        link: "/politica-calidad",
-        name: "POLÍTICA DE CALIDAD",
-      },
-      {
-        id: 3,
-        link: "/codigo-etica",
-        name: "CÓDIGO DE ÉTICA",
       },
     ],
   },
