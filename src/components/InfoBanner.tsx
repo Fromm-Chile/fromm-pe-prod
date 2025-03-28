@@ -42,7 +42,7 @@ export const InfoBanner = ({
             className="md:h-[520px] h-[200px] w-full md:w-full md:object-cover"
           />
         )}
-        <div className="parent p-6 text-white bg-red flex flex-col gap-1 md:gap-5 md:w-[40%] md:absolute md:bottom-[-20px] md:left-[40px] md:mix-blend-hard-light md:z-50 md:rounded-lg">
+        <div className="parent p-6 text-white bg-red flex flex-col gap-1 md:gap-5 md:w-[35%] md:absolute md:bottom-[-20px] md:left-[40px] md:mix-blend-hard-light md:z-50 md:rounded-lg">
           <p className="child font-extralight tracking-widest md:mt-5 md:text-2xl text-left">
             {category}
           </p>

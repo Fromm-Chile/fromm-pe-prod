@@ -19,14 +19,14 @@ export const Home = () => {
             className="w-full h-[450px] object-cover lg:hidden"
           />
           <video
-            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-chile.mp4"
+            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/This_is_FROMM_web.mp4"
             className="hidden lg:block w-full h-[450px] object-cover -z-10"
             autoPlay
             loop
             muted
           ></video>
-          <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div>
-          <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
+          {/* <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div> */}
+          {/* <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
             <div className="flex flex-col items-center justify-start mt-14 h-full">
               <h2 className="text-white font-bold lg:text-[20px] xl:text-[26px]">
                 FROMM PERU
@@ -90,7 +90,7 @@ export const Home = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="bg-red text-white flex flex-col items-start p-8 lg:hidden">
@@ -159,8 +159,8 @@ export const Home = () => {
             </div>
             <div className="flex flex-col gap-8 justify-center items-center lg:flex-col-reverse lg:w-[50%]">
               <img
-                className="border-b-2 border-black lg:h-36"
-                src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/equipoFromm.webp"
+                className="border-b-2 border-black lg:h-[19rem] h-[16rem] w-[16rem] lg:w-[19rem] object-cover rounded-full mt-5 lg:mt-0"
+                src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Bienvenido%20FROMM.jpg"
                 alt="fromm-team"
               />
               <p className="font-extralight text-lg text-textGray text-justify">
