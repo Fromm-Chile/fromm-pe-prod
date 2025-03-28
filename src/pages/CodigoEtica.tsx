@@ -10,7 +10,7 @@ export const CodigoEtica = () => {
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/codigoetica.jpg"
         alt="codigo-etica"
         category="NOSOTROS"
-        desc="FROMM Perú"
+        desc="FROMM PERÚ"
         link=""
         title="CÓDIGO DE ETICA"
         sinBoton

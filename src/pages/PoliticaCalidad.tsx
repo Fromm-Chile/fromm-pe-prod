@@ -10,7 +10,7 @@ export const PoliticaCalidad = () => {
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/politicacalidadm.jpg"
         alt="politica-calidad"
         category="NOSOTROS"
-        desc="FROMM Perú"
+        desc="FROMM PERÚ"
         link=""
         title="POLÍTICA DE CALIDAD"
         sinBoton
