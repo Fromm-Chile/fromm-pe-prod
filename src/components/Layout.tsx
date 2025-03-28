@@ -93,7 +93,7 @@ export const Layout = () => {
         </Link>
         <div className="lg:flex w-full justify-between">
           <div className="self-start ml-8 mb-6">
-            <h2 className="font-bold text-2xl mb-8">FROMM PERU</h2>
+            <h2 className="font-bold text-2xl mb-8">FROMM PERÚ</h2>
             <p className="text-textGray font-light mb-4 text-left">
               Dirección:
               <br /> Carretera Panamericana <br /> Sur Km 29.5 <br /> Almacen G
@@ -157,7 +157,7 @@ export const Layout = () => {
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
           <p className="text-textGray font-light mt-4">
-            © 2025 Fromm Peru. Todos los derechos reservados.
+            © 2025 Fromm Perú. Todos los derechos reservados.
           </p>
         </div>
         <div

@@ -6,7 +6,7 @@ import { CustomSelect } from "../components/commons/CustomSelect";
 export const Home = () => {
   return (
     <>
-      <title>Fromm Peru</title>
+      <title>Fromm Perú</title>
       <meta
         name="description"
         content="información de la empresa y productos"
@@ -29,7 +29,7 @@ export const Home = () => {
           {/* <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
             <div className="flex flex-col items-center justify-start mt-14 h-full">
               <h2 className="text-white font-bold lg:text-[20px] xl:text-[26px]">
-                FROMM PERU
+                FROMM PERÚ
               </h2>
               <p className="text-white font-extralight lg:text-[20px] xl:text-[26px]">
                 EMBALAJE CON INNOVACIÓN Y PRECISIÓN
@@ -94,7 +94,7 @@ export const Home = () => {
         </div>
 
         <div className="bg-red text-white flex flex-col items-start p-8 lg:hidden">
-          <h1 className="text-[26px] font-bold">FROMM PERU</h1>
+          <h1 className="text-[26px] font-bold">FROMM PERÚ</h1>
           <h2 className="text-[26px] font-extralight mb-8">
             EMBALAJE CON INNOVACIÓN Y PRECISIÓN
           </h2>
@@ -152,7 +152,7 @@ export const Home = () => {
               <p className="font-extralight text-xl text-red tracking-widest">
                 BIENVENIDO!
               </p>
-              <p className="text-2xl font-bold text-textGray">FROMM PERU</p>
+              <p className="text-2xl font-bold text-textGray">FROMM PERÚ</p>
               <p className="text-2xl font-extralight text-textGray text-left">
                 TRANSFORMAMOS EL EMBAJALE EN UNA EXPERIENCIA
               </p>

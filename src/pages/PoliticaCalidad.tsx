@@ -4,13 +4,13 @@ export const PoliticaCalidad = () => {
   return (
     <>
       <title>Política de Calidad</title>
-      <meta name="description" content="Política de calidad de FROMM Peru" />
+      <meta name="description" content="Política de calidad de FROMM Perú" />
       <meta name="keywords" content="Política de calidad" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/politicacalidadm.jpg"
         alt="politica-calidad"
         category="NOSOTROS"
-        desc="FROMM Peru"
+        desc="FROMM Perú"
         link=""
         title="POLÍTICA DE CALIDAD"
         sinBoton
@@ -22,7 +22,7 @@ export const PoliticaCalidad = () => {
           </h2>
           <div className="mb-3 font-light">
             <p className="mb-5 md:text-lg">
-              Cómo “Equipo Humano” Fromm Peru S.A – líderes en la fabricación de
+              Cómo “Equipo Humano” Fromm Perú S.A – líderes en la fabricación de
               zunchos de poliéster – declaramos que la “Gestión de la Calidad”
               es un pilar fundamental en nuestro actuar. En coherencia con lo
               que declaramos, nos comprometemos a:

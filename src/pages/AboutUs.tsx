@@ -5,20 +5,20 @@ import { InfoBanner } from "../components/InfoBanner";
 export const AboutUs = () => {
   return (
     <>
-      <title>Fromm Peru - Nosotros</title>
+      <title>Fromm Perú - Nosotros</title>
       <meta
         name="description"
-        content="FROMM Peru S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
+        content="FROMM Perú S.A. es una filial productiva y comercial de Fromm Holding Suiza, grupo industrial que desarrolla y produce una amplia variedad de sistemas de embalaje para el transporte y aseguramiento de cargas."
       />
       <meta
         name="keywords"
-        content="Fromm Peru, Fromm Holding Suiza, sistemas de embalaje, transporte, aseguramiento de cargas"
+        content="Fromm Perú, Fromm Holding Suiza, sistemas de embalaje, transporte, aseguramiento de cargas"
       />
       <InfoBanner
         category="NOSOTROS"
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Flugzeug.jpg"
         alt="nosotros"
-        title="ACERCA DE FROMM PERU"
+        title="ACERCA DE FROMM PERÚ"
         desc="LOS ESPECIALISTAS EN SOLUCIONES DE ENZUNCHADO."
         link="/productos"
         buttonTitle="Ver Productos"
@@ -27,7 +27,7 @@ export const AboutUs = () => {
         <div className="md:flex md:gap-10 md:m-auto md:mb-3 md:flex-col">
           <h2 className="text-textGray text-lg font-bold md:text-3xl md:font-medium md:uppercase">
             <span className="text-red font-extralight">
-              ACERCA DE FROMM PERU
+              ACERCA DE FROMM PERÚ
             </span>{" "}
             <br />
             ENVOLVEMOS CON UNA SONRISA
@@ -54,7 +54,7 @@ export const AboutUs = () => {
               décadas de éxito.
             </p>
             {/* <p className="mb-5 md:text-lg">
-              FROMM Peru S.A. es una filial productiva y comercial de Fromm
+              FROMM Perú S.A. es una filial productiva y comercial de Fromm
               Holding Suiza, grupo industrial que desarrolla y produce una
               amplia variedad de sistemas de embalaje para el transporte y
               aseguramiento de cargas. El grupo cuenta con una amplia gama de
@@ -71,7 +71,7 @@ export const AboutUs = () => {
               conciencia ambiental.
             </p>
             <p className="mb-5 md:text-lg">
-              Fromm Peru es una de las tres plataformas mundiales productivas de
+              Fromm Perú es una de las tres plataformas mundiales productivas de
               zunchos de PET responsable del abastecimiento de estos productos
               para todas Las Américas. Nuestro equipo de especialistas se
               encuentra altamente capacitado para la implementación y uso de
