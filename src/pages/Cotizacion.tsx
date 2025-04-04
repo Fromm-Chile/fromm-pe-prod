@@ -23,7 +23,7 @@ const schema = yup.object().shape({
   name: yup.string().required("Nombre es requerido"),
   email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
-  company: yup.string(),
+  company: yup.string().required("El nombre de la Empresa es requerido"),
   message: yup.string(),
 });
 
@@ -52,7 +52,7 @@ export const Cotizacion = () => {
 
     try {
       setIsLoading(true);
-      await axios(`${apiUrl}/invoices`, {
+      await axios(`${apiUrl}/pe/invoices`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -140,7 +140,7 @@ export const Cotizacion = () => {
               <InputController
                 control={control}
                 name="company"
-                placeholder="Empresa"
+                placeholder="Empresa*"
               />
             </div>
             <TextareaController

@@ -33,6 +33,36 @@ export const CustomSelect = () => {
       value: "Siderúrgica",
       link: "/siderurgica",
     },
+    {
+      id: 5,
+      value: "CONSTRUCCIÓN",
+      link: "/construccion",
+    },
+    {
+      id: 6,
+      value: "CERAMICA",
+      link: "/ceramica",
+    },
+    {
+      id: 7,
+      value: "ENVASES",
+      link: "/envases",
+    },
+    {
+      id: 8,
+      value: "FIBRAS Y TEXTILES",
+      link: "/fibras-textiles",
+    },
+    {
+      id: 9,
+      value: "PAPEL",
+      link: "/papel",
+    },
+    {
+      id: 10,
+      value: "VIDRIO",
+      link: "/vidrio",
+    },
   ];
 
   const handleOptionClick = (value: string) => {
@@ -76,7 +106,7 @@ export const CustomSelect = () => {
           {selectData.map((data) => (
             <Link to={data.link} key={data.id}>
               <li
-                className="p-3 hover:bg-gray-200 cursor-pointer ml-5"
+                className="p-3 hover:bg-gray-200 cursor-pointer pl-8"
                 onClick={() => handleOptionClick(data.value)}
               >
                 {data.value}

@@ -27,7 +27,7 @@ const schema = yup.object().shape({
   name: yup.string().required("Nombre es requerido"),
   email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
-  company: yup.string(),
+  company: yup.string().required("El nombre de la Empresa es requerido"),
   message: yup.string().required("Mensaje es requerido"),
 });
 
@@ -47,7 +47,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
   const onSubmit = async (data: FormData) => {
     try {
       setIsLoading(true);
-      await axios(`${apiUrl}/contacts`, {
+      await axios(`${apiUrl}/pe/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +101,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
               <InputController
                 control={control}
                 name="company"
-                placeholder="Empresa"
+                placeholder="Empresa*"
               />
               <TextareaController
                 control={control}
@@ -139,7 +139,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/instantmessage.svg" height={30} width={30} />
                 <a
-                  href="https://api.whatsapp.com/send?phone=56981318730"
+                  href="https://api.whatsapp.com/send?phone=51981318730"
                   target="_blank"
                   rel="noreferrer"
                 >

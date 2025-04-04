@@ -29,7 +29,7 @@ const schema = yup.object().shape({
   email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
   equipment: yup.string().required("Tipo de Máquina es requerido"),
-  company: yup.string(),
+  company: yup.string().required("El nombre de la Empresa es requerido"),
   message: yup.string().required("Mensaje es requerido"),
 });
 
@@ -49,7 +49,7 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
   const onSubmit = async (data: FormData) => {
     try {
       setIsLoading(true);
-      await axios(`${apiUrl}/contacts`, {
+      await axios(`${apiUrl}/pe/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               <InputController
                 control={control}
                 name="company"
-                placeholder="Empresa"
+                placeholder="Empresa*"
               />
               <TextareaController
                 control={control}
