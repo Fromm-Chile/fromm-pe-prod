@@ -31,12 +31,14 @@ import { Envases } from "./pages/Mercados/Envases";
 import { FibrasTextiles } from "./pages/Mercados/FibrasTextiles";
 import { Papel } from "./pages/Mercados/Papel";
 import { Vidrio } from "./pages/Mercados/Vidrio";
+import ScrollToAnchor from "./hooks/useScrollToAnchor";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
+        <ScrollToAnchor />
         <ScrollToTop />
         <Layout />
       </>
