@@ -51,8 +51,8 @@ export const Envases = () => {
                 <strong>
                   Agrupación de botellas y contenedores plásticos:
                 </strong>{" "}
-                Mantén seguros los packs de botellas, bidones y otros envases
-                durante la distribución.
+                Mantiene en forma segura los packs de botellas, bidones y otros
+                envases durante la distribución.
               </p>
             </li>
             <li className="flex gap-2 items-start">

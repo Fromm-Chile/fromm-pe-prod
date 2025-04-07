@@ -54,9 +54,9 @@ export const Papel = () => {
             <li className="flex gap-2 items-start">
               <img src="/icons/checkList.svg" />
               <p>
-                <strong>Flejado de bobinas de papel:</strong> Mantén firmes las
-                bobinas de papel kraft, papel prensa, papel reciclado y otros
-                materiales durante su almacenamiento y traslado.
+                <strong>Flejado de bobinas de papel:</strong> Mantiene firmes
+                las bobinas de papel kraft, papel prensa, papel reciclado y
+                otros materiales durante su almacenamiento y traslado.
               </p>
             </li>
             <li className="flex gap-2 items-start">
@@ -128,6 +128,14 @@ export const Papel = () => {
                 <strong>Compatibilidad con equipos de flejado:</strong> Funciona
                 con sistemas automáticos y manuales, optimizando la eficiencia
                 en la producción.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Aseguramiento de bobinas de papel y cartón:</strong>{" "}
+                Imprescindible en la industria del Packaging para el correcto
+                manejo y distribución de materias primas.
               </p>
             </li>
           </ul>

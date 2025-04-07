@@ -29,7 +29,7 @@ export const Ceramica = () => {
             productos frágiles como{" "}
             <strong>azulejos, porcelanatos, tejas y revestimientos</strong>{" "}
             requieren soluciones de embalaje resistentes y seguras. Los{" "}
-            <strong>zunchos FROMM</strong> garantizan la estabilidad de las
+            <strong>zunchos PET FROMM</strong> garantizan la estabilidad de las
             cargas, evitando daños y optimizando la logística de distribución.
           </p>
         </div>
@@ -124,7 +124,7 @@ export const Ceramica = () => {
         </div>
       </section>
       <ContactForm
-        titulo="Asegura la calidad de tus productos cerámicos con los zunchos FROMM. ¡Contáctanos y cotiza la mejor opción para tu empresa!"
+        titulo="Asegura la calidad de tus productos cerámicos con los zunchos PET FROMM. ¡Contáctanos y cotiza la mejor opción para tu empresa!"
         descripcion="Envianos un mensaje y nos pondremos en contacto contigo a la brevedad."
       />
     </>

@@ -53,7 +53,7 @@ export const Construccion = () => {
       <section className="mb-24 py-10">
         <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
           <h3 className="text-textGray font-semibold text-2xl text-left">
-            PET - La Alternativa Inteligente y Sostenible
+            PET - La Alternativa al zuncho de acero, Inteligente y Sostenible
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">

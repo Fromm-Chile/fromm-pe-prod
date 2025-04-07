@@ -49,7 +49,7 @@ export const FibrasTextiles = () => {
             <li className="flex gap-2 items-start">
               <img src="/icons/checkList.svg" />
               <p>
-                <strong>Flejado de rollos de tela y textiles:</strong> Mantén
+                <strong>Flejado de rollos de tela y textiles:</strong> Mantiene
                 los tejidos bien compactados durante el almacenamiento y
                 transporte.
               </p>
