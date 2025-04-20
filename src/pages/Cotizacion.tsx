@@ -141,6 +141,7 @@ export const Cotizacion = () => {
                 control={control}
                 name="company"
                 placeholder="Empresa*"
+                error={errors.company?.message}
               />
             </div>
             <TextareaController
