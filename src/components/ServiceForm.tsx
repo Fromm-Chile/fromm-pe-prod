@@ -9,6 +9,7 @@ import { useState } from "react";
 import { apiUrl } from "../assets/variables";
 import axios from "axios";
 import { Loader } from "./Loader";
+import { isValidRUC } from "../assets/helpers";
 
 type FormData = {
   name: string;
@@ -16,6 +17,7 @@ type FormData = {
   phone?: string;
   equipment: string;
   company?: string;
+  rucPeru?: string;
   message: string;
 };
 
@@ -30,6 +32,11 @@ const schema = yup.object().shape({
   phone: yup.string(),
   equipment: yup.string().required("Tipo de Máquina es requerido"),
   company: yup.string().required("El nombre de la Empresa es requerido"),
+  rucPeru: yup
+    .string()
+    .matches(/^[0-9]{11}$/, "RUC debe tener 11 dígitos")
+    .required("RUC es requerido")
+    .test("is-valid-ruc", "RUC inválido", (value) => isValidRUC(value)),
   message: yup.string().required("Mensaje es requerido"),
 });
 
@@ -111,6 +118,12 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
                 name="company"
                 placeholder="Empresa*"
                 error={errors.company?.message}
+              />
+              <InputController
+                control={control}
+                name="rucPeru"
+                placeholder="RUC*"
+                error={errors.rucPeru?.message}
               />
               <TextareaController
                 control={control}
