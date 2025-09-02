@@ -1,97 +1,103 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components/commons/Button";
 import { HomeCard } from "../components/HomeCard";
 import { CustomSelect } from "../components/commons/CustomSelect";
+import { useQuery } from "@tanstack/react-query";
+import axios, { AxiosError } from "axios";
+import { apiUrl } from "../assets/variables";
+import { Loader } from "../components/Loader";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+
+export type Banner = {
+  id: string;
+  name: string;
+  url: string;
+  order: number;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  const { data: swiperData = [], isLoading } = useQuery({
+    queryKey: ["bannerSwiper"],
+    queryFn: async (): Promise<Banner[]> => {
+      try {
+        const { data } = await axios.get(`${apiUrl}/pe/banners/active`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        });
+        return data;
+      } catch (error) {
+        if (error instanceof AxiosError && error.status === 401) {
+          navigate("/login");
+        } else {
+          console.error("Unexpected error:", error);
+        }
+        return [];
+      }
+    },
+    staleTime: 5 * 60 * 1000,
+  });
+
   return (
     <>
+      {isLoading && <Loader />}
       <title>Fromm Perú</title>
       <meta
         name="description"
         content="información de la empresa y productos"
       />
       <section>
-        <div className="relative">
-          <img
-            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
-            alt="home-picture"
-            className="w-full h-[450px] object-cover lg:hidden"
-          />
-          <video
-            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/This_is_FROMM_web.mp4"
-            className="hidden lg:block w-full h-[450px] object-cover -z-10"
-            autoPlay
-            loop
-            muted
-          ></video>
-          {/* <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div> */}
-          {/* <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
-            <div className="flex flex-col items-center justify-start mt-14 h-full">
-              <h2 className="text-white font-bold lg:text-[20px] xl:text-[26px]">
-                FROMM PERÚ
-              </h2>
-              <p className="text-white font-extralight lg:text-[20px] xl:text-[26px]">
-                EMBALAJE CON INNOVACIÓN Y PRECISIÓN
-              </p>
-            </div>
-            <ul className="flex gap-4 absolute bottom-4 left-0 p-8 text-white">
-              <li className="group">
-                <Link
-                  className="flex items-center gap-2"
-                  to="/zunchos-herramientas"
-                >
-                  <img
-                    className="transition-transform duration-300 group-hover:-translate-x-2"
-                    src="/icons/chevronRight.svg"
-                  />
-                  <div>
-                    <h3 className="font-medium text-white text-xs">
-                      SOLUCIONES
-                    </h3>
-                    <p className="text-white font-bold text-sm xl:text-base">
-                      ZUNCHOS
-                    </p>
-                  </div>
-                </Link>
-              </li>
-              <li className="group">
-                <Link className="flex items-center gap-2" to="/airpads">
-                  <img
-                    className="transition-transform duration-300 group-hover:-translate-x-2"
-                    src="/icons/chevronRight.svg"
-                  />
-
-                  <div>
-                    <h3 className="font-medium text-white text-xs">
-                      SOLUCIONES
-                    </h3>
-                    <p className="text-white font-bold xl:text-base">AIRPADS</p>
-                  </div>
-                </Link>
-              </li>
-              <li className="group">
-                <Link
-                  className="flex items-center gap-2"
-                  to="/servicio-tecnico"
-                >
-                  <img
-                    className="transition-transform duration-300 group-hover:-translate-x-2"
-                    src="/icons/chevronRight.svg"
-                  />
-                  <div>
-                    <h3 className="font-medium text-white text-xs">
-                      SOLUCIONES
-                    </h3>
-                    <p className="text-white font-bold text-sm xl:text-base">
-                      SERVICIO TECNICO
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div> */}
-        </div>
+        {swiperData.length > 0 ? (
+          <div className="relative">
+            <img
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
+              alt="home-picture"
+              className="h-[450px] object-cover lg:hidden"
+            />
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              scrollbar={{ draggable: true }}
+              speed={500}
+            >
+              {swiperData.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <Link to={item.url}>
+                    <img
+                      src={item.url}
+                      alt={item.name}
+                      className="w-full h-[350px] object-fit lg:block hidden"
+                    />
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ) : (
+          <div className="relative">
+            <img
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
+              alt="home-picture"
+              className="w-full h-[450px] object-cover lg:hidden"
+            />
+            <video
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/This_is_FROMM_web.mp4"
+              className="hidden lg:block w-full h-[450px] object-cover -z-10"
+              autoPlay
+              loop
+              muted
+            ></video>
+          </div>
+        )}
 
         <div className="bg-red text-white flex flex-col items-start p-8 lg:hidden">
           <h1 className="text-[26px] font-bold">FROMM PERÚ</h1>

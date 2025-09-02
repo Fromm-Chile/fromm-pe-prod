@@ -11,12 +11,14 @@ import { apiUrl } from "../assets/variables";
 import { Loader } from "../components/Loader";
 import { useNavigate } from "react-router-dom";
 import { TextareaController } from "../components/TextareaController";
+import { isValidRUC } from "../assets/helpers";
 
 type FormData = {
   name: string;
   email: string;
   phone?: string;
   company?: string;
+  rucPeru?: string;
 };
 
 const schema = yup.object().shape({
@@ -24,6 +26,11 @@ const schema = yup.object().shape({
   email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
   company: yup.string().required("El nombre de la Empresa es requerido"),
+  rucPeru: yup
+    .string()
+    .matches(/^[0-9]{11}$/, "RUC debe tener 11 dígitos")
+    .required("RUC es requerido")
+    .test("is-valid-ruc", "RUC inválido", (value) => isValidRUC(value)),
   message: yup.string(),
 });
 
@@ -142,6 +149,12 @@ export const Cotizacion = () => {
                 name="company"
                 placeholder="Empresa*"
                 error={errors.company?.message}
+              />
+              <InputController
+                control={control}
+                name="rucPeru"
+                placeholder="RUC*"
+                error={errors.rucPeru?.message}
               />
             </div>
             <TextareaController
